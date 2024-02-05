@@ -1,0 +1,29 @@
+// wp developer style.css
+
+/*
+Theme Name: theme-gr2
+Theme URI: https://referenced.ca
+Author: Clovis Gauthier
+Author URI: https://wordpress.org/
+Description: Thème de base développé dans le cours de 4w4
+Version: 1.0
+
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: theme-gr2
+Ce thème a été développé dans le cadre du cours 4A4
+*/
+
+/*///////////////////////////// */
+/* Variables CSS */
+/*///////////////////////////// */
+@import "variables";
+/*///////////////////////////// */
+/* Règles de normalisation */
+/*///////////////////////////// */
+@import "normalize";
+/*///////////////////////////// */ 
+/* Règles de base */
+/*///////////////////////////// */ 
+@import "base/h"
