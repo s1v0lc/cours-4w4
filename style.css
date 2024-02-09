@@ -18,23 +18,19 @@ Ce thème a été développé dans le cadre du cours 4A4
 /*///////////////////////////// */
 /*lien de référence dans l'exemple du prof*/
 :root {
-  --couleur-arriere-entete: #ccc;
+  --couleur-arriere-entete: rgb(255, 140, 0);
   --couleur-arriere-accueil: #ddd;
+  --couleur-arriere-galerie: #ccc;
   --couleur-arriere-evenement: #dd1;
   --couleur-arriere-footer: #aaa;
-}
-
-/*///////////////////////////// */
-/* Règles de base */
-/*///////////////////////////// */
-/*
-Sélecteur textuel de base
-
-voir mdn clamp
--> font-size clamp gen
-*/
-h1 {
-  font-size: clamp(1rem, 6.2vw - 0.57rem, 3.75rem);
+  --couleur-arriere-body: #000;
+  --transparence-elevee: 0.1;
+  --couleur-texte-h1: #070707;
+  --couleur-texte-h2: rgb(174, 103, 16);
+  --couleur-texte-h3: rgb(255, 140, 0);
+  --couleur-texte-h4: rgb(255, 140, 0);
+  --couleur-texte-h5: rgb(255, 140, 0);
+  --couleur-texte-h6: rgb(255, 140, 0);
 }
 
 /*///////////////////////////// */
@@ -43,6 +39,7 @@ h1 {
 body {
   display: flex;
   flex-direction: column;
+  font-family: "Prompt", arial, helvetica, sans-serif;
 }
 
 .global {
@@ -54,9 +51,64 @@ body {
 .global > header,
 .global > footer {
   width: 1100px;
-  border: 1px solid #aaa;
+  background-color: rgba(0, 0, 0, var(--transparence-elevee));
+  padding: 5rem 1rem;
 }
 
 #entete {
   background-color: var(--couleur-arriere-entete);
-}/*# sourceMappingURL=style.css.map */
+}
+
+#accueil {
+  background-color: var(--couleur-arriere-accueil);
+}
+
+#galerie {
+  background-color: var(--couleur-arriere-galerie);
+}
+
+#evenement {
+  background-color: var(--couleur-arriere-evenement);
+}
+
+#footer {
+  background-color: var(--couleur-arriere-footer);
+}
+
+/* Règles de base */
+/*///////////////////////////// */
+/*
+Sélecteur textuel de base
+
+voir mdn clamp
+-> font-size clamp gen
+*/
+h1 {
+  font-size: clamp(1rem, 6.2vw - 0.57rem, 3.75rem);
+  color: var(--couleur-texte-h1);
+}
+
+h2 {
+  font-size: clamp(1rem, 6.2vw - 0.57rem, 3.75rem);
+  color: var(--couleur-texte-h2);
+}
+
+h3 {
+  font-size: clamp(1rem, 6.2vw - 0.57rem, 2.5rem);
+}
+
+h4 {
+  font-size: clamp(1rem, 6.2vw - 0.57rem, 2rem);
+  border-left: ridge 10px #ccc;
+  padding-left: 1rem;
+}
+
+h5 {
+  font-size: clamp(0.1rem, 6.2vw - 0.57rem, 1.2rem);
+}
+
+h6 {
+  font-size: clamp(0.1rem, 6.2vw - 0.57rem, 0.8rem);
+}
+
+/*///////////////////////////// *//*# sourceMappingURL=style.css.map */
