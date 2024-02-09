@@ -36,6 +36,10 @@ Ce thème a été développé dans le cadre du cours 4A4
 /*///////////////////////////// */
 /* Règles de la pagination */
 /*///////////////////////////// */
+* {
+  box-sizing: border-box;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -101,7 +105,7 @@ h3 {
 h4 {
   font-size: clamp(1rem, 6.2vw - 0.57rem, 2rem);
   border: groove 10px #ccc;
-  display: inline;
+  margin: 0;
   padding: 0.5rem 1rem;
   color: var(--couleur-texte-h4);
 }
