@@ -14,10 +14,10 @@
 --hu4 : calc(var(--hu3) + var(--increment-angle));
 --hu5 : calc(var(--hu4) + var(--increment-angle));
 
---s-couleur-arriere : 50%; 
+--s-couleur-arriere : 80%; 
 --l-couleur-arriere : 50%;
---s-couleur : 70%;
---l-couleur : 50%; 
+--s-couleur : 100%;
+--l-couleur : 80%; 
 
     --couleur-arriere-entete : hsl(var(--hu1), var(--s-couleur-arriere), var(--l-couleur-arriere));
     --couleur-arriere-accueil : hsl(var(--hu2), var(--s-couleur-arriere), var(--l-couleur-arriere));
