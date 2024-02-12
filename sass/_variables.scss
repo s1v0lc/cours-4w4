@@ -3,21 +3,43 @@
 
 :root {
 
-    --couleur-arriere-entete : rgb(255, 140, 0);
-    --couleur-arriere-accueil : #ddd;
-    --couleur-arriere-galerie : #ccc;
-    --couleur-arriere-evenement : #dd1;
-    --couleur-arriere-footer : #aaa;
-    
-    --couleur--entete : hsl(0, 100%, 90%);
-    --couleur--accueil : hsl(60, 100%, 20%);
-    --couleur--galerie : hsl(120, 100%, 50%);
-    --couleur--evenement : hsl(180, 100%, 50%);
-    --couleur--footer : hsl(240, 100%, 50%);
+// variables HSL
+
+--nb-element : 5;
+--increment-angle : calc(360 / var(--nb-element)); // 360/5 = 72
+--angle-initial : 180;
+--hu1 : var(--angle-initial);
+--hu2 : calc(var(--hu1) + var(--increment-angle));
+--hu3 : calc(var(--hu2) + var(--increment-angle));
+--hu4 : calc(var(--hu3) + var(--increment-angle));
+--hu5 : calc(var(--hu4) + var(--increment-angle));
+
+--s-couleur-arriere : 50%; 
+--l-couleur-arriere : 50%;
+--s-couleur : 70%;
+--l-couleur : 50%; 
+
+    --couleur-arriere-entete : hsl(var(--hu1), var(--s-couleur-arriere), var(--l-couleur-arriere));
+    --couleur-arriere-accueil : hsl(var(--hu2), var(--s-couleur-arriere), var(--l-couleur-arriere));
+    --couleur-arriere-galerie : hsl(var(--hu3), var(--s-couleur-arriere), var(--l-couleur-arriere));
+    --couleur-arriere-evenement : hsl(var(--hu4), var(--s-couleur-arriere), var(--l-couleur-arriere));
+    --couleur-arriere-footer : hsl(var(--hu5), var(--s-couleur-arriere), var(--l-couleur-arriere));
+
+    --couleur-entete : hsl(var(--hu1), var(--s-couleur), var(--l-couleur));
+    --couleur-accueil : hsl(var(--hu2), var(--s-couleur), var(--l-couleur));
+    --couleur-galerie : hsl(var(--hu3), var(--s-couleur), var(--l-couleur));
+    --couleur-evenement : hsl(var(--hu4), var(--s-couleur), var(--l-couleur));
+    --couleur-footer : hsl(var(--hu5), var(--s-couleur), var(--l-couleur));
 
     --couleur-arriere-body : #000;
     --transparence-elevee : 0.1;
-    
+
+    // --couleur-arriere-entete : rgb(255, 140, 0);
+    // --couleur-arriere-accueil : #ddd;
+    // --couleur-arriere-galerie : #ccc;
+    // --couleur-arriere-evenement : #dd1;
+    // --couleur-arriere-footer : #aaa;
+
     // --couleur-texte-h1 : #222;
     // --couleur-texte-h2 : #444;
     // --couleur-texte-h3 : rgb(157, 153, 150);
