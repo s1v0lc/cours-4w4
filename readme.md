@@ -1,15 +1,19 @@
-# Laboratoire #1
-## Introduction à Sass et révision HTML/CSS
+# Laboratoire #2
+## Création d'une palette de couleur avec la fonction CSS hsl()
+## Ajouter des effets de vague et une diagonale
 
-### Concevoir une page de plusieurs sections qui contient éléments:
+### Continuer la version du Laboratoire #1 
 - Dossier Sass
-- normalize.css
-- style.css
+- style.scss
+- Utilisation de différentes techniques pour élaborer une palette de couleur
+- Utilisation de la regle 60-30-10
 
-A réaliser :
+À réaliser :
 - Compléter chacune des règles de style des éléments H
 - Changer les couleur de background et couleur des H
+- Ajouter les éléments bouton, lien a, bloquotes
 - Améliorer le design général sans être trop spécifique
-- Ajouter deux variables
+- Ajouter plusieurs variables
 - Créer plusieurs commits
 - Une github-page
+- > adresse github-page :

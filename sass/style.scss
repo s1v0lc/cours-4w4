@@ -12,7 +12,7 @@ Requires PHP: 7.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: theme-gr2
-Ce thème a été développé dans le cadre du cours 4A4
+Ce thème a été développé dans le cadre du cours 4W4
 */
 
 /*///////////////////////////// */
@@ -29,3 +29,6 @@ Ce thème a été développé dans le cadre du cours 4A4
 /*///////////////////////////// */ 
 @import "base/h";
 /*///////////////////////////// */
+/* Effets */
+@import "effet/vague";
+@import "effet/diagonale";

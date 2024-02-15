@@ -17,7 +17,7 @@ body{
 .global > header,
 .global > footer {
     width: 1100px;
-    background-color: rgba($color: #000, $alpha: var(--transparence-elevee));
+    // background-color: rgba($color: #000, $alpha: var(--transparence-elevee));
     padding: 5rem 1rem;
     // border: 1px solid #aaa;  
 }
@@ -25,6 +25,7 @@ body{
 #entete {
     background-color: var(--couleur-arriere-entete);
     color: var(--couleur-entete);
+    position: relative;
 }
 #accueil {
     background-color: var(--couleur-arriere-accueil);
@@ -33,6 +34,12 @@ body{
 #galerie {
     background-color: var(--couleur-arriere-galerie);
     color: var(--couleur-galerie);
+    z-index: 1;
+    background: linear-gradient(
+                    180deg,
+                    var(--couleur-arriere-accueil) 50%,
+                    var(--couleur-arriere-evenement) 50%
+                );
 }
 #evenement{
     background-color: var(--couleur-arriere-evenement);

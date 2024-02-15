@@ -11,12 +11,11 @@ Requires PHP: 7.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: theme-gr2
-Ce thème a été développé dans le cadre du cours 4A4
+Ce thème a été développé dans le cadre du cours 4W4
 */
 /*///////////////////////////// */
 /* Variables CSS */
 /*///////////////////////////// */
-/*lien de référence dans l'exemple du prof*/
 :root {
   --nb-element: 5;
   --increment-angle: calc(360 / var(--nb-element));
@@ -66,13 +65,13 @@ body {
 .global > header,
 .global > footer {
   width: 1100px;
-  background-color: rgba(0, 0, 0, var(--transparence-elevee));
   padding: 5rem 1rem;
 }
 
 #entete {
   background-color: var(--couleur-arriere-entete);
   color: var(--couleur-entete);
+  position: relative;
 }
 
 #accueil {
@@ -83,6 +82,8 @@ body {
 #galerie {
   background-color: var(--couleur-arriere-galerie);
   color: var(--couleur-galerie);
+  z-index: 1;
+  background: linear-gradient(180deg, var(--couleur-arriere-accueil) 50%, var(--couleur-arriere-evenement) 50%);
 }
 
 #evenement {
@@ -136,4 +137,42 @@ h6 {
   color: var(--couleur-texte-h6);
 }
 
-/*///////////////////////////// *//*# sourceMappingURL=style.css.map */
+/*///////////////////////////// */
+/* Effets */
+.vague {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.vague svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 73px;
+  transform: rotateY(180deg);
+}
+
+.vague .shape-fill {
+  fill: var(--couleur-arriere-accueil);
+}
+
+.diagonale {
+  position: relative;
+}
+
+.diagonale::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  transform: skewY(-3deg);
+  background-color: var(--couleur-arriere-galerie);
+}/*# sourceMappingURL=style.css.map */
