@@ -8,31 +8,25 @@ voir mdn clamp
 
 h1 {
     font-size: clamp(1rem, 6.2vw - 0.57rem, 3.75rem);
-    color: var(--couleur-texte-h1);
+    text-shadow: 0px 0px 16px var(--couleur-arriere-accueil);
 }
 h2 {
     font-size: clamp(1rem, 6.2vw - 0.57rem, 3.75rem);
-    color: var(--couleur-texte-h2);
 }
 h3 {
     font-size: clamp(1rem, 6.2vw - 0.57rem, 2.5rem);
-    color: var(--couleur-texte-h3);
 }
 h4 {
     font-size: clamp(1rem, 6.2vw - 0.57rem, 2rem);
-    border: groove 10px #ccc;
-    // display: inline;
+    border: outset 10px var(--couleur-galerie);
     margin: 0;
     padding: 0.5rem 1rem;
-    color: var(--couleur-texte-h4);
 }
 h5 {
     font-size: clamp(0.1rem, 6.2vw - 0.57rem, 1.2rem);
-    color: var(--couleur-texte-h5);
 }
 h6 {
     font-size: clamp(0.1rem, 6.2vw - 0.57rem, 0.8rem);
-    color: var(--couleur-texte-h6);
 }
 
 p {}

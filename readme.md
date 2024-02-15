@@ -15,5 +15,4 @@
 - Améliorer le design général sans être trop spécifique
 - Ajouter plusieurs variables
 - Créer plusieurs commits
-- Une github-page
-- > adresse github-page :
+- > adresse github-page : https://s1v0lc.github.io/cours-4w4/

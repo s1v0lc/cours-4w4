@@ -1,46 +1,50 @@
 :root {
 
-// variables HSL
+// Variables HSL de la palette
 
---nb-element : 5;
---increment-angle : calc(360 / var(--nb-element)); // 360/5 = 72
---angle-initial : 180;
---hu1 : var(--angle-initial);
---hu2 : calc(var(--hu1) + var(--increment-angle));
---hu3 : calc(var(--hu2) + var(--increment-angle));
---hu4 : calc(var(--hu3) + var(--increment-angle));
---hu5 : calc(var(--hu4) + var(--increment-angle));
-
---s-couleur-arriere : 80%; 
---l-couleur-arriere : 50%;
+// teintes (deg)
+--hu1 : 163;
+--hu2 : calc(var(--hu1) + -6);
+--hu3 : calc(var(--hu1) + -17);
+--hu4 : calc(var(--hu1) + -163);
+--hu5 : calc(var(--hu1) + -163);
+// saturation
+--s1 : 26%;
+--s2 : calc(var(--s1) + 36%);
+--s3 : calc(var(--s1) + 18%);
+--s4 : calc(var(--s1) + 57%);
+--s5 : calc(var(--s1) + 53%);
+// luminosité
+--l1 : 52%;
+--l2 : calc(var(--l1) + -25%);
+--l3 : calc(var(--l1) + -35%);
+--l4 : calc(var(--l1) + 17%);
+--l5 : calc(var(--l1) + 23%);
 --s-couleur : 100%;
---l-couleur : 80%; 
+--l-couleur : 60%; 
 
-    --couleur-arriere-entete : hsl(var(--hu1), var(--s-couleur-arriere), var(--l-couleur-arriere));
-    --couleur-arriere-accueil : hsl(var(--hu2), var(--s-couleur-arriere), var(--l-couleur-arriere));
-    --couleur-arriere-galerie : hsl(var(--hu3), var(--s-couleur-arriere), var(--l-couleur-arriere));
-    --couleur-arriere-evenement : hsl(var(--hu4), var(--s-couleur-arriere), var(--l-couleur-arriere));
-    --couleur-arriere-footer : hsl(var(--hu5), var(--s-couleur-arriere), var(--l-couleur-arriere));
+// Couleurs du site
 
-    --couleur-entete : hsl(var(--hu1), var(--s-couleur), var(--l-couleur));
-    --couleur-accueil : hsl(var(--hu2), var(--s-couleur), var(--l-couleur));
-    --couleur-galerie : hsl(var(--hu3), var(--s-couleur), var(--l-couleur));
-    --couleur-evenement : hsl(var(--hu4), var(--s-couleur), var(--l-couleur));
-    --couleur-footer : hsl(var(--hu5), var(--s-couleur), var(--l-couleur));
+    --couleur-arriere-entete : hsl(var(--hu1), var(--s1), var(--l1));
+    --couleur-arriere-accueil : hsl(var(--hu2), var(--s2), var(--l2));
+    --couleur-arriere-galerie : hsl(var(--hu3), var(--s3), var(--l3));
+    --couleur-arriere-evenement : hsl(var(--hu2), var(--s2), var(--l2));
+    --couleur-arriere-footer : hsl(var(--hu5), var(--s5), var(--l5));
+
+    --couleur-entete : hsl(var(--hu1), var(--s1), var(--l-couleur));
+    --couleur-accueil : hsl(var(--hu2), var(--s2), var(--l-couleur));
+    --couleur-galerie : hsl(var(--hu3), var(--s3), var(--l-couleur));
+    --couleur-evenement : hsl(var(--hu2), var(--s2), var(--l-couleur));
+    --couleur-footer : hsl(var(--hu5), var(--s5), var(--l-couleur));
 
     --couleur-arriere-body : #000;
     --transparence-elevee : 0.1;
-
-    // --couleur-arriere-entete : rgb(255, 140, 0);
-    // --couleur-arriere-accueil : #ddd;
-    // --couleur-arriere-galerie : #ccc;
-    // --couleur-arriere-evenement : #dd1;
-    // --couleur-arriere-footer : #aaa;
-
-    // --couleur-texte-h1 : #222;
-    // --couleur-texte-h2 : #444;
-    // --couleur-texte-h3 : rgb(157, 153, 150);
-    // --couleur-texte-h4 : #555;
-    // --couleur-texte-h5 : #ccc;
-    // --couleur-texte-h6 : #bbb;
+    
+    /* Color Theme Swatches in HSLA */
+    --summer-1-hsla: hsla(163, 26, 52, 1);
+    --summer-2-hsla: hsla(157, 62, 27, 1);
+    --summer-3-hsla: hsla(146, 44, 17, 1);
+    --summer-4-hsla: hsla(0, 83, 69, 1);
+    --summer-5-hsla: hsla(0, 79, 75, 1);
 }
+    
