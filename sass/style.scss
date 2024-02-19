@@ -15,7 +15,6 @@ Text Domain: theme-gr2
 Ce thème a été développé dans le cadre du cours 4W4
 */
 
-/*///////////////////////////// */
 /* Variables CSS */
 /*///////////////////////////// */
 @import "variables";
@@ -25,13 +24,17 @@ Ce thème a été développé dans le cadre du cours 4W4
 /*///////////////////////////// */ 
 @import "layout";
 @import "entete";
+/*///////////////////////////// */ 
 
 /* Règles de base */
 /*///////////////////////////// */ 
 @import "base/h";
-@import "base/liens";
 @import "base/boutons";
+@import "base/liens";
 /*///////////////////////////// */
+
 /* Effets */
+/*///////////////////////////// */
 @import "effet/vague";
 @import "effet/diagonale";
+/*///////////////////////////// */

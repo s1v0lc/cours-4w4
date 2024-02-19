@@ -1,12 +1,27 @@
 button {
     font-size: clamp(1.375rem, 0.4375rem + 3vw, 2.5rem);
+    padding: 10px 12px;
+    border-radius: 20px;
+    border: 7px groove hsl(33, 50%, 20%);
     cursor: pointer;
+    font-family: 'Prompt', arial, helvetica, sans-serif;
+    color: hsl(33, 50%, 20%);
+    background-image: linear-gradient(160deg, hsl(0, 50%, 50%, 0%) 0%, hsl(33, 50%, 70%) 50%);
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background-position-x: -100px;
+    transition: all 0.5s;
+    
+    &:hover {
+        border: 7px groove hsl(33, 50%, 40%);
+        color: hsl(33, 50%, 40%);
+        // color: var(--hover-texte);
+        background-position-x: -50px;
+        background-image: linear-gradient(160deg, hsl(0, 50%, 50%, 0%) 0%, hsl(33, 50%, 70%) 50%);
+    }
+
+    &:active {
+        color: blue;
+    }
 }
 
-button:hover {
-    color: red;
-}
-
-button:visited {
-    color: blue;
-}
