@@ -24,11 +24,13 @@ Ce thème a été développé dans le cadre du cours 4W4
 /* Règles de la pagination */
 /*///////////////////////////// */ 
 @import "layout";
+@import "entete";
 
 /* Règles de base */
 /*///////////////////////////// */ 
 @import "base/h";
 @import "base/liens";
+@import "base/boutons";
 /*///////////////////////////// */
 /* Effets */
 @import "effet/vague";
