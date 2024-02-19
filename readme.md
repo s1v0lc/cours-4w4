@@ -1,18 +1,26 @@
-# Laboratoire #2
-## Création d'une palette de couleur avec la fonction CSS hsl()
-## Ajouter des effets de vague et une diagonale
+# Exercice #1
+## Reproduire et améliorer la maquette exemple présentée au cours
 
-### Continuer la version du Laboratoire #1 
-- Dossier Sass
-- style.scss
+### Continuer la version du Laboratoire #2 
+- Amélioration du dossier Sass
+- Ajout style.scss
 - Utilisation de différentes techniques pour élaborer une palette de couleur
-- Utilisation de la regle 60-30-10
+    - monochrome (une seule teinte et on fait varier la saturation et la luminosité)
+    - complémentaire (deux teintes à 180deg)
+    - triade (trois teintes de +/- 120deg)
+- Utilisation de la règle 60-30-10
+- Améliorer l'entête en ajoutant une image en background qui s'enligne horizontalement avec les titres de l'entête
+- Création d'un bouton utilisant les variables, la propriété background-image, linear-gradient.
+  Le bouton réagit au événements :hover et :visited
+- Création de lien réagissants aux événements :hover, :visited, :focus
+- Amélioration générale de la pagination
+- Ajout de nouveaux éléments HTML
 
 À réaliser :
-- Compléter chacune des règles de style des éléments H
-- Changer les couleur de background et couleur des H
-- Ajouter les éléments bouton, lien a, bloquotes
-- Améliorer le design général sans être trop spécifique
-- Ajouter plusieurs variables
-- Créer plusieurs commits
+- Améliorer l'entête
+- Ajouter une image
+- Ajouter un bouton
+- Ajouter des liens
+- Améliorer pagination
+- Ajouter de nouveaux éléments HTML
 - > adresse github-page : https://s1v0lc.github.io/cours-4w4/
