@@ -9,10 +9,10 @@ h2 {
     font-size: clamp(1rem, 6.2vw - 0.57rem, 2.5rem);
 }
 h3 {
-    font-size: clamp(1rem, 6.2vw - 0.57rem, 2.2rem);
+    font-size: clamp(1rem, 6.2vw - 0.57rem, 2rem);
 }
 h4 {
-    font-size: clamp(1rem, 6.2vw - 0.57rem, 2rem);
+    font-size: clamp(1rem, 6.2vw - 0.57rem, 1.5rem);
     border: outset 10px var(--couleur-galerie);
     margin: 0;
     padding: 0.5rem 1rem;
@@ -24,10 +24,36 @@ h6 {
     font-size: clamp(0.1rem, 6.2vw - 0.57rem, 0.8rem);
 }
 
-p {color: blue;}
+p {
+    // color: blue;
+}
 
 hr {}
 
 blockquote {
-    background-color: hsl(33, 38%, 90%);
+    background-color: var(--couleur-arriere-evenement);
+    position: relative;
+
+    // Guillemets autour de la
+    &::before, &::after {
+        position: absolute;
+        font-size: 3.5rem;
+        height: 21px;
+    }
+
+    &::before {
+        content: "❝";
+        top: -15px;
+        left: -25px;
+    }
+
+    &::after {
+        content: "❞";
+        right: -25px;
+        bottom: -15px;
+    }
+
+    p {
+        text-align: center;
+    }
 }

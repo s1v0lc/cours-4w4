@@ -16,36 +16,35 @@ Ce thème a été développé dans le cadre du cours 4W4
 /* Variables CSS */
 /*///////////////////////////// */
 :root {
-  --hu1: 163;
-  --hu2: calc(var(--hu1) + -6);
-  --hu3: calc(var(--hu1) + -17);
-  --hu4: calc(var(--hu1) + -163);
-  --hu5: calc(var(--hu1) + -163);
-  --s1: 26%;
-  --s2: calc(var(--s1) + 36%);
-  --s3: calc(var(--s1) + 18%);
-  --s4: calc(var(--s1) + 57%);
-  --s5: calc(var(--s1) + 53%);
-  --l1: 52%;
-  --l2: calc(var(--l1) + -25%);
-  --l3: calc(var(--l1) + -35%);
-  --l4: calc(var(--l1) + 17%);
-  --l5: calc(var(--l1) + 23%);
-  --l-texte: 60%;
-  --couleur-arriere-entete: hsl(182, 46%, 59%);
-  --couleur-arriere-accueil: hsl(var(--hu2), var(--s2), var(--l2));
-  --couleur-arriere-galerie: hsl(var(--hu3), var(--s3), var(--l3));
-  --couleur-arriere-evenement: hsl(var(--hu2), var(--s2), var(--l2));
-  --couleur-arriere-footer: hsl(var(--hu5), var(--s5), var(--l5));
+  --hu1: 182;
+  --hu2: calc(var(--hu1) + -166);
+  --hu3: calc(var(--hu1) + -149);
+  --s1: 46%;
+  --s2: calc(var(--s1) + 25%);
+  --l-texte: 62%;
+  --l-texte2: 58%;
+  --l-fond: 45%;
+  --couleur-arriere-entete: hsl(182, 46%, 58%);
+  --couleur-arriere-accueil: hsl(var(--hu2), var(--s2), var(--l-fond));
+  --couleur-arriere-galerie: hsl(var(--hu1), var(--s1), var(--l-fond));
+  --couleur-arriere-evenement: hsl(var(--hu2), var(--s2), var(--l-fond));
+  --couleur-arriere-footer: hsl(var(--hu1), var(--s1), var(--l-fond));
   --couleur-entete: hsl(16, 70%, 58%);
-  --couleur-accueil: hsl(var(--hu2), var(--s2), var(--l-texte));
-  --couleur-galerie: hsl(var(--hu3), var(--s3), var(--l-texte));
-  --couleur-evenement: hsl(var(--hu2), var(--s2), var(--l-texte));
-  --couleur-footer: hsl(var(--hu5), var(--s5), var(--l-texte));
+  --couleur-accueil: hsl(var(--hu1), var(--s1), var(--l-texte));
+  --couleur-galerie: hsl(var(--hu2), var(--s2), var(--l-texte2));
+  --couleur-evenement: hsl(var(--hu3), var(--s2), var(--l-texte));
+  --couleur-footer: hsl(var(--hu2), var(--s2), var(--l-texte));
+  --b-texte: hsl(33, 50%, 20%);
+  --b-hover-texte: hsl(33, 50%, 40%);
+  --visited-texte: ;
   --transparence-elevee: 0.1;
   --tranparencre-faible: 0.8;
-  --hover-texte: hsl(182, 46%, 55%);
-  --visited-texte: ;
+  --h1-texte: 2rem;
+  --h2-texte: 2rem;
+  --h3-texte: 2rem;
+  --h4-texte: 2rem;
+  --h5-texte: 2rem;
+  --h6-texte: 2rem;
 }
 
 /*///////////////////////////// */
@@ -131,11 +130,11 @@ h2 {
 }
 
 h3 {
-  font-size: clamp(1rem, 6.2vw - 0.57rem, 2.2rem);
+  font-size: clamp(1rem, 6.2vw - 0.57rem, 2rem);
 }
 
 h4 {
-  font-size: clamp(1rem, 6.2vw - 0.57rem, 2rem);
+  font-size: clamp(1rem, 6.2vw - 0.57rem, 1.5rem);
   border: outset 10px var(--couleur-galerie);
   margin: 0;
   padding: 0.5rem 1rem;
@@ -149,22 +148,37 @@ h6 {
   font-size: clamp(0.1rem, 6.2vw - 0.57rem, 0.8rem);
 }
 
-p {
-  color: blue;
-}
-
 blockquote {
-  background-color: hsl(33, 38%, 90%);
+  background-color: var(--couleur-arriere-evenement);
+  position: relative;
+}
+blockquote::before, blockquote::after {
+  position: absolute;
+  font-size: 3.5rem;
+  height: 21px;
+}
+blockquote::before {
+  content: "❝";
+  top: -15px;
+  left: -25px;
+}
+blockquote::after {
+  content: "❞";
+  right: -25px;
+  bottom: -15px;
+}
+blockquote p {
+  text-align: center;
 }
 
 button {
   font-size: clamp(1.375rem, 0.4375rem + 3vw, 2.5rem);
   padding: 10px 12px;
   border-radius: 20px;
-  border: 7px groove hsl(33, 50%, 20%);
+  border: 4px solid hsl(33, 50%, 20%);
   cursor: pointer;
   font-family: "Prompt", arial, helvetica, sans-serif;
-  color: hsl(33, 50%, 20%);
+  color: var(--b-texte);
   background-image: linear-gradient(160deg, hsla(0, 50%, 50%, 0) 0%, hsl(33, 50%, 70%) 50%);
   background-repeat: no-repeat;
   background-size: 150%;
@@ -172,8 +186,8 @@ button {
   transition: all 0.5s;
 }
 button:hover {
-  border: 7px groove hsl(33, 50%, 40%);
-  color: hsl(33, 50%, 40%);
+  border: 4px solid hsl(33, 50%, 40%);
+  color: var(--b-hover-texte);
   background-position-x: -50px;
   background-image: linear-gradient(160deg, hsla(0, 50%, 50%, 0) 0%, hsl(33, 50%, 70%) 50%);
 }
