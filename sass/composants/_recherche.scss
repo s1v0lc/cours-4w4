@@ -2,12 +2,35 @@
     display: flex;
     justify-content: center;
 }
-
+.recherche__input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    content: url(https://s2.svgbox.net/hero-outline.svg?ic=x);
+    height: 24px;
+    width: 24px;
+}
 .recherche__input {
+    border-radius: 10px 0 0 10px;
     display: block;
     border: 1px solid rebeccapurple;
-}
+    background-color: var(--couleur-arriere-evenement);
+    border: none;
+    color: var(--couleur-evenement);
+    padding-left: 2%;
 
+    &::placeholder {
+        padding-left: 2%;
+        color: var(--couleur-evenement);
+        font-weight: bold;
+    }
+    &:focus {
+        outline: none;
+        text-decoration: none;
+        // padding-left: 2%;
+    }
+}
 .recherche__button {
-    background-color: red;
+    cursor: pointer;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    width: auto;
 }
