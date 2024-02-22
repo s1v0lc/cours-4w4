@@ -2,8 +2,14 @@
     background-image: url("images/image_header.png");
     background-repeat: no-repeat;
     background-position: 80% 50%;
-    // background-size: 25%;
 }
+
+@media screen and (max-width: 800px) {
+    .global > header {
+        background-size: 20%;
+        background-position: 90% 50%;
+    }
+  }
 
 .entete_header span {
     display: block;
