@@ -3,3 +3,27 @@
     justify-content: center;
     gap: 2rem;
 }
+
+.sociaux a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background-color: var(--b-texte);
+    transition: all 0.3s;
+
+    &:hover {
+        background-color: var(--couleur-arriere-footer);
+        border: 3px solid var(--b-texte);
+    }
+}
+
+.sociaux a svg {
+    color: var(--couleur-arriere-footer);
+    transition: color 0.3s;
+    
+}
+.sociaux a:hover svg {
+    color: var(--b-texte);
+}

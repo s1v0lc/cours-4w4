@@ -2,18 +2,13 @@
     display: flex;
     justify-content: center;
 }
-.recherche__input::-webkit-search-cancel-button {
-    -webkit-appearance: none;
-    content: url(https://s2.svgbox.net/hero-outline.svg?ic=x);
-    height: 24px;
-    width: 24px;
-}
+
 .recherche__input {
     border-radius: 10px 0 0 10px;
     display: block;
     border: 1px solid rebeccapurple;
-    background-color: var(--couleur-arriere-evenement);
-    border: none;
+    background-color: var(--b-texte);
+    border: 3px solid var(--b-texte);
     color: var(--couleur-evenement);
     padding-left: 2%;
 
@@ -25,12 +20,31 @@
     &:focus {
         outline: none;
         text-decoration: none;
-        // padding-left: 2%;
     }
 }
+
+.recherche__input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    content: url(https://s2.svgbox.net/hero-outline.svg?ic=x);
+    height: 24px;
+    width: 24px;
+}
+
 .recherche__button {
     cursor: pointer;
-    border: none;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(160deg, hsl(0, 50%, 50%, 0%) 0%, hsl(33, 50%, 70%) 50%);
+    border: 3px solid var(--b-texte);
+    border-left: none;
     border-radius: 0 10px 10px 0;
-    width: auto;
+}
+
+.recherche__button svg {
+    color: var(--b-texte);
+    height: 32px;
+    width: 32px;
 }
