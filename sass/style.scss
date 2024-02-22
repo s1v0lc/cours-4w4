@@ -23,7 +23,11 @@ Ce thème a été développé dans le cadre du cours 4W4
 /* Règles de la pagination */
 /*///////////////////////////// */ 
 @import "layout";
+
+/* Sections de la page */
+/*///////////////////////////// */ 
 @import "entete";
+@import "footer";
 /*///////////////////////////// */ 
 
 /* Règles de base */
@@ -37,4 +41,10 @@ Ce thème a été développé dans le cadre du cours 4W4
 /*///////////////////////////// */
 @import "effet/vague";
 @import "effet/diagonale";
+/*///////////////////////////// */
+
+/* Composants */
+/*///////////////////////////// */
+@import "composants/sociaux";
+@import "composants/recherche";
 /*///////////////////////////// */
