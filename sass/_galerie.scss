@@ -1,0 +1,15 @@
+.galerie__section {
+
+    div {
+        display: flex;
+        justify-content: center;
+        row-gap: 0.5vw;
+        column-gap: 0.5vw;
+        flex-wrap: wrap;
+    }
+
+    img {
+        width: 220px;
+        height: 220px;
+    }
+}

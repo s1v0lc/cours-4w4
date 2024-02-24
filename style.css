@@ -127,6 +127,18 @@ body {
   display: block;
 }
 
+.galerie__section div {
+  display: flex;
+  justify-content: center;
+  row-gap: 0.5vw;
+  column-gap: 0.5vw;
+  flex-wrap: wrap;
+}
+.galerie__section img {
+  width: 220px;
+  height: 220px;
+}
+
 .footer__footer {
   display: flex;
   flex-direction: column;
@@ -171,15 +183,16 @@ h6 {
 blockquote {
   background-color: var(--couleur-arriere-evenement);
   position: relative;
-  width: 100%;
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--b-texte);
+  border: 10px inset var(--b-texte);
 }
 blockquote p {
   text-align: center;
+  color: var(--couleur-evenement);
 }
 blockquote p::before, blockquote p::after {
   position: absolute;
@@ -188,13 +201,13 @@ blockquote p::before, blockquote p::after {
 }
 blockquote p::before {
   content: "❝";
-  top: -15px;
-  left: -25px;
+  top: 5px;
+  left: 5px;
 }
 blockquote p::after {
   content: "❞";
-  right: -25px;
-  bottom: -15px;
+  right: 5px;
+  bottom: 25px;
 }
 
 .entete__button {
@@ -221,12 +234,18 @@ blockquote p::after {
 }
 
 a {
+  text-align: center;
   text-decoration: none;
   font-weight: bold;
   border-radius: 15px;
   padding: 5px 7px;
   display: block;
+  color: var(--b-texte);
 }
+a:hover {
+  text-decoration: underline;
+}
+
 /*///////////////////////////// */
 /* Effets */
 /*///////////////////////////// */
