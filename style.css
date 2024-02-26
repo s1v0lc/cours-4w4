@@ -365,4 +365,22 @@ a:hover {
   width: 32px;
 }
 
+.section__cours {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.carte {
+  border: 1px solid #aaa;
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 23%;
+  justify-content: space-between;
+  background-color: var(--couleur-accueil);
+  color: var(--couleur-arriere-accueil);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
 /*///////////////////////////// *//*# sourceMappingURL=style.css.map */
