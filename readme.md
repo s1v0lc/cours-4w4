@@ -1,4 +1,4 @@
-# Exercice #1
+# Laboratoire #3
 ## Reproduire et améliorer la maquette exemple présentée au cours
 
 ### Continuer la version du Laboratoire #2 
@@ -19,7 +19,7 @@
 À réaliser :
 - Améliorer l'entête
 - Ajouter une image
-- Ajouter un bouton
+- Ajouter un boutons
 - Ajouter des liens
 - Améliorer pagination
 - Ajouter de nouveaux éléments HTML

@@ -42,7 +42,7 @@
                 <?php if (have_posts()):
                     while(have_posts()): the_post(); ?>
                     <div class="carte">
-                        <h3><?php the_title(); ?></h3>
+                        <h4><?php the_title(); ?></h4>
                         <p><?= wp_trim_words(get_the_content(), 10); ?></p>
                     </div>
                     <?php endwhile; ?>

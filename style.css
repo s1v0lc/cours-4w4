@@ -167,9 +167,7 @@ h3 {
 
 h4 {
   font-size: clamp(1rem, 6.2vw - 0.57rem, 1.5rem);
-  border: outset 10px var(--couleur-galerie);
   margin: 0;
-  padding: 0.5rem 1rem;
 }
 
 h5 {
