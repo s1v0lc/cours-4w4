@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thème gr2</title>
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/normalize.css'; ?>">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/style.css'; ?>">
+    <link rel="stylesheet" href="<?= get_template_directory_uri() . '/normalize.css'; ?>">
+    <link rel="stylesheet" href="<?= get_template_directory_uri() . '/style.css'; ?>">
+
+    <!-- <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css"> -->
 </head>
 <body>
     <div id="entete" class="global">
@@ -40,10 +43,16 @@
                 } -->
 
                 <?php if (have_posts()):
-                    while(have_posts()): the_post(); ?>
+                    while(have_posts()): the_post(); 
+                    $titre = get_the_title();
+                    $sigle = substr($titre, 0, 7);
+                    $duree = substr($titre, strpos($titre,"("), 6);
+                    ?>
                     <div class="carte">
-                        <h4><?php the_title(); ?></h4>
+                        <h5><?= $sigle ?></h5>
+                        <h4 class="titre"><?= substr($titre, 8, -6); ?></h4>
                         <p><?= wp_trim_words(get_the_content(), 10); ?></p>
+                        <h5><?= $duree ?></h5>
                     </div>
                     <?php endwhile; ?>
                 <?php endif; ?>
@@ -54,14 +63,14 @@
         <section class="galerie__section">
             <h2>Galerie</h2>
             <div>
-                <img src="images/galerie_01.jpg" alt="">
-                <img src="images/galerie_02.jpg" alt="">
-                <img src="images/galerie_03.jpg" alt="">
-                <img src="images/galerie_04.jpg" alt="">
-                <img src="images/galerie_05.jpg" alt="">
-                <img src="images/galerie_06.jpg" alt="">
-                <img src="images/galerie_07.jpg" alt="">
-                <img src="images/galerie_08.jpg" alt="">
+                <img src="<?= get_template_directory_uri() . '/images/galerie_01.jpg'; ?>" alt="">
+                <img src="<?= get_template_directory_uri() . '/images/galerie_02.jpg'; ?>" alt="">
+                <img src="<?= get_template_directory_uri() . '/images/galerie_03.jpg'; ?>" alt="">
+                <img src="<?= get_template_directory_uri() . '/images/galerie_04.jpg'; ?>" alt="">
+                <img src="<?= get_template_directory_uri() . '/images/galerie_05.jpg'; ?>" alt="">
+                <img src="<?= get_template_directory_uri() . '/images/galerie_06.jpg'; ?>" alt="">
+                <img src="<?= get_template_directory_uri() . '/images/galerie_07.jpg'; ?>" alt="">
+                <img src="<?= get_template_directory_uri() . '/images/galerie_08.jpg'; ?>" alt="">
             </div>
             <blockquote cite="moi">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quaerat mollitia veritatis id? Soluta, excepturi.</p>

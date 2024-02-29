@@ -1,26 +1,28 @@
-# Laboratoire #3
-## Reproduire et améliorer la maquette exemple présentée au cours
+# Labo #3
+## Création d'un site WP.
+- Adaptation du thème de exercice #1
+- Création du modèle index.php
+- Création de la branche labo3
+- minimum 3 commits
+- Un Readme.md qui contiendra:
+    - Le nom de l'auteur
+    - L'objectif du labo3
+    - Les réalisations
+    - Un lien vers la github-page
+- Décomposer le titre de chaque cours:
+    - sigle du cours ex: 582-4W4
+    - le titre du cours  ex: Conception d'interface et développement Web
+    - la durée du cours : 90h
 
-### Continuer la version du Laboratoire #2 
-- Amélioration du dossier Sass
-- Ajout style.scss
-- Utilisation de différentes techniques pour élaborer une palette de couleur
-    - monochrome (une seule teinte et on fait varier la saturation et la luminosité)
-    - complémentaire (deux teintes à 180deg)
-    - triade (trois teintes de +/- 120deg)
-- Utilisation de la règle 60-30-10
-- Améliorer l'entête en ajoutant une image en background qui s'enligne horizontalement avec les titres de l'entête
-- Création d'un bouton utilisant les variables, la propriété background-image, linear-gradient.
-  Le bouton réagit au événements :hover et :visited
-- Création de lien réagissants aux événements :hover, :visited, :focus
-- Amélioration générale de la pagination
-- Ajout de nouveaux éléments HTML
+- Garder les 30 premiers mots de la description du cours.
 
-À réaliser :
-- Améliorer l'entête
-- Ajouter une image
-- Ajouter un boutons
-- Ajouter des liens
-- Améliorer pagination
-- Ajouter de nouveaux éléments HTML
+### La section galerie affichera la liste des cours du TIM en 3 colonnes.
+- La liste devra s'adapter aux différentes largeurs de fenêtre.
+- Chacune des cartes de cours sera formatée en utilisant les flex box
+
+### Barème de correction
+- Organisation du code, 3 commits minimum (point)
+- Résultat sous forme de github page (.5 point)
+- Design global de la page (.5 point)
+
 - > adresse github-page : https://s1v0lc.github.io/cours-4w4/

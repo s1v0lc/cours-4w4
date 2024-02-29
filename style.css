@@ -172,6 +172,7 @@ h4 {
 
 h5 {
   font-size: clamp(0.1rem, 6.2vw - 0.57rem, 1.2rem);
+  margin: 0;
 }
 
 h6 {
@@ -365,11 +366,13 @@ a:hover {
 
 .section__cours {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
 }
 
 .carte {
+  min-width: 220px;
   border: 1px solid #aaa;
   display: flex;
   flex-direction: column;
@@ -379,6 +382,12 @@ a:hover {
   color: var(--couleur-arriere-accueil);
   padding: 1rem;
   border-radius: 10px;
+}
+.carte .titre {
+  flex-grow: 3;
+}
+.carte .h5:nth-of-type(2) {
+  flex-grow: 1;
 }
 
 /*///////////////////////////// *//*# sourceMappingURL=style.css.map */
