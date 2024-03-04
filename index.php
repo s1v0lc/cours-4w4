@@ -11,9 +11,14 @@
     <link rel="stylesheet" href="style.css"> -->
 </head>
 <body>
+    <div id="menu" class="global">
+        <div class="entete_menu">
+            <?php wp_nav_menu(); ?>
+        </div>
+    </div>
     <div id="entete" class="global">
         <header class="entete_header">
-            <h1>Thème du groupe #2</h1>
+            <h1 class="bgc-texte">Thème du groupe #2</h1>
             <h2>4W4 - Conception d'interface <span>et développement Web</span></h2>
             <h3>TIM - Collège Maisonneuve</h3>
             <button class="entete__button">Événements</button>

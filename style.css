@@ -76,6 +76,10 @@ body {
   padding: 5rem 1rem;
 }
 
+.global > .entete_menu {
+  width: 100%;
+}
+
 .global > header {
   flex: 0 1 1300px;
 }
@@ -390,4 +394,26 @@ a:hover {
   flex-grow: 1;
 }
 
+.entete__menu {
+  width: 100%;
+}
+
+.menu-entete-container {
+  width: 100%;
+  background-color: var(--b-hover-texte);
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+.menu-item {
+  color: var(--b-texte);
+}
+
+/*///////////////////////////// */
+/* utile */
+/*///////////////////////////// */
 /*///////////////////////////// *//*# sourceMappingURL=style.css.map */
