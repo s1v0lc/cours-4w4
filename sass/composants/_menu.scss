@@ -11,12 +11,13 @@
 //                 </nav>
 #menu { //entete
     z-index: 100;
-    width: 30vw;
+    width: 50vw;
+    height: 70vh;
     min-width: fit-content;
     position: absolute;
     @media screen and (min-width:700px) {
         width: 100vw;
-        // position: static;
+        height: unset;
     }
 }
 
@@ -24,18 +25,25 @@
     width: 100%;
     border: 5px solid var(--b-hover-texte);
     background-color: var(--b-texte);
+    @media screen and (min-width:700px) {
+        height: 10vh;
+    }
 }
 
 .menu { //ul
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: space-around;
+    align-items: center;
     list-style-type: none;
-    padding: 0;
+    padding: 10%;
     @media screen and (min-width:700px) {
         flex-direction: row;
         justify-content: space-around;
+        height: inherit;
+        padding: 0%;
+        margin: 0;
     }
 }
 
@@ -46,11 +54,10 @@
 .menu-item a {
     text-decoration: none;
     color: var(--couleur-evenement);
-    // background-color: black;
-    text-align: left;
-    font-size: var(--h2);
+    text-align: center;
+    font-size: 2rem;
     @media screen and (min-width:700px) {
-        text-align: center;
+        font-size: unset;
     }
 }
 
