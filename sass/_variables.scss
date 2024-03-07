@@ -20,6 +20,8 @@
     --couleur-arriere-galerie : hsl(var(--hu1), var(--s1), var(--l-fond));
     --couleur-arriere-evenement : hsl(var(--hu2), var(--s2), var(--l-fond));
     --couleur-arriere-footer : hsl(var(--hu1), var(--s1), var(--l-fond));
+
+    --_couleur-arriere-vague : hsl(var(--hu2), var(--s2), var(--l-fond));
     // Texte des sections
     --couleur-entete : hsl(var(--hu2), var(--s2), var(--l-texte2));
     --couleur-accueil : hsl(var(--hu1), var(--s1), var(--l-texte));
@@ -35,11 +37,12 @@
 // Opacité
     --transparence-elevee : 0.1;
     --tranparencre-faible : 0.8;
+
 // Tailles textes
     --h1-texte : 2rem;
-    --h2-texte : 2rem;
-    --h3-texte : 2rem;
+    --h2-texte : clamp(1rem, 6.2vw - 0.57rem, 2.5rem);
+    --h3-texte : clamp(0.8rem, 6.2vw - 0.57rem, 2rem);
     --h4-texte : 2rem;
     --h5-texte : 2rem;
-    --h6-texte : 2rem;
+    --h6-texte : 2rem; 
 }

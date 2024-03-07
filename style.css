@@ -29,6 +29,7 @@ Ce thème a été développé dans le cadre du cours 4W4
   --couleur-arriere-galerie: hsl(var(--hu1), var(--s1), var(--l-fond));
   --couleur-arriere-evenement: hsl(var(--hu2), var(--s2), var(--l-fond));
   --couleur-arriere-footer: hsl(var(--hu1), var(--s1), var(--l-fond));
+  --_couleur-arriere-vague: hsl(var(--hu2), var(--s2), var(--l-fond));
   --couleur-entete: hsl(var(--hu2), var(--s2), var(--l-texte2));
   --couleur-accueil: hsl(var(--hu1), var(--s1), var(--l-texte));
   --couleur-galerie: hsl(var(--hu2), var(--s2), var(--l-texte2));
@@ -40,8 +41,8 @@ Ce thème a été développé dans le cadre du cours 4W4
   --transparence-elevee: 0.1;
   --tranparencre-faible: 0.8;
   --h1-texte: 2rem;
-  --h2-texte: 2rem;
-  --h3-texte: 2rem;
+  --h2-texte: clamp(1rem, 6.2vw - 0.57rem, 2.5rem);
+  --h3-texte: clamp(0.8rem, 6.2vw - 0.57rem, 2rem);
   --h4-texte: 2rem;
   --h5-texte: 2rem;
   --h6-texte: 2rem;
@@ -80,8 +81,12 @@ body {
   width: 100%;
 }
 
-.global > header {
+.global > section {
   flex: 0 1 1300px;
+}
+
+.entete_menu, .entete_header {
+  flex: 0 1 1500px;
 }
 
 #entete {
@@ -122,7 +127,7 @@ body {
 }
 
 @media screen and (max-width: 800px) {
-  .global > header {
+  .global > section {
     background-size: 20%;
     background-position: 90% 50%;
   }
@@ -270,6 +275,10 @@ a:hover {
   transform: rotateY(180deg);
 }
 
+.remplissage {
+  fill: var(--_couleur-arriere-vague);
+}
+
 .diagonale {
   position: relative;
 }
@@ -394,23 +403,80 @@ a:hover {
   flex-grow: 1;
 }
 
-.entete__menu {
-  width: 100%;
+#menu {
+  z-index: 100;
+  width: 30vw;
+  min-width: fit-content;
+  position: absolute;
+}
+@media screen and (min-width: 700px) {
+  #menu {
+    width: 100vw;
+  }
 }
 
-.menu-entete-container {
+.menu-principal-container {
   width: 100%;
-  background-color: var(--b-hover-texte);
+  border: 5px solid var(--b-hover-texte);
+  background-color: var(--b-texte);
 }
 
 .menu {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   list-style-type: none;
+  padding: 0;
+}
+@media screen and (min-width: 700px) {
+  .menu {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 
-.menu-item {
-  color: var(--b-texte);
+.menu-item a {
+  text-decoration: none;
+  color: var(--couleur-evenement);
+  text-align: left;
+  font-size: var(--h2);
+}
+@media screen and (min-width: 700px) {
+  .menu-item a {
+    text-align: center;
+  }
+}
+
+#chk_burger {
+  display: none;
+}
+
+#burger {
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+@media screen and (min-width: 700px) {
+  #burger {
+    display: none;
+  }
+}
+
+#chk_burger ~ .menu-principal-container {
+  transition: transform 0.3s;
+}
+
+#chk_burger:checked ~ .menu-principal-container {
+  transform: translate(-100%, 0);
+}
+@media screen and (min-width: 700px) {
+  #chk_burger:checked ~ .menu-principal-container {
+    transform: unset;
+  }
 }
 
 /*///////////////////////////// */

@@ -1,34 +1,82 @@
-// <div id="menu" class="global">
-//         <div class="entete_menu">
-//             // Généré par wp_nav_menu
-//             <div class="menu-entete-container">
-//                 <ul id="menu-entete" class="menu">
-//                     <li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-post current-menu-item menu-item-32"><a href="http://localhost:8080/4w4_clovis/2020/10/07/582-6n3-stage-285h/" aria-current="page">582-6N3 Stage (285h)</a></li>
-//                     <li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-33"><a href="http://localhost:8080/4w4_clovis/2020/10/07/582-5mbtechnologies-emergentes-et-avancees-volet-creation-60h/">582-5MB	Technologies émergentes et avancées – volet Création (60h)</a></li>
-//                     <li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-34"><a href="http://localhost:8080/4w4_clovis/2020/10/07/582-5w5-projet-web-en-equipe-105h/">582-5W5	Projet Web en équipe (105h)</a></li>
-//                     <li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-35"><a href="http://localhost:8080/4w4_clovis/2020/10/07/350-5n1-communication-et-dynamique-dune-equipe-de-travail-45h/">350-5N1 Communication et dynamique d’une équipe de travail (45h)</a></li>
-//                     <li id="menu-item-36" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-36"><a href="http://localhost:8080/4w4_clovis/2020/10/07/393-5e1-methodes-de-recherche-et-preparation-au-marche-du-travail-45h/">393-5E1 Méthodes de recherche et préparation au marché du travail (45h)</a></li>
-//                 </ul>
-//             </div>        
-//         </div>
-// </div>
-.entete__menu {
-    // border: 1px solid #ccc;
-    width: 100%;
+// <nav class="menu-principal-container">
+//                     <ul id="menu-principal" class="menu">
+//                         <li id="menu-item-32"
+//                             class="menu-item menu-item-type-post_type menu-item-object-post menu-item-32"><a
+//                                 href="http://localhost:8080/4w4_clovis/2020/10/07/582-6n3-stage-285h/">Stage</a></li>
+//                         <li id="menu-item-33"
+//                             class="menu-item menu-item-type-post_type menu-item-object-post menu-item-33"><a
+//                                 href="http://localhost:8080/4w4_clovis/2020/10/07/582-5mbtechnologies-emergentes-et-avancees-volet-creation-60h/">Technologies
+//                                 émergentes</a></li>
+//                     </ul>
+//                 </nav>
+#menu { //entete
+    z-index: 100;
+    width: 30vw;
+    min-width: fit-content;
+    position: absolute;
+    @media screen and (min-width:700px) {
+        width: 100vw;
+        // position: static;
+    }
 }
 
-.menu-entete-container { //div
-    // border: 1px solid #ccc;
+.menu-principal-container { //nav
     width: 100%;
-    background-color: var(--b-hover-texte);
+    border: 5px solid var(--b-hover-texte);
+    background-color: var(--b-texte);
 }
 
 .menu { //ul
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     list-style-type: none;
+    padding: 0;
+    @media screen and (min-width:700px) {
+        flex-direction: row;
+        justify-content: space-around;
+    }
 }
 
 .menu-item { //li
-    color: var(--b-texte);
+
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: var(--couleur-evenement);
+    // background-color: black;
+    text-align: left;
+    font-size: var(--h2);
+    @media screen and (min-width:700px) {
+        text-align: center;
+    }
+}
+
+#chk_burger { //checkbox
+    display: none;
+}
+
+#burger { //icone du checkbox
+    display: block;
+    cursor: pointer;
+    user-select: none;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    @media screen and (min-width:700px) {
+        display: none;
+    }
+}
+
+#chk_burger~.menu-principal-container {
+    transition: transform 0.3s;
+}
+
+#chk_burger:checked~.menu-principal-container {
+    transform: translate(-100%, 0);
+    @media screen and (min-width:700px) {
+       transform: unset;
+    }
 }

@@ -28,8 +28,12 @@ body{
     width: 100%;
 }
 
-.global > header {
+.global > section {
     flex: 0 1 1300px;
+}
+
+.entete_menu, .entete_header {
+    flex: 0 1 1500px;
 }
 
 #entete {
