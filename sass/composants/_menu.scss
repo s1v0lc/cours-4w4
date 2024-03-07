@@ -15,10 +15,9 @@
     height: 70vh;
     min-width: fit-content;
     position: fixed;
-    
     @media screen and (min-width:700px) {
-        width: 100vw;
         height: unset;
+        width: 100vw;
     }
 }
 
@@ -39,7 +38,7 @@
     align-items: center;
     list-style-type: none;
     padding: 10%;
-    pointer-events: none;
+    // pointer-events: none;
     @media screen and (min-width:700px) {
         flex-direction: row;
         justify-content: space-around;
@@ -90,6 +89,9 @@
 #chk_burger~.menu-principal-container {
     transition: transform 0.3s;
     transform: translate(100%, 0);
+    @media screen and (min-width:700px) {
+        transform: translate(0%, 0);
+     }
 }
 #chk_burger:checked~#burger {
     background-color: var(--couleur-evenement);
@@ -97,6 +99,8 @@
 
 #chk_burger:checked~.menu-principal-container {
     transform: translate(0, 0);
+    pointer-events: all;
+    // background-color: red;
     @media screen and (min-width:700px) {
        transform: unset;
     }

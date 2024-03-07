@@ -412,8 +412,8 @@ a:hover {
 }
 @media screen and (min-width: 700px) {
   #menu {
-    width: 100vw;
     height: unset;
+    width: 100vw;
   }
 }
 
@@ -436,7 +436,6 @@ a:hover {
   align-items: center;
   list-style-type: none;
   padding: 10%;
-  pointer-events: none;
 }
 @media screen and (min-width: 700px) {
   .menu {
@@ -491,6 +490,11 @@ a:hover {
   transition: transform 0.3s;
   transform: translate(100%, 0);
 }
+@media screen and (min-width: 700px) {
+  #chk_burger ~ .menu-principal-container {
+    transform: translate(0%, 0);
+  }
+}
 
 #chk_burger:checked ~ #burger {
   background-color: var(--couleur-evenement);
@@ -498,6 +502,7 @@ a:hover {
 
 #chk_burger:checked ~ .menu-principal-container {
   transform: translate(0, 0);
+  pointer-events: all;
 }
 @media screen and (min-width: 700px) {
   #chk_burger:checked ~ .menu-principal-container {
