@@ -11,10 +11,11 @@
 //                 </nav>
 #menu { //entete
     z-index: 100;
-    width: 50vw;
+    width: 100vw;
     height: 70vh;
     min-width: fit-content;
-    position: absolute;
+    position: fixed;
+    
     @media screen and (min-width:700px) {
         width: 100vw;
         height: unset;
@@ -38,15 +39,21 @@
     align-items: center;
     list-style-type: none;
     padding: 10%;
+    pointer-events: none;
     @media screen and (min-width:700px) {
         flex-direction: row;
         justify-content: space-around;
         height: inherit;
-        padding: 0%;
-        margin: 0;
+        padding: 2%;
+        margin: unset;
     }
 }
 
+#menu label {
+    background-color: white;
+    border-radius: 50px;
+    padding: 20px;
+}
 .menu-item { //li
 
 }
@@ -56,8 +63,9 @@
     color: var(--couleur-evenement);
     text-align: center;
     font-size: 2rem;
+    user-select: none;
     @media screen and (min-width:700px) {
-        font-size: unset;
+        font-size: 1.5rem;
     }
 }
 
@@ -66,12 +74,14 @@
 }
 
 #burger { //icone du checkbox
+    z-index: 1000;
     display: block;
     cursor: pointer;
     user-select: none;
-    position: absolute;
-    top: 5px;
-    left: 5px;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    box-shadow: 0 2px 8px 0px #555;
     @media screen and (min-width:700px) {
         display: none;
     }
@@ -79,10 +89,14 @@
 
 #chk_burger~.menu-principal-container {
     transition: transform 0.3s;
+    transform: translate(100%, 0);
+}
+#chk_burger:checked~#burger {
+    background-color: var(--couleur-evenement);
 }
 
 #chk_burger:checked~.menu-principal-container {
-    transform: translate(-100%, 0);
+    transform: translate(0, 0);
     @media screen and (min-width:700px) {
        transform: unset;
     }
