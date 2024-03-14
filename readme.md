@@ -1,4 +1,20 @@
-# Labo #3
+# TP1 - Club de voyage #
+
+### Objectifs:
+ créer un site web pour un club de voyage qui permettra de mettre en valeur les différentes destinations de voyages
+
+### Auteur:
+Clovis Gauthier
+
+### Groupe:
+?
+
+### Description du projet:
+
+### Liens URL:
+- Lien vers le serveur distant whc.ca
+- Lien vers ghp
+
 ## Création d'un site WP.
 - Adaptation du thème de exercice #1
 - Création du modèle index.php
