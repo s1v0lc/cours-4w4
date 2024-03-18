@@ -65,6 +65,10 @@ body {
   font-family: "Prompt", arial, helvetica, sans-serif;
 }
 
+body > h2 {
+  position: absolute;
+}
+
 .global {
   display: flex;
   justify-content: center;
@@ -402,19 +406,26 @@ a:hover {
 .carte .h5:nth-of-type(2) {
   flex-grow: 1;
 }
+.carte .post-categories {
+  list-style-type: none;
+  display: flex;
+}
 
 #menu {
   z-index: 100;
-  width: 100vw;
-  height: 70vh;
-  min-width: fit-content;
+  background-color: gray;
   position: fixed;
 }
 @media screen and (min-width: 700px) {
   #menu {
-    height: unset;
+    height: 20vh;
     width: 100vw;
   }
+}
+
+#menu a img {
+  width: 50px;
+  height: 50px;
 }
 
 .menu-principal-container {

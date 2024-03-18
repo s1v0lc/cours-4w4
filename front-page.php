@@ -8,8 +8,6 @@
 <h2>Front-page.php</h2>
 <div id="entete" class="global">
         <section class="entete__header">  
-                        <!-- facebook -->
-
             <div class="entete__header__texte">    
                 <h1 class="bgc-text"><?= get_bloginfo('name'); ?></h1>
                 <h2 class="bgc-text"><?= get_bloginfo('description'); ?></h2>
@@ -35,13 +33,16 @@
             }
         }
   */
+// the_title() // echo du titre
+// get_the_title // string du titre
   ?>      
   <?php if (have_posts()):
         while(have_posts()): the_post(); ?>
         <div class="carte">
             <h4><?php the_title() ?></h4>
             <p><?= wp_trim_words(get_the_content(),10); ?></p>
-            <p><a href="<?= get_permalink(); ?>">La suite</a> </p>
+            <p><a href="<?= get_permalink(); ?>">Lire plus</a> </p>
+            <?php the_category() ?>
         </div>
        <?php endwhile; ?>
     <?php endif; ?>

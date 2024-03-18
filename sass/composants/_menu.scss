@@ -11,14 +11,20 @@
 //                 </nav>
 #menu { //entete
     z-index: 100;
-    width: 100vw;
-    height: 70vh;
-    min-width: fit-content;
+    // width: 100vw;
+    // height: 50vh;
+    background-color: gray;
+    // min-width: fit-content;
     position: fixed;
     @media screen and (min-width:700px) {
-        height: unset;
+        height: 20vh;
         width: 100vw;
     }
+}
+
+#menu a img {
+    width: 50px;
+    height: 50px;
 }
 
 .menu-principal-container { //nav
