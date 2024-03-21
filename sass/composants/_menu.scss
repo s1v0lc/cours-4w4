@@ -11,10 +11,6 @@
 //                 </nav>
 #menu { //entete
     z-index: 100;
-    // width: 100vw;
-    // height: 50vh;
-    background-color: gray;
-    // min-width: fit-content;
     position: fixed;
     @media screen and (min-width:700px) {
         height: 20vh;
@@ -29,8 +25,8 @@
 
 .menu-principal-container { //nav
     width: 100%;
-    border: 5px solid var(--b-hover-texte);
-    background-color: var(--b-texte);
+    border: 5px solid $--clr-bleu-moyen;
+    background-color: $--clr-brun-moyen;
     @media screen and (min-width:700px) {
         height: 10vh;
     }
@@ -41,15 +37,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+    align-items: stretch;
     list-style-type: none;
-    padding: 10%;
-    // pointer-events: none;
     @media screen and (min-width:700px) {
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: center;
         height: inherit;
-        padding: 2%;
+        padding: 0%;
         margin: unset;
     }
 }
@@ -60,7 +54,8 @@
     padding: 20px;
 }
 .menu-item { //li
-
+    flex-grow: 1;
+    background-image: linear-gradient(160deg, $--clr-brun-pale 0%, $--clr-brun-leger 50%);
 }
 
 .menu-item a {
@@ -106,7 +101,6 @@
 #chk_burger:checked~.menu-principal-container {
     transform: translate(0, 0);
     pointer-events: all;
-    // background-color: red;
     @media screen and (min-width:700px) {
        transform: unset;
     }

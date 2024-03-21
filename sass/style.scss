@@ -15,10 +15,12 @@ Text Domain: theme-gr2
 Ce thème a été développé dans le cadre du cours 4W4
 */
 
-/* Variables CSS */
+/* utile */
 /*///////////////////////////// */
-@import "variables";
-/*///////////////////////////// */ 
+@import "utile/couleurs";
+@import "utile/couleurs-class";
+@import "utile/local";
+/*///////////////////////////// */
  
 /* Règles de la pagination */
 /*///////////////////////////// */ 
@@ -52,7 +54,3 @@ Ce thème a été développé dans le cadre du cours 4W4
 @import "composants/menu";
 /*///////////////////////////// */
 
-/* utile */
-/*///////////////////////////// */
-@import "utile/local";
-/*///////////////////////////// */

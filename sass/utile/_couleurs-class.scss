@@ -1,0 +1,43 @@
+@use "sass:list";
+
+/* création des clases de couleurs
+    .clr-primaire-100()
+    .clr-ternaire-400()
+*/
+@each $nom,
+$couleurs in $defaut {
+
+    @each $valeur,
+    $couleur in $couleurs {
+        .clr-#{$nom}-#{$valeur} {
+            color : #{$couleur};
+
+        }
+
+        .bck-#{$nom}-#{$valeur} {
+
+            background-color: #{$couleur};
+        }
+    }
+}
+
+/* Définit la règle de style à partir d'une couleur de texte $clr et une ou plusieurs couleurs en backgroung $bck */
+@mixin couleur-agencement($clr, $bck) {
+    color: $clr;
+
+    @if(list.length($bck)==1) {
+        background-color: $bck;
+    }
+
+    @else {
+        background-image: linear-gradient(-90deg, $bck);
+    }
+}
+
+/* création de l'ensemble de regles de styles de l'agencement de couleurs */
+@each $valeur,
+$clr in $agencement-couleur {
+    .clr-agencement-#{$valeur} {
+        @include couleur-agencement($clr...);
+    }
+}
