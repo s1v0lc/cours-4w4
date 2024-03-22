@@ -14,7 +14,6 @@
     position: fixed;
     @media screen and (min-width:700px) {
         height: 13vh;
-        // min-height: fit-content;
         width: 100vw;
     }
 }
@@ -57,10 +56,19 @@
 
 .menu-item { //li
     flex-basis: 12.5%; // 100/8
-    background-image: linear-gradient(160deg, $--clr-brun-pale 0%, $--clr-brun-leger 50%);
     border-right: 2px solid $--clr-brun-moyen;
+    background-position-x: 0;
+    background-size: 200px;
+    // background-color: $--clr-vert-moyen;
+    background-position-y: 0px;
+    background-image: linear-gradient(0deg, $--clr-vert-moyen 0%, $--clr-brun-leger 120%);
+    transition: background-position-y 0.3s linear;
     &:last-of-type {
         border-right: none;
+    }
+    &:hover {
+        background-position-y: -100px;
+        // background-image: linear-gradient(160deg, $--clr-vert-moyen 80%, $--clr-brun-leger 150%);
     }
 }
 
@@ -71,9 +79,12 @@
     width: 100%;
     height: 100%;
     text-decoration: none;
-    color: $--clr-vert-moyen;
+    color: $--clr-brun-pale;
     font-size: 2rem;
     user-select: none;
+    &:hover {
+        color: $--clr-vert-moyen;
+    }
     @media screen and (min-width:700px) {
         font-size: 1.5rem;
     }

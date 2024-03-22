@@ -616,11 +616,18 @@ a:hover {
 
 .menu-item {
   flex-basis: 12.5%;
-  background-image: linear-gradient(160deg, hsl(39, 38%, 90%) 0%, hsl(39, 38%, 70%) 50%);
   border-right: 2px solid hsl(39, 38%, 40%);
+  background-position-x: 0;
+  background-size: 200px;
+  background-position-y: 0px;
+  background-image: linear-gradient(0deg, hsl(67, 50%, 30%) 0%, hsl(39, 38%, 70%) 120%);
+  transition: background-position-y 0.3s linear;
 }
 .menu-item:last-of-type {
   border-right: none;
+}
+.menu-item:hover {
+  background-position-y: -100px;
 }
 
 .menu-item a {
@@ -630,9 +637,12 @@ a:hover {
   width: 100%;
   height: 100%;
   text-decoration: none;
-  color: hsl(67, 50%, 30%);
+  color: hsl(39, 38%, 90%);
   font-size: 2rem;
   user-select: none;
+}
+.menu-item a:hover {
+  color: hsl(67, 50%, 30%);
 }
 @media screen and (min-width: 700px) {
   .menu-item a {
