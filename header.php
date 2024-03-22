@@ -21,5 +21,6 @@
             </label>
             <input id="chk_burger" type="checkbox">
             <?php wp_nav_menu(array("container"=>"nav")); ?>
+            <div class="trait"></div>
         </header>
     </div>
