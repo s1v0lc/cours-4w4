@@ -64,11 +64,11 @@ Ce thème a été développé dans le cadre du cours 4W4
 }
 
 .clr-primaire-200 {
-  color: hsl(67, 50%, 50%);
+  color: hsl(67, 50%, 40%);
 }
 
 .bck-primaire-200 {
-  background-color: hsl(67, 50%, 50%);
+  background-color: hsl(67, 50%, 40%);
 }
 
 .clr-primaire-300 {
@@ -187,7 +187,7 @@ Ce thème a été développé dans le cadre du cours 4W4
 /* création de l'ensemble de regles de styles de l'agencement de couleurs */
 .clr-agencement-primaire {
   color: hsl(67, 50%, 15%);
-  background-image: linear-gradient(-90deg, hsl(67, 50%, 85%), hsl(67, 50%, 50%));
+  background-image: linear-gradient(-90deg, hsl(67, 50%, 85%), hsl(67, 50%, 40%));
 }
 
 .clr-agencement-secondaire {
@@ -253,14 +253,7 @@ body > h2 {
 }
 
 #entete {
-  background-color: var(--couleur-arriere-entete);
-  color: var(--couleur-entete);
   position: relative;
-}
-
-#accueil {
-  background-color: var(--couleur-arriere-accueil);
-  color: var(--couleur-accueil);
 }
 
 #galerie {
@@ -439,7 +432,7 @@ a:hover {
 }
 
 .remplissage {
-  fill: var(--_couleur-arriere-vague);
+  fill: hsl(67, 50%, 40%);
 }
 
 .diagonale {

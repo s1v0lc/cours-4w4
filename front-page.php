@@ -6,7 +6,7 @@
 
 <?php get_header(); ?>
 <h2>Front-page.php</h2>
-<div id="entete" class="global">
+<div id="entete" class="global bck-primaire-400 clr-primaire-200">
         <section class="entete__header">  
             <div class="entete__header__texte">    
                 <h1 class="bgc-text"><?= get_bloginfo('name'); ?></h1>
@@ -15,9 +15,9 @@
             </div>   
             <div class="entete__header__button"><button class="entete__button">Événements</button></div>
         </section>
-<?php get_template_part("gabarit/vague"); ?>
-    </div>
-    <div id="accueil" class="global">
+    <?php get_template_part("gabarit/vague"); ?>
+</div>
+<div id="accueil" class="global bck-primaire-200 clr-primaire-400">
         <section class="accueil__section">
             <h2>Accueil (h2)</h2>
         <div class="section__cours">  
@@ -33,8 +33,8 @@
             }
         }
   */
-// the_title() // echo du titre
-// get_the_title // string du titre
+    // the_title() // echo du titre
+    // get_the_title // string du titre
   ?>      
   <?php if (have_posts()):
         while(have_posts()): the_post(); ?>
@@ -46,7 +46,7 @@
         </div>
        <?php endwhile; ?>
     <?php endif; ?>
-  </div>
+</div>
 
     </div>
     <div id="galerie" class="global diagonal">

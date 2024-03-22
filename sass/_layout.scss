@@ -13,7 +13,6 @@ body{
 }
 body>h2{
     position: absolute;
-    // z-index: 2;
 }
 .global {
     display: flex;
@@ -42,18 +41,18 @@ body>h2{
     flex: 0 1 1500px;
 }
 
-#entete {
-    background-color: var(--couleur-arriere-entete);
-    color: var(--couleur-entete);
+#entete { //titre du site
+    // background-color: $--c;
+    // color: var(--couleur-entete);
     position: relative;
 }
 
-#accueil {
-    background-color: var(--couleur-arriere-accueil);
-    color: var(--couleur-accueil);
+#accueil { //section avec les cartes
+    // background-color: var(--couleur-arriere-accueil);
+    // color: var(--couleur-accueil);
 }
 
-#galerie {
+#galerie { //images
     background-color: var(--couleur-arriere-galerie);
     color: var(--couleur-galerie);
     z-index: 1;
@@ -64,13 +63,13 @@ body>h2{
                 );
 }
 
-#evenement{
+#evenement{ // events!
     background-color: var(--couleur-arriere-evenement);
     color: var(--couleur-evenement);
     position: relative;
 }
 
-#footer {
+#footer { //pied de page
     background-color: var(--couleur-arriere-footer);
     color: var(--couleur-footer);
 }
