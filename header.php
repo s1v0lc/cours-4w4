@@ -13,7 +13,7 @@
 
 </head>
 <body>
-    <div id="menu" class="global clr-agencement-primaire">
+    <div id="menu" class="global bck-primaire-300">
         <?= get_custom_logo(); ?>
         <header class="entete__menu">
             <label id="burger" for="chk_burger">

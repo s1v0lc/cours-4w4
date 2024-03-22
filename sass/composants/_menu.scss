@@ -26,7 +26,7 @@
 
 .menu-principal-container { //nav
     width: 100%;
-    border: 5px solid $--clr-brun-moyen;
+    border: 5px solid $--clr-vert-moyen;
     background-color: $--clr-brun-moyen;
     @media screen and (min-width:700px) {
         height: 10vh;
@@ -65,10 +65,13 @@
 }
 
 .menu-item a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
     text-decoration: none;
-    color: $--clr-brun-moyen;
+    color: $--clr-vert-moyen;
     font-size: 2rem;
     user-select: none;
     @media screen and (min-width:700px) {

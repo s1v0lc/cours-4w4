@@ -50,41 +50,41 @@ Ce thème a été développé dans le cadre du cours 4W4
 
 /* Color Theme Swatches in Hex */
 /* Color Theme Swatches in RGBA */
-/* Color Theme Swatches in HSLA */
+/* Color Theme Swatches in HSL */
 /* création des clases de couleurs
     .clr-primaire-100()
     .clr-ternaire-400()
 */
 .clr-primaire-100 {
-  color: hsl(220, 100%, 85%);
+  color: hsl(67, 50%, 85%);
 }
 
 .bck-primaire-100 {
-  background-color: hsl(220, 100%, 85%);
+  background-color: hsl(67, 50%, 85%);
 }
 
 .clr-primaire-200 {
-  color: hsl(220, 100%, 60%);
+  color: hsl(67, 50%, 50%);
 }
 
 .bck-primaire-200 {
-  background-color: hsl(220, 100%, 60%);
+  background-color: hsl(67, 50%, 50%);
 }
 
 .clr-primaire-300 {
-  color: hsl(220, 100%, 30%);
+  color: hsl(67, 50%, 30%);
 }
 
 .bck-primaire-300 {
-  background-color: hsl(220, 100%, 30%);
+  background-color: hsl(67, 50%, 30%);
 }
 
 .clr-primaire-400 {
-  color: hsl(220, 100%, 15%);
+  color: hsl(67, 50%, 15%);
 }
 
 .bck-primaire-400 {
-  background-color: hsl(220, 100%, 15%);
+  background-color: hsl(67, 50%, 15%);
 }
 
 .clr-secondaire-100 {
@@ -152,42 +152,42 @@ Ce thème a été développé dans le cadre du cours 4W4
 }
 
 .clr-brun-100 {
-  color: hsl(33, 50%, 90%);
+  color: hsl(39, 38%, 90%);
 }
 
 .bck-brun-100 {
-  background-color: hsl(33, 50%, 90%);
+  background-color: hsl(39, 38%, 90%);
 }
 
 .clr-brun-200 {
-  color: hsl(33, 50%, 70%);
+  color: hsl(39, 38%, 70%);
 }
 
 .bck-brun-200 {
-  background-color: hsl(33, 50%, 70%);
+  background-color: hsl(39, 38%, 70%);
 }
 
 .clr-brun-300 {
-  color: hsl(33, 50%, 40%);
+  color: hsl(39, 38%, 40%);
 }
 
 .bck-brun-300 {
-  background-color: hsl(33, 50%, 40%);
+  background-color: hsl(39, 38%, 40%);
 }
 
 .clr-brun-400 {
-  color: hsl(33, 50%, 30%);
+  color: hsl(39, 38%, 30%);
 }
 
 .bck-brun-400 {
-  background-color: hsl(33, 50%, 30%);
+  background-color: hsl(39, 38%, 30%);
 }
 
 /* Définit la règle de style à partir d'une couleur de texte $clr et une ou plusieurs couleurs en backgroung $bck */
 /* création de l'ensemble de regles de styles de l'agencement de couleurs */
 .clr-agencement-primaire {
-  color: hsl(220, 100%, 15%);
-  background-image: linear-gradient(-90deg, hsl(220, 100%, 85%), hsl(220, 100%, 60%));
+  color: hsl(67, 50%, 15%);
+  background-image: linear-gradient(-90deg, hsl(67, 50%, 85%), hsl(67, 50%, 50%));
 }
 
 .clr-agencement-secondaire {
@@ -201,8 +201,8 @@ Ce thème a été développé dans le cadre du cours 4W4
 }
 
 .clr-agencement-brun {
-  color: hsl(33, 50%, 30%);
-  background-color: hsl(33, 50%, 90%);
+  color: hsl(39, 38%, 30%);
+  background-color: hsl(39, 38%, 90%);
 }
 
 /*///////////////////////////// */
@@ -387,17 +387,17 @@ blockquote p::after {
   border-radius: 20px;
   cursor: pointer;
   font-family: "Prompt", arial, helvetica, sans-serif;
-  color: hsl(33, 50%, 40%);
-  border: 4px solid hsl(33, 50%, 40%);
-  background-image: linear-gradient(160deg, hsl(33, 50%, 90%) 0%, hsl(33, 50%, 70%) 50%);
+  color: hsl(39, 38%, 40%);
+  border: 4px solid hsl(39, 38%, 40%);
+  background-image: linear-gradient(160deg, hsl(39, 38%, 90%) 0%, hsl(39, 38%, 70%) 50%);
   background-repeat: no-repeat;
   background-size: 150%;
   background-position-x: 10%;
   transition: all 0.5s;
 }
 .entete__button:hover {
-  color: hsl(33, 50%, 30%);
-  border: 4px solid hsl(33, 50%, 30%);
+  color: hsl(39, 38%, 30%);
+  border: 4px solid hsl(39, 38%, 30%);
   background-position-x: 50%;
 }
 .entete__button:active {
@@ -588,8 +588,8 @@ a:hover {
 
 .menu-principal-container {
   width: 100%;
-  border: 5px solid hsl(33, 50%, 40%);
-  background-color: hsl(33, 50%, 40%);
+  border: 5px solid hsl(67, 50%, 30%);
+  background-color: hsl(39, 38%, 40%);
 }
 @media screen and (min-width: 700px) {
   .menu-principal-container {
@@ -598,7 +598,7 @@ a:hover {
 }
 
 .menu {
-  border: 10px hsl(33, 50%, 40%);
+  border: 10px hsl(39, 38%, 40%);
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -623,18 +623,21 @@ a:hover {
 
 .menu-item {
   flex-basis: 12.5%;
-  background-image: linear-gradient(160deg, hsl(33, 50%, 90%) 0%, hsl(33, 50%, 70%) 50%);
-  border-right: 2px solid hsl(33, 50%, 40%);
+  background-image: linear-gradient(160deg, hsl(39, 38%, 90%) 0%, hsl(39, 38%, 70%) 50%);
+  border-right: 2px solid hsl(39, 38%, 40%);
 }
 .menu-item:last-of-type {
   border-right: none;
 }
 
 .menu-item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   text-decoration: none;
-  color: hsl(33, 50%, 40%);
+  color: hsl(67, 50%, 30%);
   font-size: 2rem;
   user-select: none;
 }
