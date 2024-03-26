@@ -275,9 +275,22 @@ body > h2 {
 /* Sections de la page */
 /*///////////////////////////// */
 #entete {
-  background: #000 center/cover url("images/image_entete.jpg") no-repeat fixed;
-  background-size: 100%;
+  background: #000 url("images/image_entete2.jpg") no-repeat fixed;
+  background-size: 150%;
   height: 90vh;
+  min-width: 350px;
+}
+@media screen and (min-width: 576px) {
+  #entete {
+    background-size: 100%;
+    background: #000 center/cover url("images/image_entete3.jpg") no-repeat fixed;
+  }
+}
+@media screen and (min-width: 992px) {
+  #entete {
+    background-size: 100%;
+    background: #000 center/cover url("images/image_entete.jpg") no-repeat fixed;
+  }
 }
 #entete .entete__header {
   height: 100%;
@@ -286,7 +299,8 @@ body > h2 {
   align-items: flex-start;
   justify-content: center;
 }
-#entete .entete__header h1, #entete .entete__header h3 {
+#entete .entete__header h1,
+#entete .entete__header h3 {
   margin-bottom: 0;
 }
 
@@ -602,12 +616,8 @@ a:hover {
 #menu {
   z-index: 100;
   position: fixed;
-}
-@media screen and (min-width: 1000px) {
-  #menu {
-    height: 13vh;
-    width: 100vw;
-  }
+  width: 100vw;
+  height: 13vh;
 }
 
 #menu a img {
@@ -615,27 +625,53 @@ a:hover {
   height: 10vh;
 }
 
-.menu-principal-container {
+.entete__menu {
   width: 100%;
+  height: 100%;
+}
+
+.menu-principal-container {
+  opacity: 0.9;
+  position: absolute;
   border: 5px solid hsl(67, 50%, 30%);
   background-color: hsl(39, 38%, 40%);
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  top: 17px;
+  right: 22px;
+  transition: all 0.8s;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 992px) {
   .menu-principal-container {
     height: 10vh;
+    width: 100%;
+    border-radius: unset;
+    position: unset;
   }
 }
 
 .menu {
+  opacity: 0;
   border: 10px hsl(39, 38%, 40%);
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
+  padding-top: 5vw;
+  padding-right: 25vw;
+  row-gap: 1vw;
   align-items: stretch;
   list-style-type: none;
+  transition: opacity 0.4s ease-in-out;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 576px) {
+  .menu {
+    padding-top: 0vw;
+    padding-right: 15vw;
+  }
+}
+@media screen and (min-width: 992px) {
   .menu {
     flex-direction: row;
     justify-content: center;
@@ -645,27 +681,27 @@ a:hover {
 }
 
 #menu label {
-  background-color: white;
   border-radius: 50px;
   padding: 20px;
 }
 
 .menu-item {
-  flex-basis: 12.5%;
-  border-right: 2px solid hsl(39, 38%, 40%);
-  background-position-x: 0;
-  background-size: 200px;
-  background-position-y: 0px;
-  background-image: linear-gradient(0deg, hsl(67, 50%, 30%) 0%, hsl(39, 38%, 70%) 120%);
-  transition: background-position-y 0.3s linear;
+  pointer-events: none;
+}
+@media screen and (minwidth: 992px) {
+  .menu-item {
+    transition: background-position-y 0.3s linear;
+    flex-basis: 12.5%;
+    background-size: 200px;
+    background-position-x: 0;
+    background-position-y: 0px;
+    background-image: linear-gradient(0deg, hsl(67, 50%, 30%) 0%, hsl(39, 38%, 70%) 120%);
+    border-right: 2px solid hsl(39, 38%, 40%);
+  }
 }
 .menu-item:last-of-type {
   border-right: none;
 }
-.menu-item:hover {
-  background-position-y: -100px;
-}
-
 .menu-item a {
   display: flex;
   justify-content: center;
@@ -674,13 +710,13 @@ a:hover {
   height: 100%;
   text-decoration: none;
   color: hsl(39, 38%, 90%);
-  font-size: 2rem;
+  font-size: var(--h3-texte);
   user-select: none;
 }
 .menu-item a:hover {
   color: hsl(67, 50%, 30%);
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 992px) {
   .menu-item a {
     font-size: 1.5rem;
   }
@@ -691,7 +727,8 @@ a:hover {
 }
 
 #burger {
-  z-index: 1000;
+  background-color: hsl(39, 38%, 90%);
+  z-index: 992;
   display: block;
   cursor: pointer;
   user-select: none;
@@ -699,35 +736,42 @@ a:hover {
   top: 15px;
   right: 15px;
   box-shadow: 0 2px 8px 0px #555;
+  transition: background-color 1s;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 992px) {
   #burger {
     display: none;
   }
 }
 
-#chk_burger ~ .menu-principal-container {
-  transition: transform 0.3s;
-  transform: translate(100%, 0);
-}
-@media screen and (min-width: 1000px) {
-  #chk_burger ~ .menu-principal-container {
-    transform: translate(0%, 0);
-  }
-}
-
-#chk_burger:checked ~ #burger {
-  background-color: var(--couleur-evenement);
-}
-
 #chk_burger:checked ~ .menu-principal-container {
-  transform: translate(0, 0);
-  pointer-events: all;
+  width: 110vw;
+  height: 110vw;
+  transform: translate(20%, -20%);
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 992px) {
   #chk_burger:checked ~ .menu-principal-container {
     transform: unset;
   }
+}
+#chk_burger:checked ~ .menu-principal-container .menu {
+  opacity: 1;
+}
+#chk_burger:checked ~ .menu-principal-container .menu li {
+  pointer-events: unset;
+}
+
+#chk_burger:checked ~ #burger {
+  background-color: hsl(39, 38%, 30%);
+}
+#chk_burger:checked ~ #burger svg {
+  transform: rotate(-180deg);
+  color: hsl(39, 38%, 90%);
+}
+
+#burger svg {
+  transition: transform 1s ease-in-out;
+  color: hsl(39, 38%, 30%);
 }
 
 /*///////////////////////////// *//*# sourceMappingURL=style.css.map */
