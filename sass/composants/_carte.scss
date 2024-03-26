@@ -7,25 +7,32 @@
 
 .carte {
     min-width: 220px;
+    min-height: fit-content;
     height: 30vh;
-    border: 1px solid #aaa;
     display: flex;
     flex-direction: column;
-    flex: 0 1 23%;
+    flex: 0 1 40%;
     justify-content: space-between;
-    background-color: var(--couleur-accueil);
-    color: var(--couleur-arriere-accueil);
+    background-color: $--clr-vert-moyen;
+    color: $--clr-brun-leger;
     padding: 1rem;
     border-radius: 10px;
+    @media screen and (min-width:1000px) {
+        flex: 0 1 30%;
+    }
 
     .titre {
+        color: $--clr-vert-pale;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        height: 40%;
+        flex-grow: 3;
 
         p {
             margin: 0;
+            a{
+                color: $--clr-vert-leger;
+            }
         }
     }
 
@@ -39,10 +46,14 @@
     }
 
     p {
-        margin-top: 0;
+        margin-top: 10px;
     }
-
-    a {
-        margin: none;
+    ul {
+        padding-left: 0;
+        justify-content: flex-start;
+        a {
+            color: $--clr-vert-leger;
+            margin: none;
+        }
     }
 }

@@ -46,9 +46,11 @@
                 // get_the_title // string du titre
                 while(have_posts()): the_post(); ?>
                 <div class="carte">
-                    <h4><?php the_title() ?></h4>
+                    <div class="titre">
+                        <h4><?php the_title() ?></h4>
+                        <p><a href="<?= get_permalink(); ?>">Lire plus</a> </p>
+                    </div>
                     <p><?= wp_trim_words(get_the_content(),10); ?></p>
-                    <p><a href="<?= get_permalink(); ?>">Lire plus</a> </p>
                     <?php the_category() ?>
                 </div>
             <?php endwhile; ?>

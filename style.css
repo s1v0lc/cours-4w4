@@ -551,25 +551,34 @@ a:hover {
 
 .carte {
   min-width: 220px;
+  min-height: fit-content;
   height: 30vh;
-  border: 1px solid #aaa;
   display: flex;
   flex-direction: column;
-  flex: 0 1 23%;
+  flex: 0 1 40%;
   justify-content: space-between;
-  background-color: var(--couleur-accueil);
-  color: var(--couleur-arriere-accueil);
+  background-color: hsl(67, 50%, 30%);
+  color: hsl(39, 38%, 70%);
   padding: 1rem;
   border-radius: 10px;
 }
+@media screen and (min-width: 1000px) {
+  .carte {
+    flex: 0 1 30%;
+  }
+}
 .carte .titre {
+  color: hsl(67, 50%, 85%);
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  height: 40%;
+  flex-grow: 3;
 }
 .carte .titre p {
   margin: 0;
+}
+.carte .titre p a {
+  color: hsl(67, 50%, 40%);
 }
 .carte .h5:nth-of-type(2) {
   flex-grow: 1;
@@ -579,9 +588,14 @@ a:hover {
   display: flex;
 }
 .carte p {
-  margin-top: 0;
+  margin-top: 10px;
 }
-.carte a {
+.carte ul {
+  padding-left: 0;
+  justify-content: flex-start;
+}
+.carte ul a {
+  color: hsl(67, 50%, 40%);
   margin: none;
 }
 
