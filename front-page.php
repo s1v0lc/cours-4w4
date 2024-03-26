@@ -6,14 +6,10 @@
 
 <?php get_header(); ?>
 <h2>Front-page.php</h2>
-<div id="entete" class="global bck-primaire-400 clr-primaire-200">
+<div id="entete" class="global clr-primaire-100">
         <section class="entete__header">  
-            <div class="entete__header__texte">    
-                <h1 class="bgc-text"><?= get_bloginfo('name'); ?></h1>
-                <h2 class="bgc-text"><?= get_bloginfo('description'); ?></h2>
-                <h3 class="bgc-text">TIM - Collège de Maisonneuve</h3>
-            </div>   
-            <div class="entete__header__button"><button class="entete__button">Événements</button></div>
+            <h1 class="bgc-text"><?= get_bloginfo('name'); ?></h1>
+            <h3 class="bgc-text"><?= get_bloginfo('description'); ?></h3>
         </section>
     <?php get_template_part("gabarit/vague"); ?>
 </div>

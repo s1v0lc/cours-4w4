@@ -6,14 +6,27 @@
     overflow: hidden;
     line-height: 0;
     transform: rotate(180deg);
-}
 
-.vague svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 73px;
-    transform: rotateY(180deg);
+    .feuille {
+        margin-top: -3.5%;
+        margin-left: 10%;
+        height: 200px;
+        width: 200px;
+        transform: rotate(180deg);
+        img {
+            object-fit: contain;
+            width: 100%;
+            height: auto;
+
+        }
+    }
+    svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 73px;
+        transform: rotateY(180deg);
+    }
 }
 
 .remplissage {

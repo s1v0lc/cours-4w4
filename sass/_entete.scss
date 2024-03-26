@@ -1,16 +1,18 @@
-.entete_header {
-    background-image: url("images/image_header.png");
-    background-repeat: no-repeat;
-    background-position: 80% 50%;
-}
+#entete {
+    background: #000 center/cover url("images/image_entete.jpg") no-repeat fixed;
+    background-size: 100%;
+    height: 70vh;
 
-@media screen and (max-width: 800px) {
-    .global > section {
-        background-size: 20%;
-        background-position: 90% 50%;
+
+    .entete__header {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+        h1, h3 {
+            margin-bottom: 0;
+        }
     }
-  }
-
-.entete_header span {
-    display: block;
 }

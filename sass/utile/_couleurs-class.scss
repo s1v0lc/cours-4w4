@@ -1,8 +1,7 @@
 @use "sass:list";
 
-/* création des clases de couleurs
-    .clr-primaire-100()
-    .clr-ternaire-400()
+/* 
+    Création des clases de couleurs
 */
 @each $nom,
 $couleurs in $defaut {

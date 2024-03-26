@@ -49,11 +49,9 @@ Ce thème a été développé dans le cadre du cours 4W4
 }
 
 /* Color Theme Swatches in Hex */
-/* Color Theme Swatches in RGBA */
 /* Color Theme Swatches in HSL */
-/* création des clases de couleurs
-    .clr-primaire-100()
-    .clr-ternaire-400()
+/* 
+    Création des clases de couleurs
 */
 .clr-primaire-100 {
   color: hsl(67, 50%, 85%);
@@ -276,20 +274,20 @@ body > h2 {
 
 /* Sections de la page */
 /*///////////////////////////// */
-.entete_header {
-  background-image: url("images/image_header.png");
-  background-repeat: no-repeat;
-  background-position: 80% 50%;
+#entete {
+  background: #000 center/cover url("images/image_entete.jpg") no-repeat fixed;
+  background-size: 100%;
+  height: 70vh;
 }
-
-@media screen and (max-width: 800px) {
-  .global > section {
-    background-size: 20%;
-    background-position: 90% 50%;
-  }
+#entete .entete__header {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
-.entete_header span {
-  display: block;
+#entete .entete__header h1, #entete .entete__header h3 {
+  margin-bottom: 0;
 }
 
 .galerie__section div {
@@ -319,7 +317,7 @@ body > h2 {
     Sélecteur textuel de base
 */
 h1 {
-  font-size: clamp(2rem, 6.2vw - 0.57rem, 4.5rem);
+  font-size: clamp(2rem, 6.2vw - 0.57rem, 6rem);
 }
 
 h2 {
@@ -422,7 +420,18 @@ a:hover {
   line-height: 0;
   transform: rotate(180deg);
 }
-
+.vague .feuille {
+  margin-top: -3.5%;
+  margin-left: 10%;
+  height: 200px;
+  width: 200px;
+  transform: rotate(180deg);
+}
+.vague .feuille img {
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+}
 .vague svg {
   position: relative;
   display: block;
