@@ -277,7 +277,7 @@ body > h2 {
 #entete {
   background: #000 center/cover url("images/image_entete.jpg") no-repeat fixed;
   background-size: 100%;
-  height: 70vh;
+  height: 90vh;
 }
 #entete .entete__header {
   height: 100%;
@@ -425,7 +425,7 @@ a:hover {
   margin-left: 10%;
   height: 200px;
   width: 200px;
-  transform: rotate(180deg);
+  transform: rotate(170deg);
 }
 .vague .feuille img {
   object-fit: contain;
@@ -551,6 +551,7 @@ a:hover {
 
 .carte {
   min-width: 220px;
+  height: 30vh;
   border: 1px solid #aaa;
   display: flex;
   flex-direction: column;
@@ -562,7 +563,13 @@ a:hover {
   border-radius: 10px;
 }
 .carte .titre {
-  flex-grow: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 40%;
+}
+.carte .titre p {
+  margin: 0;
 }
 .carte .h5:nth-of-type(2) {
   flex-grow: 1;
@@ -571,12 +578,18 @@ a:hover {
   list-style-type: none;
   display: flex;
 }
+.carte p {
+  margin-top: 0;
+}
+.carte a {
+  margin: none;
+}
 
 #menu {
   z-index: 100;
   position: fixed;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1000px) {
   #menu {
     height: 13vh;
     width: 100vw;
@@ -593,7 +606,7 @@ a:hover {
   border: 5px solid hsl(67, 50%, 30%);
   background-color: hsl(39, 38%, 40%);
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1000px) {
   .menu-principal-container {
     height: 10vh;
   }
@@ -608,7 +621,7 @@ a:hover {
   align-items: stretch;
   list-style-type: none;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1000px) {
   .menu {
     flex-direction: row;
     justify-content: center;
@@ -653,7 +666,7 @@ a:hover {
 .menu-item a:hover {
   color: hsl(67, 50%, 30%);
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1000px) {
   .menu-item a {
     font-size: 1.5rem;
   }
@@ -673,7 +686,7 @@ a:hover {
   right: 15px;
   box-shadow: 0 2px 8px 0px #555;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1000px) {
   #burger {
     display: none;
   }
@@ -683,7 +696,7 @@ a:hover {
   transition: transform 0.3s;
   transform: translate(100%, 0);
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1000px) {
   #chk_burger ~ .menu-principal-container {
     transform: translate(0%, 0);
   }
@@ -697,7 +710,7 @@ a:hover {
   transform: translate(0, 0);
   pointer-events: all;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1000px) {
   #chk_burger:checked ~ .menu-principal-container {
     transform: unset;
   }
