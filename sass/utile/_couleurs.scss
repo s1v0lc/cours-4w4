@@ -99,7 +99,7 @@ $agencement-couleur :(primaire: ($--clr-vert-fonce, ($--clr-vert-pale, $--clr-ve
     --h1-texte: clamp(1rem, 6.2vw - 0.57rem, 4.5rem);
     --h2-texte: clamp(1rem, 6.2vw - 0.57rem, 2.5rem);
     --h3-texte: clamp(0.8rem, 6.2vw - 0.57rem, 2rem);
-    --h4-texte: 2rem;
+    --h4-texte: clamp(0.6rem, 0.3545rem + 1.3091vw, 1.5rem);
     --h5-texte: 2rem;
     --h6-texte: 2rem;
 }

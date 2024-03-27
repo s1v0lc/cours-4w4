@@ -43,7 +43,7 @@ Ce thème a été développé dans le cadre du cours 4W4
   --h1-texte: clamp(1rem, 6.2vw - 0.57rem, 4.5rem);
   --h2-texte: clamp(1rem, 6.2vw - 0.57rem, 2.5rem);
   --h3-texte: clamp(0.8rem, 6.2vw - 0.57rem, 2rem);
-  --h4-texte: 2rem;
+  --h4-texte: clamp(0.6rem, 0.3545rem + 1.3091vw, 1.5rem);
   --h5-texte: 2rem;
   --h6-texte: 2rem;
 }
@@ -647,8 +647,10 @@ a:hover {
 }
 @media screen and (min-width: 992px) {
   .menu-principal-container {
-    height: 100%;
+    align-self: center;
+    height: 80%;
     width: 80%;
+    background-color: unset;
     border-radius: unset;
     position: unset;
     border: unset;
@@ -666,7 +668,7 @@ a:hover {
   padding-top: 5vw;
   padding-right: 25vw;
   row-gap: 1vw;
-  align-items: stretch;
+  align-items: center;
   list-style-type: none;
   transition: opacity 0.4s ease-in-out;
 }
@@ -681,6 +683,7 @@ a:hover {
     opacity: 1;
     flex-direction: row;
     justify-content: space-between;
+    align-items: stretch;
     padding: 0%;
     margin: unset;
   }
@@ -693,39 +696,52 @@ a:hover {
 
 .menu-item {
   pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media screen and (min-width: 992px) {
   .menu-item {
     pointer-events: all;
     transition: background-position-y 0.3s linear;
     flex-basis: 12.5%;
-    background-size: 200px;
-    background-position-x: 0;
-    background-position-y: 0px;
-    background-image: linear-gradient(0deg, hsl(67, 50%, 30%) 0%, hsl(39, 38%, 70%) 120%);
-    border-right: 2px solid hsl(39, 38%, 40%);
+    border-right: 2px solid hsl(67, 50%, 15%);
   }
 }
 .menu-item:last-of-type {
   border-right: none;
 }
 .menu-item a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
+  position: relative;
+  margin: 8px 10px;
   text-decoration: none;
   color: hsl(39, 38%, 90%);
   font-size: var(--h3-texte);
   user-select: none;
+  transition: color 0.3s ease-in;
 }
 .menu-item a:hover {
-  color: hsl(67, 50%, 30%);
+  color: hsl(67, 50%, 85%);
+}
+.menu-item a::after {
+  position: absolute;
+  content: "";
+  top: 85%;
+  left: 0px;
+  width: 100%;
+  height: 3px;
+  background: hsl(67, 50%, 40%);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+}
+.menu-item a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 @media screen and (min-width: 992px) {
   .menu-item a {
-    font-size: 1.5rem;
+    font-size: var(--h4-texte);
   }
 }
 
