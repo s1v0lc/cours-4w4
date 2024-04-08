@@ -3,24 +3,24 @@
 */
 
 h1 {
-    font-size: clamp(2rem, 6.2vw - 0.57rem, 6rem);
+    font-size: var(--h1-texte);
 }
 h2 {
-    font-size: clamp(1rem, 6.2vw - 0.57rem, 2.5rem);
+    font-size: var(--h2-texte);
 }
 h3 {
-    font-size: clamp(1rem, 6.2vw - 0.57rem, 2rem);
+    font-size: var(--h3-texte);
 }
 h4 {
-    font-size: clamp(1rem, 6.2vw - 0.57rem, 1.5rem);
+    font-size: var(--h4-texte);
     margin: 0;
 }
 h5 {
-    font-size: clamp(0.1rem, 6.2vw - 0.57rem, 1.2rem);
+    font-size: var(--h5-texte);
     margin: 0;
 }
 h6 {
-    font-size: clamp(0.1rem, 6.2vw - 0.57rem, 0.8rem);
+    font-size: var(--h6-texte);
 }
 
 p {

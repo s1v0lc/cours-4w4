@@ -1,5 +1,6 @@
 <div id="footer" class="global">
         <footer class="footer__section">
+            <?php get_search_form(); ?>
             <form class="recherche" action="">
                 <input class="recherche__input" type="search" name="" id="" placeholder="Recherche">
                 <button class="recherche__button">

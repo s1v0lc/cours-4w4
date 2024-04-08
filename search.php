@@ -1,5 +1,5 @@
     <?php get_header() ?>
-    <h2>Index.php</h2>
+    <h2>Search.php</h2>
     <div id="entete" class="global clr-primaire-100">
         <section class="entete__header">  
             <h1 class="bgc-text"><?= get_bloginfo('name'); ?></h1>
@@ -13,20 +13,44 @@
             <div class="section__cours">
                 <?php if (have_posts()):
                     while(have_posts()): the_post(); 
-                    $titre = get_the_title();
-                    $sigle = substr($titre, 0, 7);
-                    $duree = substr($titre, strpos($titre,"("), 6);
                     ?>
                     <div class="carte">
-                        <h5><?= $sigle ?></h5>
-                        <h4 class="titre"><?= substr($titre, 8, -6); ?></h4>
+                        <h4 class="titre"><?= get_the_title(); ?></h4>
                         <p><?= wp_trim_words(get_the_content(), 10); ?></p>
-                        <h5><?= $duree ?></h5>
                     </div>
                     <?php endwhile; ?>
                 <?php endif; ?>
             </div>
         </section>
+    </div>
+    <div id="galerie" class="global diagonale">
+        <section class="galerie__section">
+            <h2>Galerie</h2>
+            <div>
+                <img src="<?= get_template_directory_uri() . '/images/galerie_01.jpg'; ?>" alt="">
+                <img src="<?= get_template_directory_uri() . '/images/galerie_02.jpg'; ?>" alt="">
+                <img src="<?= get_template_directory_uri() . '/images/galerie_03.jpg'; ?>" alt="">
+                <img src="<?= get_template_directory_uri() . '/images/galerie_04.jpg'; ?>" alt="">
+                <img src="<?= get_template_directory_uri() . '/images/galerie_05.jpg'; ?>" alt="">
+                <img src="<?= get_template_directory_uri() . '/images/galerie_06.jpg'; ?>" alt="">
+                <img src="<?= get_template_directory_uri() . '/images/galerie_07.jpg'; ?>" alt="">
+                <img src="<?= get_template_directory_uri() . '/images/galerie_08.jpg'; ?>" alt="">
+            </div>
+            <blockquote cite="moi">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quaerat mollitia veritatis id? Soluta, excepturi.</p>
+            </blockquote>
+            <a href="">Lien vers autre page</a>
+        </section>
+    </div>
+    <div id="evenement" class="global">
+        <section class="galerie__evenement">
+            <h2>Événement</h2>
+            <h3>Lorem ipsum dolor sit amet. (h3)</h3>
+            <blockquote cite="moi">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quaerat mollitia veritatis id? Soluta, excepturi.</p>
+            </blockquote>
+        </section>
+        <?php get_template_part("gabarit/vague") ?>
     </div>
     <div id="footer" class="global">
         <footer class="footer__footer">

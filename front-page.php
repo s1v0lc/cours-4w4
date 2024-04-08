@@ -50,6 +50,7 @@
                         <h4><?php the_title() ?></h4>
                         <p><a href="<?= get_permalink(); ?>">Lire plus</a> </p>
                     </div>
+                    <?= the_post_thumbnail(); ?>
                     <p><?= wp_trim_words(get_the_content(),10); ?></p>
                     <?php the_category() ?>
                 </div>

@@ -17,3 +17,7 @@ function _4w4_modifie_requete_principale( $query ) {
       }
      }
      add_action( 'pre_get_posts', '_4w4_modifie_requete_principale' );
+
+     if (function_exists( 'add_theme_support' )) {
+      add_theme_support( 'post-thumbnails' );
+    }

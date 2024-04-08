@@ -96,7 +96,7 @@ $agencement-couleur :(primaire: ($--clr-vert-fonce, ($--clr-vert-pale, $--clr-ve
     --tranparencre-faible: 0.8;
 
     // Tailles textes
-    --h1-texte: clamp(1rem, 6.2vw - 0.57rem, 4.5rem);
+    --h1-texte: clamp(4rem, 6.2vw - 0.57rem, 6rem);
     --h2-texte: clamp(1rem, 6.2vw - 0.57rem, 2.5rem);
     --h3-texte: clamp(0.8rem, 6.2vw - 0.57rem, 2rem);
     --h4-texte: clamp(0.6rem, 0.3545rem + 1.3091vw, 1.5rem);
@@ -105,15 +105,15 @@ $agencement-couleur :(primaire: ($--clr-vert-fonce, ($--clr-vert-pale, $--clr-ve
 }
 
 /* Color Theme Swatches in Hex */
-$---1-hex: #6A7327;
-$---2-hex: #D9BD6A;
-$---3-hex: #A68549;
-$---4-hex: #F2BB77;
-$---5-hex: #BF9A78;
+// $---1-hex: #6A7327;
+// $---2-hex: #D9BD6A;
+// $---3-hex: #A68549;
+// $---4-hex: #F2BB77;
+// $---5-hex: #BF9A78;
 
-/* Color Theme Swatches in HSL */
-$--1-hsla: hsla(67, 49, 30);
-$--2-hsla: hsla(45, 59, 63);
-$--3-hsla: hsla(39, 38, 46);
-$--4-hsla: hsla(33, 82, 70);
-$--5-hsla: hsla(28, 35, 61);
+// /* Color Theme Swatches in HSL */
+// $--1-hsla: hsla(67, 49, 30);
+// $--2-hsla: hsla(45, 59, 63);
+// $--3-hsla: hsla(39, 38, 46);
+// $--4-hsla: hsla(33, 82, 70);
+// $--5-hsla: hsla(28, 35, 61);

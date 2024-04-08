@@ -1,5 +1,5 @@
     <?php get_header() ?>
-    <h2>Index.php</h2>
+    <h2>404.php</h2>
     <div id="entete" class="global clr-primaire-100">
         <section class="entete__header">  
             <h1 class="bgc-text"><?= get_bloginfo('name'); ?></h1>
@@ -11,20 +11,8 @@
         <section class="accueil__section">
             <h2>Accueil (h2)</h2>
             <div class="section__cours">
-                <?php if (have_posts()):
-                    while(have_posts()): the_post(); 
-                    $titre = get_the_title();
-                    $sigle = substr($titre, 0, 7);
-                    $duree = substr($titre, strpos($titre,"("), 6);
-                    ?>
-                    <div class="carte">
-                        <h5><?= $sigle ?></h5>
-                        <h4 class="titre"><?= substr($titre, 8, -6); ?></h4>
-                        <p><?= wp_trim_words(get_the_content(), 10); ?></p>
-                        <h5><?= $duree ?></h5>
-                    </div>
-                    <?php endwhile; ?>
-                <?php endif; ?>
+                <p>L'adresse saisie n'existe pas ...</p>
+                <p>Pour revenir à la page d'accueil, <a href="<?= get_bloginfo('url') ?>">Cliquez ici</a></p>
             </div>
         </section>
     </div>
