@@ -11,13 +11,16 @@
     height: 30vh;
     display: flex;
     flex-direction: column;
-    flex: 0 1 40%;
+    flex: 1 1 50%;
     justify-content: space-between;
     background-color: $--clr-vert-moyen;
     color: $--clr-brun-leger;
     padding: 1rem;
     border-radius: 10px;
-    @media screen and (min-width:1000px) {
+    @media screen and (min-width:576px) {
+        flex: 0 1 40%;
+    }
+    @media screen and (min-width:992px) {
         flex: 0 1 30%;
     }
 
@@ -38,6 +41,7 @@
 
     img {
         width: 100%;
+        // height: auto;
     }
     .h5:nth-of-type(2) {
         flex-grow: 1;

@@ -568,14 +568,19 @@ a:hover {
   height: 30vh;
   display: flex;
   flex-direction: column;
-  flex: 0 1 40%;
+  flex: 1 1 50%;
   justify-content: space-between;
   background-color: hsl(67, 50%, 30%);
   color: hsl(39, 38%, 70%);
   padding: 1rem;
   border-radius: 10px;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 576px) {
+  .carte {
+    flex: 0 1 40%;
+  }
+}
+@media screen and (min-width: 992px) {
   .carte {
     flex: 0 1 30%;
   }

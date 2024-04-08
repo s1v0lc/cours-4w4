@@ -1,9 +1,3 @@
-<?php 
-/**
- *  Modèle de base index.php 
- */
-?>
-
 <?php get_header(); ?>
 <h2>Front-page.php</h2>
 <div id="entete" class="global clr-primaire-100">
@@ -45,9 +39,13 @@
                 // the_title() // echo du titre
                 // get_the_title // string du titre
                 while(have_posts()): the_post(); ?>
+                <?php $pos = strpos(get_the_title(), ",")?>
+                <?php $titre = substr(get_the_title(), 0, $pos) ?>
+                <?php $endroit = substr(get_the_title(), 1+$pos) ?>
                 <div class="carte">
                     <div class="titre">
-                        <h4><?php the_title() ?></h4>
+                        <h4><?= $titre ?></h4>
+                        <!-- <h4><?= $endroit ?></h4> -->
                         <p><a href="<?= get_permalink(); ?>">Lire plus</a> </p>
                     </div>
                     <?= the_post_thumbnail(); ?>
