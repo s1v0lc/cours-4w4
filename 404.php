@@ -2,18 +2,13 @@
     <h2>404.php</h2>
     <div id="entete" class="global clr-primaire-100">
         <section class="entete__header">  
-            <h1 class="bgc-text"><?= get_bloginfo('name'); ?></h1>
-            <h3 class="bgc-text"><?= get_bloginfo('description'); ?></h3>
+            <h1 class="bgc-text">L'adresse saisie n'existe pas ...</h1>
+            <h3 class="bgc-text">Pour revenir à la page d'accueil, <a class="clr-brun-200"href="<?= get_bloginfo('url') ?>">Cliquez ici</a></h3>
         </section>
     <?php get_template_part("gabarit/vague"); ?>
 </div>
-    <div id="accueil" class="global">
-        <section class="accueil__section">
-            <h2>Accueil (h2)</h2>
-            <div class="section__cours">
-                <p>L'adresse saisie n'existe pas ...</p>
-                <p>Pour revenir à la page d'accueil, <a href="<?= get_bloginfo('url') ?>">Cliquez ici</a></p>
-            </div>
+    <div id="accueil" class="global bck-primaire-200">
+        <section class="accueil__section bck-primaire-200">
         </section>
     </div>
     <div id="footer" class="global">
