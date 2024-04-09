@@ -259,6 +259,12 @@ body > h2 {
   background-color: hsl(67, 50%, 15%);
 }
 
+.section_posts {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
 #galerie {
   background-color: var(--couleur-arriere-galerie);
   color: var(--couleur-galerie);
@@ -567,6 +573,12 @@ a:hover {
 
 .section_pop .carte {
   height: 400px;
+}
+
+.section_posts .carte .titre {
+  justify-content: flex-start;
+  align-items: flex-end;
+  column-gap: 10px;
 }
 
 .carte {

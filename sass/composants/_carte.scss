@@ -12,6 +12,17 @@
     }
 }
 
+.section_posts {
+    .carte {
+
+        .titre {
+            justify-content: flex-start;
+            align-items: flex-end;
+            column-gap: 10px;
+        }
+    }
+}
+
 .carte {
     min-width: 220px;
     min-height: fit-content;

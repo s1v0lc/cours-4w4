@@ -59,6 +59,12 @@ body>h2 {
     // background-color: green;
 }
 
+.section_posts {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
 #galerie {
     //images
     background-color: var(--couleur-arriere-galerie);

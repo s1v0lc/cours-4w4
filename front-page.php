@@ -19,7 +19,6 @@
                     $desc[] = $cat->description;
                     $slug[] = $cat->slug;
                     $nb[] = $cat->count;
-                    // print_r($cat);
                 }
                 foreach($categories as $cat) : ?>
                 <div class="carte">

@@ -9,18 +9,31 @@
 <div class="marge"></div>
 <div id="accueil" class="global bck-primaire-400">
     <section class="accueil__section">
-    <div class="section__cat">        
-        <?php if (have_posts()):
-            while(have_posts()): the_post(); ?>
-            <div class="carte">
-                <h4><?php the_title() ?></h4>
-                <p><?= get_the_content(); ?></p>
-                <p><a href="<?php echo get_permalink(); ?>">La suite</a> </p>
-            </div>
-        <?php endwhile; ?>
-        <?php endif; ?>
-    </div>
-
+        <div class="section__titre clr-primaire-200">
+            <?php $cat = get_categories();?>
+            <h2> Catégorie </h2>
+            <h1><?= $cat[0]->cat_name ?></h1>
+        </div>
+        <div class="section_posts">
+            <?php if (have_posts()):
+                // the_title() // echo du titre
+                // get_the_title // string du titre
+                while(have_posts()): the_post(); ?>
+                <?php $pos = strpos(get_the_title(), ",")?>
+                <?php $titre = substr(get_the_title(), 0, $pos) ?>
+                <?php $endroit = substr(get_the_title(), 1+$pos) ?>
+                <div class="carte">
+                    <div class="titre">
+                        <h3><?= $titre ?></h3>
+                        <p><a href="<?= get_permalink(); ?>">Lire plus</a> </p>
+                    </div>
+                    <h4><?= $endroit ?></h4>
+                    <p><?= get_the_content() ?></p>
+                </div>
+            <?php endwhile; ?>
+            <?php endif; ?>
+        </div>
+    </section>
 </div>
 
 <?php  get_footer(); ?>
