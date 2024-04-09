@@ -10,9 +10,12 @@
 <div id="accueil" class="global bck-primaire-400">
     <section class="accueil__section">
         <div class="section__titre clr-primaire-200">
-            <?php $cat = get_categories();?>
             <h2> Catégorie </h2>
-            <h1><?= $cat[0]->cat_name ?></h1>
+            <?php while(have_posts()): the_post(); ?>
+            <?php $test = get_the_category(); ?>
+            <?php endwhile; ?>
+            <?php $cat = the_post();?>
+            <h1><?php print_r($test[0]->cat_name) ?></h1>
         </div>
         <div class="section_posts">
             <?php if (have_posts()):
