@@ -12,10 +12,11 @@
         <div class="section__titre clr-primaire-200">
             <h2> Catégorie </h2>
             <?php while(have_posts()): the_post(); ?>
-            <?php $test = get_the_category(); ?>
+            <?php $cats = get_the_category(); ?>
+            <?php $nomCats[] = $cats[0]->cat_name; ?>
+
             <?php endwhile; ?>
-            <?php $cat = the_post();?>
-            <h1><?php print_r($test[0]->cat_name) ?></h1>
+            <h1><?php print_r($nomCats[4]); ?></h1>
         </div>
         <div class="section_posts">
             <?php if (have_posts()):
