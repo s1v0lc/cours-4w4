@@ -24,15 +24,13 @@
                 // get_the_title // string du titre
                 while(have_posts()): the_post(); ?>
                 <?php $pos = strpos(get_the_title(), ",")?>
-                <?php $titre = substr(get_the_title(), 0, $pos) ?>
-                <?php $endroit = substr(get_the_title(), 1+$pos) ?>
+                <?php $titre = get_the_title() ?>
                 <div class="carte">
                     <div class="titre">
                         <h3><?= $titre ?></h3>
                         <p><a href="<?= get_permalink(); ?>">Lire plus</a> </p>
                     </div>
-                    <h4><?= $endroit ?></h4>
-                    <p><?= get_the_content() ?></p>
+                    <p><?= wp_trim_words(get_the_content(), 30); ?></p>
                 </div>
             <?php endwhile; ?>
             <?php endif; ?>

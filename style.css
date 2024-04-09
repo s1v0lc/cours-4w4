@@ -265,6 +265,10 @@ body > h2 {
   row-gap: 20px;
 }
 
+.section__single {
+  height: 80vh;
+}
+
 #galerie {
   background-color: var(--couleur-arriere-galerie);
   color: var(--couleur-galerie);
@@ -581,10 +585,13 @@ a:hover {
   column-gap: 10px;
 }
 
+.section_single .carte h3 {
+  color: red;
+}
+
 .carte {
   min-width: 220px;
   min-height: fit-content;
-  height: 30vh;
   display: flex;
   flex-direction: column;
   flex: 1 1 50%;

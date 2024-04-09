@@ -65,6 +65,11 @@ body>h2 {
     row-gap: 20px;
 }
 
+.section__single {
+    height: 80vh;
+    // background: url("images/image_entete2.jpg");
+}
+
 #galerie {
     //images
     background-color: var(--couleur-arriere-galerie);
