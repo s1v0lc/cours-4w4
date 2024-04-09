@@ -1,8 +1,15 @@
-.section__cours {
+.section_cat,
+.section_pop {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
+}
+
+.section_pop {
+    .carte {
+        height: 400px;
+    }
 }
 
 .carte {
@@ -17,9 +24,11 @@
     color: $--clr-brun-leger;
     padding: 1rem;
     border-radius: 10px;
+
     @media screen and (min-width:576px) {
         flex: 0 1 40%;
     }
+
     @media screen and (min-width:992px) {
         flex: 0 1 30%;
     }
@@ -29,11 +38,12 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        flex-grow: 3;
+        flex-grow: 4;
 
         p {
             margin: 0;
-            a{
+
+            a {
                 color: $--clr-vert-leger;
             }
         }
@@ -41,8 +51,10 @@
 
     img {
         width: 100%;
+        margin: 10px 0;
         // height: auto;
     }
+
     .h5:nth-of-type(2) {
         flex-grow: 1;
     }
@@ -50,14 +62,17 @@
     .post-categories {
         list-style-type: none;
         display: flex;
+        margin: 0;
     }
 
     p {
         margin-top: 10px;
     }
+
     ul {
         padding-left: 0;
         justify-content: flex-start;
+
         a {
             color: $--clr-vert-leger;
             margin: none;

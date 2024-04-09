@@ -245,12 +245,18 @@ body > h2 {
   flex: 0 1 1300px;
 }
 
-.entete_menu, .entete_header {
+.entete_menu,
+.entete_header {
   flex: 0 1 1500px;
 }
 
 #entete {
   position: relative;
+}
+
+.marge {
+  height: 10vh;
+  background-color: hsl(67, 50%, 15%);
 }
 
 #galerie {
@@ -264,11 +270,6 @@ body > h2 {
   background-color: var(--couleur-arriere-evenement);
   color: var(--couleur-evenement);
   position: relative;
-}
-
-#footer {
-  background-color: var(--couleur-arriere-footer);
-  color: var(--couleur-footer);
 }
 
 /* Sections de la page */
@@ -339,6 +340,7 @@ h2 {
 
 h3 {
   font-size: var(--h3-texte);
+  margin: 0;
 }
 
 h4 {
@@ -489,15 +491,15 @@ a:hover {
   width: 45px;
   height: 45px;
   background-color: var(--b-texte);
-  transition: all 0.3s;
+  transition: color 0.3s, background-color 0.3s;
 }
 .sociaux a:hover {
-  background-color: var(--couleur-arriere-footer);
+  background-color: var(--couleur-evenement);
   border: 3px solid var(--b-texte);
 }
 
 .sociaux a svg {
-  color: var(--couleur-arriere-footer);
+  color: var(--couleur-evenement);
   transition: color 0.3s;
 }
 
@@ -555,11 +557,16 @@ a:hover {
   width: 32px;
 }
 
-.section__cours {
+.section_cat,
+.section_pop {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
+}
+
+.section_pop .carte {
+  height: 400px;
 }
 
 .carte {
@@ -590,7 +597,7 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  flex-grow: 3;
+  flex-grow: 4;
 }
 .carte .titre p {
   margin: 0;
@@ -600,6 +607,7 @@ a:hover {
 }
 .carte img {
   width: 100%;
+  margin: 10px 0;
 }
 .carte .h5:nth-of-type(2) {
   flex-grow: 1;
@@ -607,6 +615,7 @@ a:hover {
 .carte .post-categories {
   list-style-type: none;
   display: flex;
+  margin: 0;
 }
 .carte p {
   margin-top: 10px;

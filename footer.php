@@ -1,4 +1,4 @@
-<div id="footer" class="global">
+<div id="footer" class="global bck-brun-400">
         <footer class="footer__section">
             <?php get_search_form(); ?>
             <form class="recherche" action="">
