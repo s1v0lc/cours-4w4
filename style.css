@@ -282,6 +282,13 @@ body > h2 {
   position: relative;
 }
 
+#footer .footer__section {
+  display: flex;
+  row-gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+}
+
 /* Sections de la page */
 /*///////////////////////////// */
 #entete {
@@ -332,6 +339,9 @@ body > h2 {
   justify-content: flex-start;
   align-items: center;
   row-gap: 1.5vh;
+}
+.footer__footer .recherche__input {
+  height: 40px;
 }
 
 /*///////////////////////////// */
@@ -530,6 +540,7 @@ a:hover {
   border: 3px solid var(--b-texte);
   color: var(--couleur-evenement);
   padding-left: 2%;
+  height: 40px;
 }
 .recherche__input::placeholder {
   padding-left: 2%;

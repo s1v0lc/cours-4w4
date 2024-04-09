@@ -89,6 +89,10 @@ body>h2 {
 
 #footer {
     //pied de page
-    // background-color: var(--couleur-arriere-footer);
-    // color: var(--couleur-footer);
+    .footer__section {
+        display: flex;
+        row-gap: 10px;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
