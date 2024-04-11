@@ -1,6 +1,10 @@
-._404__image {
-    img {
-        height: 100px;
-        width: 100px;
+.image__404 {
+    flex-grow: 1;
+    width: 30%;
+    // height: auto;
+    display: none;
+
+    @media screen and (min-width:992px) {
+        display: unset;
     }
 }

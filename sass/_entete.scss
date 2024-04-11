@@ -14,8 +14,9 @@
         // background: #000 center/cover url("images/image_entete.jpg") no-repeat fixed;
     }
 
-    .entete__404 {
-        // background: unset;
+    .div__404 {
+        display: flex;
+        padding: 2rem 5rem;
     }
 
     .entete__header {
