@@ -245,8 +245,8 @@ body > h2 {
   flex: 0 1 1300px;
 }
 
-.entete_menu,
-.entete_header {
+.entete__menu,
+.entete__header {
   flex: 0 1 1500px;
 }
 
@@ -292,7 +292,6 @@ body > h2 {
 /* Sections de la page */
 /*///////////////////////////// */
 #entete {
-  background: #000 url("images/image_entete2.jpg") no-repeat fixed;
   background-size: 150%;
   height: 90vh;
   min-width: 350px;
@@ -300,25 +299,31 @@ body > h2 {
 @media screen and (min-width: 576px) {
   #entete {
     background-size: 100%;
-    background: #000 center/cover url("images/image_entete3.jpg") no-repeat fixed;
   }
 }
 @media screen and (min-width: 992px) {
   #entete {
     background-size: 100%;
-    background: #000 center/cover url("images/image_entete.jpg") no-repeat fixed;
   }
 }
 #entete .entete__header {
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
 }
 #entete .entete__header h1,
 #entete .entete__header h3 {
-  margin-bottom: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+#entete .entete__header .cats {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 .galerie__section div {
@@ -425,6 +430,23 @@ blockquote p::after {
 }
 .entete__button:active {
   color: blue;
+}
+
+.btn {
+  cursor: pointer;
+  width: 60vw;
+  padding: 10px 0;
+  border: 4px solid rgb(240, 240, 240);
+  border-radius: 10px;
+  color: var(--b-texte);
+  font-size: 2rem;
+  font-family: inherit;
+  transition: background-color 0.4s ease, color 0.4s ease, border 0.4s ease;
+}
+.btn:hover {
+  color: var(--couleur-evenement);
+  background-color: var(--b-texte);
+  border: 4px solid var(--couleur-evenement);
 }
 
 a {
@@ -573,6 +595,10 @@ a:hover {
   color: var(--b-texte);
   height: 32px;
   width: 32px;
+}
+
+._404 {
+  margin-top: 20px;
 }
 
 .section_cat,
