@@ -292,6 +292,7 @@ body > h2 {
 /* Sections de la page */
 /*///////////////////////////// */
 #entete {
+  background: #000 url("images/image_entete2.jpg") no-repeat fixed;
   background-size: 150%;
   height: 90vh;
   min-width: 350px;
@@ -299,14 +300,17 @@ body > h2 {
 @media screen and (min-width: 576px) {
   #entete {
     background-size: 100%;
+    background: #000 center/cover url("images/image_entete3.jpg") no-repeat fixed;
   }
 }
 @media screen and (min-width: 992px) {
   #entete {
     background-size: 100%;
+    background: #000 center/cover url("images/image_entete.jpg") no-repeat fixed;
   }
 }
 #entete .div__404 {
+  background-image: unset;
   display: flex;
   padding: 2rem 5rem;
 }
@@ -328,6 +332,11 @@ body > h2 {
   justify-content: space-around;
   margin-top: 20px;
   flex-wrap: wrap;
+}
+
+#entete.entete__404 {
+  background: unset;
+  background-color: hsl(67, 50%, 15%);
 }
 
 .galerie__section div {
@@ -438,12 +447,11 @@ blockquote p::after {
 
 .btn {
   cursor: pointer;
-  width: 60%;
-  padding: 10px 0;
+  padding: 10px 20px;
   border: 4px solid rgb(240, 240, 240);
   border-radius: 10px;
   color: var(--b-texte);
-  font-size: 2rem;
+  font-size: var(--h3-texte);
   font-family: inherit;
   transition: background-color 0.4s ease, color 0.4s ease, border 0.4s ease;
 }

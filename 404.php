@@ -21,7 +21,6 @@
                     <a href="<?= "category/".$cat->name; ?>"><?= $cat->name; ?></a>
                     <?php endforeach; ?>
                 </div>
-
             </section>
         </div>
         <img class="image__404" src="<?= get_template_directory_uri() . '/images/vague_feuille_verte.png' ?>" alt="image feuille verte">
