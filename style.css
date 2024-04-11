@@ -318,7 +318,7 @@ body > h2 {
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 #entete .entete__header h1,
@@ -332,6 +332,9 @@ body > h2 {
   justify-content: space-around;
   margin-top: 20px;
   flex-wrap: wrap;
+}
+#entete .div__404 .entete__header {
+  align-items: center;
 }
 
 #entete.entete__404 {

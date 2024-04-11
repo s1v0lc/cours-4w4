@@ -24,7 +24,7 @@
         height: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
 
         h1,
@@ -39,6 +39,12 @@
             justify-content: space-around;
             margin-top: 20px;
             flex-wrap: wrap;
+        }
+    }
+
+    .div__404 {
+        .entete__header {
+            align-items: center;
         }
     }
 }
