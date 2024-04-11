@@ -22,6 +22,8 @@
             </div>
 
         </section>
-        
+        <div class="_404__image">
+            <img src="<?= get_template_directory_uri() . '/images/vague_feuille_verte.png' ?>" alt="allo?">
+        </div>
     </div>
 <?php get_footer() ?>
