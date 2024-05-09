@@ -66,10 +66,15 @@
         }
     }
 
-    img {
+    // Pour pas affecter le carrousel
+    >img {
         width: 100%;
         margin: 10px 0;
         // height: auto;
+    }
+
+    figure {
+        // display: none;
     }
 
     .h5:nth-of-type(2) {

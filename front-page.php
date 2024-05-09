@@ -2,6 +2,10 @@
 <h2>Front-page.php</h2>
 <div id="entete" class="global clr-primaire-100">
         <section class="entete__header">  
+        <?php
+            // Appel du shortcode directement dans le fichier front-page.php
+            echo do_shortcode('[em_destination]');
+        ?>
             <h1 class="bgc-text"><?= get_bloginfo('name'); ?></h1>
             <h3 class="bgc-text"><?= get_bloginfo('description'); ?></h3>
         </section>

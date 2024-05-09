@@ -3,6 +3,7 @@
     background-size: 150%;
     height: 90vh;
     min-width: 350px;
+    z-index: 1000;
 
     @media screen and (min-width:576px) {
         background-size: 100%;

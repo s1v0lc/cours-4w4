@@ -19,7 +19,11 @@
         <div class="section__single bck-primaire-400">
             <?php while(have_posts()): the_post(); ?>
                 <div class="carte">
-                    <h3><?= get_the_content() ?></h3>
+                    <?php the_content() ?>
+                    <p>Température minimum:<?php the_field('temperature_minimum'); ?></p>
+                    <p>Température maximum:<?php the_field('temperature_maximum'); ?></p>
+                    <p>Humidité:<?php the_field('humidite'); ?></p>
+                    <p>Ville avoisinante:<?php the_field('ville_avoisinante'); ?></p>
                 </div>
             <?php endwhile; ?>
             </div>
