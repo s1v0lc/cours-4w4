@@ -5,21 +5,30 @@
 h1 {
     font-size: var(--h1-texte);
 }
+
 h2 {
     font-size: var(--h2-texte);
+
+    svg {
+        height: 30px;
+    }
 }
+
 h3 {
     font-size: var(--h3-texte);
     margin: 0;
 }
+
 h4 {
     font-size: var(--h4-texte);
     margin: 0;
 }
+
 h5 {
     font-size: var(--h5-texte);
     margin: 0;
 }
+
 h6 {
     font-size: var(--h6-texte);
 }
@@ -43,9 +52,10 @@ blockquote {
     p {
         text-align: center;
         color: var(--couleur-evenement);
-        
+
         // Guillemets autour de la citation
-        &::before, &::after {
+        &::before,
+        &::after {
             position: absolute;
             font-size: 3.5rem;
             height: 21px;
@@ -63,6 +73,6 @@ blockquote {
             right: 5px;
             bottom: 25px;
         }
-        
+
     }
 }
