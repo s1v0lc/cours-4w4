@@ -101,3 +101,24 @@
         }
     }
 }
+
+.restapi__carte {
+    background-color: $--clr-vert-moyen;
+    color: $--clr-brun-leger;
+
+    .titre {
+        color: $--clr-vert-pale;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-grow: 4;
+
+        p {
+            margin: 0;
+
+            a {
+                color: $--clr-vert-leger;
+            }
+        }
+    }
+}

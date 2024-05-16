@@ -709,6 +709,24 @@ a:hover {
   margin: none;
 }
 
+.restapi__carte {
+  background-color: hsl(67, 50%, 30%);
+  color: hsl(39, 38%, 70%);
+}
+.restapi__carte .titre {
+  color: hsl(67, 50%, 85%);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-grow: 4;
+}
+.restapi__carte .titre p {
+  margin: 0;
+}
+.restapi__carte .titre p a {
+  color: hsl(67, 50%, 40%);
+}
+
 #menu {
   z-index: 1001;
   position: fixed;
