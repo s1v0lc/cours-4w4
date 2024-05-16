@@ -73,10 +73,6 @@
         // height: auto;
     }
 
-    figure {
-        // display: none;
-    }
-
     .h5:nth-of-type(2) {
         flex-grow: 1;
     }
@@ -96,29 +92,23 @@
         justify-content: flex-start;
 
         a {
-            color: $--clr-vert-leger;
+            color: hsl(67, 50%, 40%);
             margin: none;
         }
     }
 }
 
-.restapi__carte {
-    background-color: $--clr-vert-moyen;
-    color: $--clr-brun-leger;
-
-    .titre {
-        color: $--clr-vert-pale;
+// CSS de l'extension voyage car son css marche pas
+.section_cat {
+    .contenu__restapi {
         display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        flex-grow: 4;
-
-        p {
-            margin: 0;
-
-            a {
-                color: $--clr-vert-leger;
-            }
-        }
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 20px;
+        margin-top: 10px;
     }
+}
+
+.restapi__carte {
+    margin-bottom: 20px;
 }
