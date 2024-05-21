@@ -469,7 +469,16 @@ blockquote p::after {
 }
 
 .bouton__categorie {
+  background-color: hsl(67, 50%, 30%);
+  color: hsl(67, 50%, 85%);
+  font-family: "Prompt", arial, helvetica, sans-serif;
+  font-size: var(--h4-texte);
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-weight: bold;
   border: none;
+  cursor: pointer;
+  user-select: none;
 }
 
 a {
