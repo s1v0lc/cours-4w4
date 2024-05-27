@@ -1,20 +1,78 @@
-
 /*
-Sélecteur textuel de base
-
-voir mdn clamp
--> font-size clamp gen
+    Sélecteur textuel de base
 */
 
 h1 {
-    font-size: clamp(1rem, 6.2vw - 0.57rem, 3.75rem);
+    font-size: var(--h1-texte);
 }
-h2 {}
-h3 {}
-h4 {}
-h5 {}
-h6 {}
 
-p {}
+h2 {
+    font-size: var(--h2-texte);
+
+    svg {
+        height: 30px;
+    }
+}
+
+h3 {
+    font-size: var(--h3-texte);
+    margin: 0;
+}
+
+h4 {
+    font-size: var(--h4-texte);
+    margin: 0;
+}
+
+h5 {
+    font-size: var(--h5-texte);
+    margin: 0;
+}
+
+h6 {
+    font-size: var(--h6-texte);
+}
+
+p {
+    // color: blue;
+}
 
 hr {}
+
+blockquote {
+    background-color: var(--couleur-arriere-evenement);
+    position: relative;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--b-texte);
+    border: 10px inset var(--b-texte);
+
+    p {
+        text-align: center;
+        color: var(--couleur-evenement);
+
+        // Guillemets autour de la citation
+        &::before,
+        &::after {
+            position: absolute;
+            font-size: 3.5rem;
+            height: 21px;
+        }
+
+        &::before {
+            content: "❝";
+            // top: -15px;
+            top: 5px;
+            left: 5px;
+        }
+
+        &::after {
+            content: "❞";
+            right: 5px;
+            bottom: 25px;
+        }
+
+    }
+}

@@ -1,0 +1,56 @@
+#entete {
+    background: #000 url("images/image_entete2.jpg") no-repeat fixed;
+    background-size: 150%;
+    height: 90vh;
+    min-width: 350px;
+    z-index: 1000;
+
+    @media screen and (min-width:576px) {
+        background-size: 100%;
+        background: #000 center/cover url("images/image_entete3.jpg") no-repeat fixed;
+    }
+
+    @media screen and (min-width:992px) {
+        background-size: 100%;
+        background: #000 center/cover url("images/image_entete.jpg") no-repeat fixed;
+    }
+
+    .div__404 {
+        background-image: unset;
+        display: flex;
+        padding: 2rem 5rem;
+    }
+
+    .entete__header {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        h1,
+        h3 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .cats {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+    }
+
+    .div__404 {
+        .entete__header {
+            align-items: center;
+        }
+    }
+}
+
+#entete.entete__404 {
+    background: unset;
+    background-color: $--clr-vert-fonce;
+}

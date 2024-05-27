@@ -1,7 +1,7 @@
 // wp developer style.css
 
 /*
-Theme Name: theme-gr2
+Theme Name: tp2
 Theme URI: https://referenced.ca
 Author: Clovis Gauthier
 Author URI: https://wordpress.org/
@@ -12,18 +12,46 @@ Requires PHP: 7.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: theme-gr2
-Ce thème a été développé dans le cadre du cours 4A4
+Ce thème a été développé dans le cadre du cours 4W4
 */
 
+/* utile */
 /*///////////////////////////// */
-/* Variables CSS */
+@import "utile/couleurs";
+@import "utile/couleurs-class";
+@import "utile/local";
 /*///////////////////////////// */
-@import "variables";
-/*///////////////////////////// */ 
-/* Règles de base */
-/*///////////////////////////// */ 
-@import "base/h";
-/*///////////////////////////// */ 
+ 
 /* Règles de la pagination */
 /*///////////////////////////// */ 
 @import "layout";
+
+/* Sections de la page */
+/*///////////////////////////// */ 
+@import "entete";
+@import "galerie";
+@import "footer";
+/*///////////////////////////// */ 
+
+/* Règles de base */
+/*///////////////////////////// */ 
+@import "base/h";
+@import "base/boutons";
+@import "base/liens";
+@import "base/images";
+/*///////////////////////////// */
+
+/* Effets */
+/*///////////////////////////// */
+@import "effet/vague";
+@import "effet/diagonale";
+/*///////////////////////////// */
+
+/* Composants */
+/*///////////////////////////// */
+@import "composants/sociaux";
+@import "composants/recherche";
+@import "composants/carte";
+@import "composants/menu";
+/*///////////////////////////// */
+

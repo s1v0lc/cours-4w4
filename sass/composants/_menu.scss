@@ -1,0 +1,208 @@
+// <nav class="menu-principal-container">
+//                     <ul id="menu-principal" class="menu">
+//                         <li id="menu-item-32"
+//                             class="menu-item menu-item-type-post_type menu-item-object-post menu-item-32"><a
+//                                 href="http://localhost:8080/4w4_clovis/2020/10/07/582-6n3-stage-285h/">Stage</a></li>
+//                         <li id="menu-item-33"
+//                             class="menu-item menu-item-type-post_type menu-item-object-post menu-item-33"><a
+//                                 href="http://localhost:8080/4w4_clovis/2020/10/07/582-5mbtechnologies-emergentes-et-avancees-volet-creation-60h/">Technologies
+//                                 émergentes</a></li>
+//                     </ul>
+//                 </nav>
+#menu {
+    //entete
+    z-index: 1001;
+    position: fixed;
+    width: 100vw;
+    height: 13vh;
+}
+
+#menu a img {
+    width: 10vh;
+    height: 10vh;
+}
+
+.entete__menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 3vw;
+}
+
+.menu-principal-container {
+    //nav
+    opacity: 0.9;
+    position: absolute;
+    border: 5px solid $--clr-brun-fonce;
+    background-color: $--clr-brun-moyen;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    top: 15px;
+    right: 25px;
+    transition: all 0.8s;
+
+    @media screen and (min-width:992px) {
+        align-self: center;
+        height: 80%;
+        width: fit-content;
+        background-color: unset;
+        border-radius: unset;
+        position: unset;
+        border: unset;
+        transform: unset;
+    }
+}
+
+.menu {
+    //ul
+    opacity: 0;
+    border: 10px $--clr-brun-moyen;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 27vw;
+    padding-right: 25vw;
+    row-gap: 0.8vw;
+    align-items: center;
+    list-style-type: none;
+    transition: opacity 0.4s ease-in-out;
+
+    @media screen and (min-width:576px) {
+        height: 100%;
+        padding-top: 5vw;
+        padding-right: 15vw;
+    }
+
+    @media screen and (min-width:992px) {
+        opacity: 1;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+        padding: 0%;
+        margin: unset;
+    }
+}
+
+#menu label {
+    //icone du bouton
+    border-radius: 50px;
+    padding: 20px;
+}
+
+.menu-item {
+    //li
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (min-width:992px) {
+        pointer-events: all;
+        transition: background-position-y 0.3s linear;
+        flex-basis: 12.5%; // 100/8
+        border-right: 2px solid $--clr-vert-fonce;
+    }
+
+    &:last-of-type {
+        border-right: none;
+    }
+
+    a {
+        position: relative;
+        margin: 8px 10px;
+        text-decoration: none;
+        color: $--clr-brun-pale;
+        font-size: var(--h3-texte);
+        user-select: none;
+        transition: color 0.3s ease-in;
+
+        &:hover {
+            color: $--clr-vert-pale;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            top: 85%;
+            left: 0px;
+            width: 100%;
+            height: 3px;
+            background: $--clr-vert-leger;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.5s;
+        }
+
+        &:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        @media screen and (min-width:992px) {
+            font-size: var(--h4-texte);
+        }
+    }
+}
+
+#chk_burger {
+    //checkbox
+    display: none;
+}
+
+#burger {
+    //icone du checkbox
+    background-color: $--clr-brun-pale;
+    z-index: 992;
+    display: block;
+    cursor: pointer;
+    user-select: none;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    box-shadow: 0 2px 8px 0px #555;
+    transition: background-color 1s;
+
+    @media screen and (min-width:992px) {
+        display: none;
+    }
+}
+
+#chk_burger:checked~.menu-principal-container {
+    width: 110vw;
+    height: 110vw;
+    transform: translate(20%, -20%);
+
+    @media screen and (min-width:992px) {
+        transform: unset;
+        width: unset;
+        height: unset;
+    }
+
+    .menu {
+        // width: 0%;
+        opacity: 1;
+
+        li {
+            // opacity: 1;
+            // display: unset;
+            pointer-events: unset;
+        }
+    }
+}
+
+#chk_burger:checked~#burger {
+    background-color: $--clr-brun-fonce;
+
+    svg {
+        transform: rotate(-180deg);
+        color: $--clr-brun-pale;
+    }
+}
+
+#burger svg {
+    transition: transform 1s ease-in-out;
+    color: $--clr-brun-fonce;
+}
