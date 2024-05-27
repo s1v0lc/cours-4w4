@@ -724,6 +724,16 @@ a:hover {
   color: hsl(67, 50%, 40%);
   margin: none;
 }
+.carte .champs {
+  display: flex;
+  justify-content: center;
+  column-gap: 2vw;
+}
+.carte .champs p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .section_cat .contenu__restapi {
   display: flex;

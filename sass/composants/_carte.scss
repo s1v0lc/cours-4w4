@@ -96,6 +96,19 @@
             margin: none;
         }
     }
+
+    // ACF
+    .champs {
+        display: flex;
+        justify-content: center;
+        column-gap: 2vw;
+
+        p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
 }
 
 // CSS de l'extension voyage car son css marche pas

@@ -20,10 +20,12 @@
             <?php while(have_posts()): the_post(); ?>
                 <div class="carte">
                     <?php the_content() ?>
-                    <p>Température minimum:<?php the_field('temperature_minimum'); ?></p>
-                    <p>Température maximum:<?php the_field('temperature_maximum'); ?></p>
-                    <p>Humidité:<?php the_field('humidite'); ?></p>
-                    <p>Ville avoisinante:<?php the_field('ville_avoisinante'); ?></p>
+                    <div class="champs">
+                        <p>Température minimum <?php the_field('temperature_minimum'); ?><span class="material-symbols-outlined">thermometer_minus</span></p>
+                        <p>Température maximum <?php the_field('temperature_maximum'); ?><span class="material-symbols-outlined">thermometer_gain</span></p>
+                        <p>Humidité <?php the_field('humidite'); ?><span class="material-symbols-outlined">humidity_percentage</span></p>
+                        <p>Ville avoisinante <?php the_field('ville_avoisinante'); ?><span class="material-symbols-outlined">near_me</span></p>
+                    </div>
                 </div>
             <?php endwhile; ?>
             </div>
