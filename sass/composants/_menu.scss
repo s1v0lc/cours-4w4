@@ -86,6 +86,24 @@
     }
 }
 
+#menu .loupe {
+    user-select: none;
+    height: 50%;
+    transform: rotate(20deg);
+    translate: -55px 20px;
+}
+
+#menu .survol {
+    animation: animerLoupe 1s ease-in-out forwards;
+}
+
+@keyframes animerLoupe {
+    to {
+        transform: rotate(-90deg);
+        translate: 15vw 12vh;
+    }
+}
+
 #menu label {
     //icone du bouton
     border-radius: 50px;

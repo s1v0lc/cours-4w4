@@ -50,8 +50,6 @@
                     'post_type' => 'post',
                     'name' => 'galerie-destinations-populaires'
                 );
-            ?>
-            <?php
                 $query = new WP_Query( $args );
                 // Affichage du post
                 if ( $query->have_posts() ) :
