@@ -14,6 +14,6 @@
         </div>
         <?= the_post_thumbnail(); ?>
         <h4><?= $endroit ?></h4>
-        <p><?= wp_trim_words(get_the_content(),10); ?></p>
+        <p><?= wp_trim_words(get_the_content(), 10); ?></p>
         <?php the_category() ?>
     </div>
