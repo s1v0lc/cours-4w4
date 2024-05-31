@@ -85,4 +85,21 @@
             }
         }
     }
+
+    .contenu__restapi__ef {
+        // display: flex;
+        // justify-content: space-around;
+        // flex-grow: ;
+        
+        flex-wrap: wrap;
+        .restapi__carte {
+            margin-bottom: 10px;
+            img {
+                background-color: red;
+            }
+            p {
+                font-size: clamp(.6rem, 1.0667vw + .3333rem, 1rem);
+            }
+        }
+    }
 }
