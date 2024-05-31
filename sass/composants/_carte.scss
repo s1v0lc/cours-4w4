@@ -130,6 +130,7 @@
     padding: 15px 0;
     background-color: hsl(67, 50%, 15%);
     transition: height 1s;
+
     .contenu__restapi {
         display: flex;
         flex-wrap: wrap;
@@ -137,10 +138,33 @@
         column-gap: 20px;
         margin-top: 10px;
         padding-top: 20px;
+        max-height: 0px;
+        opacity: 0;
+        display: none;
 
+        .restapi__carte {
+            margin-bottom: 20px;
+        }
+    }
+}
+.afficherConteneur {
+    // classe pour animer l'ouverture du conteneur des filtres
+    .contenu__restapi {
+        display: flex;
+        animation: apparitionCartes 0.8s forwards;
     }
 }
 
-.restapi__carte {
-    margin-bottom: 20px;
+@keyframes apparitionCartes {
+    from {
+        max-height: fit-content;
+        opacity: 0;
+        transform: translate(0px, -40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: unset;
+        max-height: fit-content;
+    }
 }
