@@ -1,7 +1,28 @@
-.footer__footer{
+.footer__footer {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     row-gap: 1.5vh;
+
+}
+
+.footer__section {
+    .div__footer {
+        display: flex;
+        justify-content: space-around;
+    }
+    .feuille {
+        margin-top: -3.5%;
+        margin-left: 10%;
+        height: 300px;
+        width: 300px;
+
+        img {
+            object-fit: contain;
+            width: 100%;
+            height: auto;
+
+        }
+    }
 }

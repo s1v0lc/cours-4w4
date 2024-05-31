@@ -14,8 +14,8 @@ Clovis Gauthier
 gr. 00002
 
 ### Description du projet:
-Projet de thème wordpress réalisé avec php et sass dans le cadre du cours 582-4W4-MA Conception d'interfaces et développement web
-Les extensions Carrousel et Voyage ont aussi recours à du javascript
+Projet de thème wordpress réalisé avec php, javascript et sass dans le cadre du cours 582-4W4-MA Conception d'interfaces et développement web.
+Les extensions Carrousel et Voyage utilisent la même structure que le thème principal.
 
 ### Liens URL:
 - Lien vers le serveur distant whc.ca: https://gftnth00.mywhc.ca/tim40/
