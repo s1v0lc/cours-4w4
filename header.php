@@ -15,8 +15,13 @@
 </head>
 <body>
     <div id="menu" class="global bck-primaire-300">
+        <!-- Logo -->
         <?= get_custom_logo(); ?>
+        <!-- Loupe -->
         <img class="loupe" src="<?= get_template_directory_uri() . '/images/loupeExplora.png' ?>" alt="loupeExplora.png">
+        <!-- Barre de recherche -->
+        <?php get_search_form(); ?>
+        <!-- Navigation -->
         <header class="entete__menu">
             <input id="chk_burger" type="checkbox">
             <label id="burger" for="chk_burger">

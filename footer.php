@@ -12,8 +12,6 @@
         </footer>
     </div>
     <?php wp_footer()?>
-    <!-- Scripts -->
-    <script src="wp-content/themes/tp2/js/recherche.js"></script>
 </body>
 </html>
 

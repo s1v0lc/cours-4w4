@@ -778,6 +778,7 @@ a:hover {
   top: 15px;
   right: 25px;
   transition: all 0.8s;
+  z-index: 102;
 }
 @media screen and (min-width: 992px) {
   .menu-principal-container {
@@ -824,7 +825,9 @@ a:hover {
   }
 }
 
-#menu .loupe {
+#menu img.loupe {
+  z-index: 101;
+  cursor: pointer;
   user-select: none;
   height: 50%;
   transform: rotate(20deg);
@@ -832,16 +835,47 @@ a:hover {
 }
 
 #menu .survol {
-  animation: animerLoupe 1s ease-in-out forwards;
+  animation: animerLoupe 1s ease-in forwards;
 }
 
 @keyframes animerLoupe {
+  30% {
+    translate: unset 0px;
+  }
+  90% {
+    opacity: 1;
+  }
   to {
     transform: rotate(-90deg);
-    translate: 15vw 12vh;
+    opacity: 0;
+    translate: 280px;
   }
 }
-#menu label {
+#menu .recherche {
+  z-index: 100;
+  position: relative;
+}
+
+#menu .recherche::after {
+  content: "";
+  background-color: hsl(67, 50%, 30%);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#menu .afficher::after {
+  animation: animerBarre 0.8s ease-in 0.2s forwards;
+}
+
+@keyframes animerBarre {
+  to {
+    left: 100%;
+  }
+}
+#menu .entete__menu label {
   border-radius: 50px;
   padding: 20px;
 }
