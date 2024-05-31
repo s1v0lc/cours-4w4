@@ -430,13 +430,14 @@ blockquote p::after {
 }
 
 .entete__button {
-  font-size: clamp(1.375rem, 0.4375rem + 3vw, 2.5rem);
-  padding: 10px 12px;
-  border-radius: 20px;
+  font-size: clamp(0.625rem, 0.3182rem + 1.6364vw, 1.75rem);
+  padding: 8px 10px;
+  margin-bottom: 50px;
+  border-radius: 10px;
   cursor: pointer;
   font-family: "Prompt", arial, helvetica, sans-serif;
   color: hsl(39, 38%, 40%);
-  border: 4px solid hsl(39, 38%, 40%);
+  border: 3px solid hsl(39, 38%, 40%);
   background-image: linear-gradient(160deg, hsl(39, 38%, 90%) 0%, hsl(39, 38%, 70%) 50%);
   background-repeat: no-repeat;
   background-size: 150%;
@@ -445,7 +446,7 @@ blockquote p::after {
 }
 .entete__button:hover {
   color: hsl(39, 38%, 30%);
-  border: 4px solid hsl(39, 38%, 30%);
+  border: 3px solid hsl(39, 38%, 30%);
   background-position-x: 50%;
 }
 .entete__button:active {
@@ -524,6 +525,8 @@ a:hover {
 /* Effets */
 /*///////////////////////////// */
 .vague {
+  user-select: none;
+  pointer-events: none;
   position: absolute;
   bottom: -1px;
   left: 0;
@@ -575,13 +578,37 @@ a:hover {
 /*///////////////////////////// */
 /* Composants */
 /*///////////////////////////// */
-.sociaux {
+.entete__header .sociaux {
+  display: flex;
+  gap: 2vw;
+}
+.entete__header .sociaux a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  transition: color 0.3s, background-color 0.3s;
+}
+.entete__header .sociaux a:hover {
+  background-color: var(--couleur-evenement);
+  background-color: hsl(67, 50%, 85%);
+  border: 3px solid var(--b-texte);
+}
+.entete__header .sociaux a:hover svg {
+  color: var(--b-texte);
+}
+.entete__header .sociaux a svg {
+  color: hsl(67, 50%, 85%);
+  transition: color 0.3s;
+}
+
+.footer__section .sociaux {
   display: flex;
   justify-content: center;
   gap: 2rem;
 }
-
-.sociaux a {
+.footer__section .sociaux a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -590,18 +617,16 @@ a:hover {
   background-color: var(--b-texte);
   transition: color 0.3s, background-color 0.3s;
 }
-.sociaux a:hover {
+.footer__section .sociaux a:hover {
   background-color: var(--couleur-evenement);
   border: 3px solid var(--b-texte);
 }
-
-.sociaux a svg {
+.footer__section .sociaux a:hover svg {
+  color: var(--b-texte);
+}
+.footer__section .sociaux a svg {
   color: var(--couleur-evenement);
   transition: color 0.3s;
-}
-
-.sociaux a:hover svg {
-  color: var(--b-texte);
 }
 
 .recherche {

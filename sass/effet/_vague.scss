@@ -1,4 +1,6 @@
 .vague {
+    user-select: none;
+    pointer-events: none;
     position: absolute;
     bottom: -1px;
     left: 0;
@@ -13,6 +15,7 @@
         height: 200px;
         width: 200px;
         transform: rotate(170deg);
+
         img {
             object-fit: contain;
             width: 100%;
@@ -20,6 +23,7 @@
 
         }
     }
+
     svg {
         position: relative;
         display: block;
