@@ -1094,4 +1094,42 @@ a:hover {
 /*///////////////////////////// */
 /* Épreuve Finale */
 /*///////////////////////////// */
+.page__pays {
+  color: hsl(67, 50%, 85%);
+  background-color: hsl(67, 50%, 15%);
+}
+.page__pays h1 {
+  padding-left: 10%;
+  margin-top: 20vh;
+}
+.page__pays .section__contenu__pays {
+  padding-top: 130px;
+  padding-bottom: 130px;
+  background-color: hsl(67, 50%, 40%);
+}
+.page__pays .section__contenu__pays p {
+  margin: 0;
+  padding: 2% 10%;
+  font-size: var(--h2-texte);
+}
+.page__pays .section__contenu__pays > figure {
+  padding: 0 10%;
+}
+.page__pays .vague__header .vague {
+  position: unset;
+  translate: 0px 3px;
+}
+.page__pays .vague__header .vague svg path {
+  fill: hsl(67, 50%, 40%);
+}
+.page__pays .vague__footer {
+  position: relative;
+}
+.page__pays .vague__footer .vague {
+  position: absolute;
+}
+.page__pays .vague__footer .vague svg path {
+  fill: hsl(39, 38%, 30%);
+}
+
 /*///////////////////////////// *//*# sourceMappingURL=style.css.map */

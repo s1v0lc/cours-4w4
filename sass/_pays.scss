@@ -1,0 +1,55 @@
+// Styles utilisé pour la pag des plus beaux pays dans l'épreuve finale
+.page__pays {
+    color: hsl(67, 50%, 85%);
+    background-color: hsl(67, 50%, 15%);
+
+    h1 {
+        // text-align: center;
+        padding-left: 10%;
+        margin-top: 20vh;
+    }
+
+    .section__contenu__pays {
+        padding-top: 130px;
+        padding-bottom: 130px;
+        background-color: hsl(67, 50%, 40%);
+
+        p {
+            margin: 0;
+            padding: 2% 10%;
+            font-size: var(--h2-texte);
+        }
+
+        &>figure {
+            padding: 0 10%;
+        }
+
+    }
+
+    .vague__header {
+
+        // Vague du header
+        .vague {
+            position: unset;
+            translate: 0px 3px;
+
+            svg path {
+                // fill: red;
+                fill: hsl(67, 50%, 40%);
+            }
+        }
+    }
+
+    .vague__footer {
+        // Vague du footer
+        position: relative;
+
+        .vague {
+            position: absolute;
+
+            svg path {
+                fill: hsl(39, 38%, 30%);
+            }
+        }
+    }
+}

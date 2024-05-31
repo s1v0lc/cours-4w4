@@ -6,23 +6,22 @@
 ?>
 <!-- header -->
 <?php get_header(); ?>
-<!-- Contenu -->
-<main class="site__main">
+<!-- Main -->
+<main class="page__pays">
+    <!-- Titre -->
     <h1><?= get_the_title(); ?></h1>
-    <?php
-        // Requête pour obtenir le post de la galerie à partir de son template
-        $args = array(
-            'post_type' => 'post',
-            'name' => 'galerie-destinations-populaires'
-        );
-        $query = new WP_Query( $args );
-        // Affichage du post
-        if ( $query->have_posts() ) :
-            while ( $query->have_posts() ) : ?>
-                <?php $query->the_post(); ?>
-                <figure><?php get_template_part( 'gabarit/categorie-galerie' ); ?></figure>
-            <?php endwhile; ?>
-        <?php endif; ?>
+    <!-- Vague -->
+    <div class="vague__header">
+        <?php get_template_part("gabarit/vague"); ?>
+    </div>
+    <!-- Contenu de la page -->
+    <section class="section__contenu__pays">
+        <?php the_content();?>
+    </section>
+    <!-- Vague -->
+    <div class="vague__footer">
+        <?php get_template_part("gabarit/vague"); ?>
+    </div>
 </main>
 <!-- Footer -->
 <?php get_footer(); ?>
