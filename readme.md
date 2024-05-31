@@ -1,4 +1,4 @@
-# TP2 - Club de voyage #
+# Epreuve Finale - Les plus beaux pays #
 
 ### Objectifs:
 Poursuivre le développement d'un site web pour un club de voyage débuté dans le tp1 en:
