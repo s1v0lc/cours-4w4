@@ -3,9 +3,9 @@
             <div class="div__footer">
                 <div class="liens">
                     <p>Liens</p>
-                    <a href="#">Dépot Github</a>
-                    <a href="#">Page Github</a>
-                    <a href="#">Page WordPress</a>
+                    <a href="https://github.com/s1v0lc/ef-pays">Dépot Github Pays</a>
+                    <a href="https://github.com/s1v0lc/cours-4w4/tree/epreuve-finale">Dépot Github Thème</a>
+                    <a href="https://gftnth00.mywhc.ca/tim40/">Page WHC</a>
                 </div>
                 <div class="adresse">
                     <p>Adresse</p>
@@ -21,9 +21,9 @@
                         Conception d'interfaces et développement web.
                     </p>
                 </div>
-                <div class="feuille">
+                <!-- <div class="feuille">
                     <img src="wp-content/themes/theme_gr2/images/vague_feuille_verte.png" alt="">
-                </div>
+                </div> -->
             </div>
             <?php get_search_form(); ?>
             <div class="sociaux">

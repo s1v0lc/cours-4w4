@@ -1,6 +1,8 @@
 (function () {
     let conteneur = document.querySelector('.section_restapi'); // Sélection du conteneur
-    conteneur.ouvert = false; // état d'ouverture du conteneur
+    if(conteneur) {
+        conteneur.ouvert = false; // état d'ouverture du conteneur
+    }
     let boutons = document.querySelectorAll('.section_restapi .bouton__categorie'); // Sélection des boutons 
     if (boutons) { // Vérification
         for (const btn of boutons) {

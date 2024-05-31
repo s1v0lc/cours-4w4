@@ -19,5 +19,5 @@ Les extensions Carrousel et Voyage utilisent la même structure que le thème pr
 ### Liens URL:
 - Lien vers le serveur distant whc.ca: https://gftnth00.mywhc.ca/tim40/
 - Lien vers ghp de la page d'accueil: https://s1v0lc.github.io/cours-4w4/
-- Lien vers le dépot du thème: https://github.com/s1v0lc/cours-4w4/tree/tp2
-- Lien vers le dépot du carrousel: https://github.com/s1v0lc/4w4_carrousel
+- Lien vers le dépot du thème: https://github.com/s1v0lc/cours-4w4/tree/epreuve-finale
+- Lien vers le dépot de l'extnesion: https://github.com/s1v0lc/ef-pays
