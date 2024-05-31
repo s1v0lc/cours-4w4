@@ -3,7 +3,7 @@
             <div class="div__footer">
                 <div class="liens">
                     <p>Liens</p>
-                    <a href="https://github.com/s1v0lc/ef-pays">Dépot Github Pays</a>
+                    <a href="https://github.com/s1v0lc/ef-pays/tree/master">Dépot Github Pays</a>
                     <a href="https://github.com/s1v0lc/cours-4w4/tree/epreuve-finale">Dépot Github Thème</a>
                     <a href="https://gftnth00.mywhc.ca/tim40/">Page WHC</a>
                 </div>

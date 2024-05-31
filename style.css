@@ -1135,7 +1135,13 @@ a:hover {
   margin-top: 100px;
   padding: 0 10%;
 }
-.page__pays .ef__div .bouton__pays {
+.page__pays .ef__div .restapi__boutons__ef {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+.page__pays .ef__div .restapi__boutons__ef .bouton__pays {
   background-color: hsl(67, 50%, 30%);
   color: hsl(67, 50%, 85%);
   font-family: "Prompt", arial, helvetica, sans-serif;
@@ -1148,7 +1154,7 @@ a:hover {
   user-select: none;
   transition: color 0.2s, background-color 0.2s;
 }
-.page__pays .ef__div .bouton__pays:hover {
+.page__pays .ef__div .restapi__boutons__ef .bouton__pays:hover {
   background-color: hsl(67, 50%, 85%);
   color: hsl(67, 50%, 30%);
 }

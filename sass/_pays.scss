@@ -60,22 +60,28 @@
         margin-top: 100px;
         padding: 0 10%;
         // section restapi
-        .bouton__pays {
-            background-color: $--clr-vert-moyen;
-            color: $--clr-vert-pale;
-            font-family: 'Prompt', arial, helvetica, sans-serif;
-            font-size: var(--h4-texte);
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-            user-select: none;
-            transition: color 0.2s, background-color 0.2s;
-    
-            &:hover {
-                background-color: $--clr-vert-pale;
-                color: $--clr-vert-moyen;
+        .restapi__boutons__ef {
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+            .bouton__pays {
+                background-color: $--clr-vert-moyen;
+                color: $--clr-vert-pale;
+                font-family: 'Prompt', arial, helvetica, sans-serif;
+                font-size: var(--h4-texte);
+                padding: 5px 10px;
+                border-radius: 5px;
+                font-weight: bold;
+                border: none;
+                cursor: pointer;
+                user-select: none;
+                transition: color 0.2s, background-color 0.2s;
+        
+                &:hover {
+                    background-color: $--clr-vert-pale;
+                    color: $--clr-vert-moyen;
+                }
             }
         }
     }
