@@ -1,11 +1,10 @@
 # Epreuve Finale - Les plus beaux pays #
 
-### Objectifs:
-Poursuivre le développement d'un site web pour un club de voyage débuté dans le tp1 en:
-- Ajoutant une extension Carrousel qui affiche mieux les images
-- Utilisant l'extension ACF pour indiquer plus de détails sur les destinations avec un API météo
-- Afficher dynamiquement des destinations avec des filtres utilisant REST API
-- Animer certaines interactions pour rendre le site plus convivial pour les utilisateurs
+### Objectifs :  Utilisez la structure de thème de votre TP2 pour réaliser le développement de l’épreuve finale. 
+Ce que vous devez réaliser
+1.	Une page décrivant par pays les plus belles destinations de voyages la page sera créé à partir du modèle « template-pays.php » 
+2.	Une extension basée sur API REST de Wordpress qui génère un menu constitué des noms des pays et selon le pays sélectionné affiche l’ensemble des destinations de ce pays. L’extension sera intégrée dans le modèle de page à partir d’un « short-code »
+a.	    "France","États-Unis", "Canada", "Argentine", "Chili", "Belgique", "Maroc", "Mexique", "Japon", "Italie", "Islande", "Chine", "Grèce", "Suisse
 
 ### Auteur:
 Clovis Gauthier
