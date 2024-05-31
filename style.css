@@ -1131,5 +1131,26 @@ a:hover {
 .page__pays .vague__footer .vague svg path {
   fill: hsl(39, 38%, 30%);
 }
+.page__pays .ef__div {
+  margin-top: 100px;
+  padding: 0 10%;
+}
+.page__pays .ef__div .bouton__pays {
+  background-color: hsl(67, 50%, 30%);
+  color: hsl(67, 50%, 85%);
+  font-family: "Prompt", arial, helvetica, sans-serif;
+  font-size: var(--h4-texte);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s, background-color 0.2s;
+}
+.page__pays .ef__div .bouton__pays:hover {
+  background-color: hsl(67, 50%, 85%);
+  color: hsl(67, 50%, 30%);
+}
 
 /*///////////////////////////// *//*# sourceMappingURL=style.css.map */

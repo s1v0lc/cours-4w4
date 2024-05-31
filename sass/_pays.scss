@@ -2,13 +2,14 @@
 .page__pays {
     color: hsl(67, 50%, 85%);
     background-color: hsl(67, 50%, 15%);
-
+    // titre
     h1 {
         // text-align: center;
         padding-left: 10%;
         margin-top: 20vh;
     }
 
+    // Layout
     .section__contenu__pays {
         padding-top: 130px;
         padding-bottom: 130px;
@@ -26,6 +27,7 @@
 
     }
 
+    // Vagues
     .vague__header {
 
         // Vague du header
@@ -49,6 +51,31 @@
 
             svg path {
                 fill: hsl(39, 38%, 30%);
+            }
+        }
+    }
+
+
+    .ef__div {
+        margin-top: 100px;
+        padding: 0 10%;
+        // section restapi
+        .bouton__pays {
+            background-color: $--clr-vert-moyen;
+            color: $--clr-vert-pale;
+            font-family: 'Prompt', arial, helvetica, sans-serif;
+            font-size: var(--h4-texte);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            user-select: none;
+            transition: color 0.2s, background-color 0.2s;
+    
+            &:hover {
+                background-color: $--clr-vert-pale;
+                color: $--clr-vert-moyen;
             }
         }
     }
