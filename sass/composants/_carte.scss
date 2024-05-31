@@ -1,3 +1,4 @@
+.section_restapi,
 .section_cat,
 .section_pop {
     display: flex;
@@ -22,12 +23,17 @@
     }
 }
 
-.section_single {
-    .carte {
-        h3 {
-            color: red;
-        }
+.section__category,
+.section__single {
+    .carte:hover {
+        border-color: rgba($color: #000000, $alpha: 0);
     }
+}
+
+.section_restapi {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    transition: height 1s;
 }
 
 .carte {
@@ -39,8 +45,14 @@
     justify-content: space-between;
     background-color: $--clr-vert-moyen;
     color: $--clr-brun-leger;
-    padding: 1rem;
+    border: 6px solid $--clr-vert-moyen;
     border-radius: 10px;
+    padding: 1rem;
+    transition: border-color 0.2s;
+
+    &:hover {
+        border-color: hsl(67, 50%, 20%);
+    }
 
     @media screen and (min-width:576px) {
         flex: 0 1 40%;
@@ -112,13 +124,20 @@
 }
 
 // CSS de l'extension voyage car son css marche pas
-.section_cat {
+.section_restapi {
+    justify-content: space-around;
+    border-radius: 12px;
+    padding: 15px 0;
+    background-color: hsl(67, 50%, 15%);
+    transition: height 1s;
     .contenu__restapi {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         column-gap: 20px;
         margin-top: 10px;
+        padding-top: 20px;
+
     }
 }
 

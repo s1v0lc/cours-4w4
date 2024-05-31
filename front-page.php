@@ -24,14 +24,24 @@
                     <?php endwhile; ?>
                 <?php endif; ?>
             </div>
+            
             <!-- Affichage des catégories de voyages -->
             <h2>
                 Catégories
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="40px" fill="#e8eaed">
+                    <path fill="#353913" d="m260.67-524 220-356 220 356h-440ZM703.76-80q-73.43 0-124.59-51.26Q528-182.53 528-255.76q0-73.24 51.26-124.74 51.27-51.5 124.5-51.5 73.24 0 124.74 51.4T880-255.76q0 73.43-51.4 124.59Q777.2-80 703.76-80ZM120-103.33v-309.34h309.33v309.34H120Z"/>
+                </svg>
+            </h2>
+            <?php get_template_part( 'gabarit/categorie-categorie' ); ?>
+            
+            <!-- Affichage des filtres de catégories -->
+            <h2>
+                Filtres
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                     <path fill="#353913" d="M3.9 54.9C10.5 40.9 24.5 32 40 32H472c15.5 0 29.5 8.9 36.1 22.9s4.6 30.5-5.2 42.5L320 320.9V448c0 12.1-6.8 23.2-17.7 28.6s-23.8 4.3-33.5-3l-64-48c-8.1-6-12.8-15.5-12.8-25.6V320.9L9 97.3C-.7 85.4-2.8 68.8 3.9 54.9z"/>
                 </svg>
             </h2>
-            <div class="section_cat">
+            <div class="section_restapi">
                 <?php
                     // Appel du shortcode directement dans le fichier front-page.php
                     echo do_shortcode('[em_destination]');

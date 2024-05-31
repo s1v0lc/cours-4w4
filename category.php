@@ -8,7 +8,7 @@
 <!-- Espace caché par le menu en tout temps -->
 <div class="marge"></div>
 <div id="accueil" class="global bck-primaire-400">
-    <section class="accueil__section">
+    <section class="section__category accueil__section">
         <div class="section__titre clr-primaire-200">
             <h2> Catégorie </h2>
             <?php while(have_posts()): the_post(); ?>

@@ -468,17 +468,33 @@ blockquote p::after {
   border: 4px solid var(--couleur-evenement);
 }
 
-.bouton__categorie {
+.restapi__boutons {
+  display: flex;
+  justify-content: space-around;
+}
+.restapi__boutons .bouton__categorie,
+.restapi__boutons .bouton__fermer {
   background-color: hsl(67, 50%, 30%);
   color: hsl(67, 50%, 85%);
   font-family: "Prompt", arial, helvetica, sans-serif;
   font-size: var(--h4-texte);
   padding: 5px 10px;
-  border-radius: 10px;
+  border-radius: 5px;
   font-weight: bold;
   border: none;
   cursor: pointer;
   user-select: none;
+  transition: color 0.2s, background-color 0.2s;
+}
+.restapi__boutons .bouton__categorie:hover,
+.restapi__boutons .bouton__fermer:hover {
+  background-color: hsl(67, 50%, 85%);
+  color: hsl(67, 50%, 30%);
+}
+
+.clique {
+  background-color: hsl(67, 50%, 85%);
+  color: hsl(67, 50%, 30%);
 }
 
 a {
@@ -644,6 +660,7 @@ a:hover {
   margin-top: 20px;
 }
 
+.section_restapi,
 .section_cat,
 .section_pop {
   display: flex;
@@ -662,8 +679,15 @@ a:hover {
   column-gap: 10px;
 }
 
-.section_single .carte h3 {
-  color: red;
+.section__category .carte:hover,
+.section__single .carte:hover {
+  border-color: rgba(0, 0, 0, 0);
+}
+
+.section_restapi {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  transition: height 1s;
 }
 
 .carte {
@@ -675,8 +699,13 @@ a:hover {
   justify-content: space-between;
   background-color: hsl(67, 50%, 30%);
   color: hsl(39, 38%, 70%);
-  padding: 1rem;
+  border: 6px solid hsl(67, 50%, 30%);
   border-radius: 10px;
+  padding: 1rem;
+  transition: border-color 0.2s;
+}
+.carte:hover {
+  border-color: hsl(67, 50%, 20%);
 }
 @media screen and (min-width: 576px) {
   .carte {
@@ -735,12 +764,20 @@ a:hover {
   align-items: center;
 }
 
-.section_cat .contenu__restapi {
+.section_restapi {
+  justify-content: space-around;
+  border-radius: 12px;
+  padding: 15px 0;
+  background-color: hsl(67, 50%, 15%);
+  transition: height 1s;
+}
+.section_restapi .contenu__restapi {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   column-gap: 20px;
   margin-top: 10px;
+  padding-top: 20px;
 }
 
 .restapi__carte {
@@ -757,6 +794,7 @@ a:hover {
 #menu a img {
   width: 10vh;
   height: 10vh;
+  user-select: none;
 }
 
 .entete__menu {
@@ -854,9 +892,13 @@ a:hover {
 #menu .recherche {
   z-index: 100;
   position: relative;
+  user-select: none;
+  pointer-events: none;
 }
 
 #menu .recherche::after {
+  user-select: none;
+  pointer-events: none;
   content: "";
   background-color: hsl(67, 50%, 30%);
   position: absolute;
@@ -866,12 +908,18 @@ a:hover {
   bottom: 0;
 }
 
+#menu .afficher {
+  user-select: all;
+  pointer-events: all;
+}
 #menu .afficher::after {
   animation: animerBarre 0.8s ease-in 0.2s forwards;
 }
 
 @keyframes animerBarre {
   to {
+    pointer-events: all;
+    user-select: all;
     left: 100%;
   }
 }

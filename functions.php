@@ -21,9 +21,10 @@ function _4w4_modifie_requete_principale( $query ) {
 }
 add_action( 'pre_get_posts', '_4w4_modifie_requete_principale' );
 
-// Importation du Script recherche.js
+// Importation des Script
 function ajouterScriptRecherche() {
   wp_enqueue_script('recherche.js', get_template_directory_uri() . '/js/recherche.js', array('jquery'), null, true);
+  wp_enqueue_script('filtres.js', get_template_directory_uri() . '/js/filtres.js', array('jquery'), null, true);
 }
 add_action('wp_enqueue_scripts', 'ajouterScriptRecherche');
 

@@ -20,6 +20,7 @@
 #menu a img {
     width: 10vh;
     height: 10vh;
+    user-select: none;
 }
 
 .entete__menu {
@@ -89,7 +90,6 @@
 
 #menu img.loupe {
     // Image de la loupe dans le logo
-    // position: absolute;
     z-index: 101;
     cursor: pointer;
     user-select: none;
@@ -121,10 +121,14 @@
 #menu .recherche {
     z-index: 100;
     position: relative;
+    user-select: none;
+    pointer-events: none;
 }
 
 #menu .recherche::after {
     // rectangle cachant la barre de recherche
+    user-select: none;
+    pointer-events: none;
     content: "";
     background-color: hsl(67, 50%, 30%);
     position: absolute;
@@ -135,6 +139,9 @@
 }
 
 #menu .afficher {
+    user-select: all;
+    pointer-events: all;
+
     &::after {
         animation: animerBarre 0.8s ease-in 0.2s forwards;
     }
@@ -142,6 +149,8 @@
 
 @keyframes animerBarre {
     to {
+        pointer-events: all;
+        user-select: all;
         left: 100%;
     }
 }
