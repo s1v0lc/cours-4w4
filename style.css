@@ -1107,7 +1107,7 @@ a:hover {
   padding-bottom: 130px;
   background-color: hsl(67, 50%, 40%);
 }
-.page__pays .section__contenu__pays p {
+.page__pays .section__contenu__pays > p {
   margin: 0;
   padding: 2% 10%;
   font-size: var(--h2-texte);
@@ -1158,16 +1158,23 @@ a:hover {
   background-color: hsl(67, 50%, 85%);
   color: hsl(67, 50%, 30%);
 }
-.page__pays .contenu__restapi__ef {
-  flex-wrap: wrap;
-}
 .page__pays .contenu__restapi__ef .restapi__carte {
   margin-bottom: 10px;
 }
-.page__pays .contenu__restapi__ef .restapi__carte img {
-  background-color: red;
+.page__pays .contenu__restapi__ef .restapi__carte .img__contenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
 }
-.page__pays .contenu__restapi__ef .restapi__carte p {
+.page__pays .contenu__restapi__ef .restapi__carte .img__contenu div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page__pays .contenu__restapi__ef .restapi__carte .img__contenu p {
+  margin-left: 20px;
   font-size: clamp(0.6rem, 1.0667vw + 0.3333rem, 1rem);
 }
 
