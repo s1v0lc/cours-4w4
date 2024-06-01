@@ -366,12 +366,34 @@ body > h2 {
 .footer__section .div__footer {
   display: flex;
   justify-content: space-around;
+  margin-bottom: 20px;
+}
+.footer__section .div__footer p {
+  color: var(--couleur-evenement);
+  font-weight: bold;
+}
+.footer__section .div__footer a {
+  padding-left: 0;
+  color: hsl(33, 50%, 45%);
+}
+.footer__section .div__footer .apropos {
+  width: 33%;
+  padding-top: 5px;
+}
+.footer__section .div__footer .apropos p:last-of-type {
+  color: hsl(33, 50%, 45%);
+  font-weight: bold;
 }
 .footer__section .feuille {
-  margin-top: -3.5%;
-  margin-left: 10%;
-  height: 300px;
-  width: 300px;
+  color: var(--couleur-evenement);
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2%;
+  height: 200px;
+  width: 200px;
 }
 .footer__section .feuille img {
   object-fit: contain;
@@ -619,6 +641,7 @@ a:hover {
 }
 
 .footer__section .sociaux {
+  margin-top: 30px;
   display: flex;
   justify-content: center;
   gap: 2rem;

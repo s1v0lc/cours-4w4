@@ -1,29 +1,29 @@
 <div id="footer" class="global bck-brun-400">
         <footer class="footer__section">
             <div class="div__footer">
+                <div class="apropos">
+                    <p>À propos</p>
+                    <p>
+                        Projet de thème wordpress réalisé avec php, 
+                        javascript et sass dans le cadre du cours 582-4W4-MA 
+                        Conception d'interfaces et développement web. Réalisé par Clovis Gauthier
+                    </p>
+                </div>
                 <div class="liens">
                     <p>Liens</p>
-                    <a href="https://github.com/s1v0lc/ef-pays/tree/master">Dépot Github Pays</a>
+                    <a href="https://github.com/s1v0lc/4w4_carrousel">Dépot Github Carrousel</a>
                     <a href="https://github.com/s1v0lc/cours-4w4/tree/epreuve-finale">Dépot Github Thème</a>
                     <a href="https://gftnth00.mywhc.ca/tim40/">Page WHC</a>
+                    <a href="https://s1v0lc.github.io/cours-4w4/">Page GHP</a>
                 </div>
                 <div class="adresse">
                     <p>Adresse</p>
                     <a>3800 R. Sherbrooke E, Montréal, QC H1X 2A2</a>
                 </div>
-                <div class="apropos">
-                    <p>Auteur</p>
-                    <p>Clovis Gauthier</p>
-                    <p>Description</p>
-                    <p>
-                        Projet de thème wordpress réalisé avec php, 
-                        javascript et sass dans le cadre du cours 582-4W4-MA 
-                        Conception d'interfaces et développement web.
-                    </p>
-                </div>
-                <!-- <div class="feuille">
+                <div class="feuille">
+                    Explora
                     <img src="wp-content/themes/theme_gr2/images/vague_feuille_verte.png" alt="">
-                </div> -->
+                </div>
             </div>
             <?php get_search_form(); ?>
             <div class="sociaux">
