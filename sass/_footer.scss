@@ -12,26 +12,31 @@
         display: flex;
         justify-content: space-around;
         margin-bottom: 20px;
+
         p {
             color: var(--couleur-evenement);
             font-weight: bold;
         }
+
         a {
             padding-left: 0;
             color: hsl(33, 50%, 45%);
         }
+
         .apropos {
             width: 33%;
             padding-top: 5px;
-            p:last-of-type{
+
+            p:last-of-type {
                 color: hsl(33, 50%, 45%);
                 font-weight: bold;
             }
         }
     }
+
     .feuille {
         color: var(--couleur-evenement);
-        font-weight: bold   ;
+        font-weight: bold;
         display: flex;
         justify-content: center;
         flex-direction: column;

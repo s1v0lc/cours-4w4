@@ -21,8 +21,8 @@
                     <a>3800 R. Sherbrooke E, Montréal, QC H1X 2A2</a>
                 </div>
                 <div class="feuille">
-                    Explora
-                    <img src="wp-content/themes/theme_gr2/images/vague_feuille_verte.png" alt="">
+                    <p>Explora</p>
+                    <img src="<?= get_template_directory_uri() . "/images/vague_feuille_verte.png"; ?>" alt="">
                 </div>
             </div>
             <?php get_search_form(); ?>

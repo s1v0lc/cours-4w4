@@ -1,0 +1,61 @@
+// Styles utilisé pour la page des conference
+.page_conference {
+    background-color: hsl(67, 50%, 15%);
+
+    // padding: 0 10%;
+    h1 {
+        padding-left: 10%;
+        margin-top: 150px;
+        margin-bottom: 100px;
+        color: hsl(67, 50%, 85%);
+    }
+
+    .conference__contenu {
+        // Contenu
+        padding: 5% 10%;
+        background-color: hsl(67, 50%, 40%);
+
+        div div {
+            h2, p {
+                color: hsl(67, 50%, 85%);
+            }
+        }
+
+        .conference__acf {
+            p {
+                margin: 0;
+                color: hsl(67, 50%, 85%);
+                text-align: center;
+                font-weight: bold;
+            }
+        }
+    }
+
+    // Vagues
+    .vague__header {
+        position: relative;
+
+        // Vague du header
+        .vague {
+            position: absolute;
+
+            svg path {
+                // fill: red;
+                fill: hsl(67, 50%, 40%);
+            }
+        }
+    }
+
+    .vague__footer {
+        // Vague du footer
+        position: relative;
+
+        .vague {
+            position: absolute;
+
+            svg path {
+                fill: hsl(39, 38%, 30%);
+            }
+        }
+    }
+}
