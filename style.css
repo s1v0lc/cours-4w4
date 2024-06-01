@@ -712,12 +712,6 @@ a:hover {
   height: 400px;
 }
 
-.section_posts .carte .titre {
-  justify-content: flex-start;
-  align-items: flex-end;
-  column-gap: 10px;
-}
-
 .section__category .carte:hover,
 .section__single .carte:hover {
   border-color: rgba(0, 0, 0, 0);
@@ -801,6 +795,15 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.section_posts .carte:hover {
+  border-color: hsl(67, 50%, 20%);
+}
+.section_posts .carte .titre {
+  justify-content: flex-start;
+  align-items: flex-end;
+  column-gap: 10px;
 }
 
 .section_restapi {

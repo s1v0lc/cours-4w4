@@ -13,16 +13,6 @@
     }
 }
 
-.section_posts {
-    .carte {
-        .titre {
-            justify-content: flex-start;
-            align-items: flex-end;
-            column-gap: 10px;
-        }
-    }
-}
-
 .section__category,
 .section__single {
     .carte:hover {
@@ -120,6 +110,21 @@
             justify-content: center;
             align-items: center;
         }
+    }
+}
+
+.section_posts {
+    .carte {
+        &:hover {
+            border-color: hsl(67, 50%, 20%);
+        }
+
+        .titre {
+            justify-content: flex-start;
+            align-items: flex-end;
+            column-gap: 10px;
+        }
+
     }
 }
 
