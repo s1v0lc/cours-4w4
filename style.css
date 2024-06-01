@@ -1187,6 +1187,9 @@ a:hover {
 .page__pays .contenu__restapi__ef .restapi__carte {
   margin-bottom: 10px;
 }
+.page__pays .contenu__restapi__ef .restapi__carte h3 {
+  color: hsl(67, 50%, 85%);
+}
 .page__pays .contenu__restapi__ef .restapi__carte .img__contenu {
   display: flex;
   flex-direction: row;
@@ -1202,6 +1205,7 @@ a:hover {
 .page__pays .contenu__restapi__ef .restapi__carte .img__contenu p {
   margin-left: 20px;
   font-size: clamp(0.6rem, 1.0667vw + 0.3333rem, 1rem);
+  color: hsl(67, 50%, 85%);
 }
 
 .page_conference {

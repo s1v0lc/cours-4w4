@@ -93,6 +93,10 @@
         .restapi__carte {
             margin-bottom: 10px;
 
+            h3 {
+                color: hsl(67, 50%, 85%);
+            }
+
             .img__contenu {
                 display: flex;
                 flex-direction: row;
@@ -109,6 +113,7 @@
                 p {
                     margin-left: 20px;
                     font-size: clamp(.6rem, 1.0667vw + .3333rem, 1rem);
+                    color: hsl(67, 50%, 85%);
                 }
             }
 
