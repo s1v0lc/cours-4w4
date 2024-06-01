@@ -1,63 +1,337 @@
-
 <!DOCTYPE html>
 <html lang="en" class="bck-brun-400">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thème gr2</title>
     <link rel="icon" href="images/favicon.png">
-    <link rel="stylesheet" href="normalize.css" >
-    <link rel="stylesheet" href="style.css" >
-
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+    <link
+        href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0">
+    <meta name='robots' content='max-image-preview:large' />
 </head>
+
 <body>
     <div id="menu" class="global bck-primaire-300">
-        <a href="http://localhost:8080/4w4_clovis/" class="custom-logo-link" rel="home" aria-current="page"><img width="672" height="755" src="http://localhost:8080/4w4_clovis/wp-content/uploads/2024/03/logo.png" class="custom-logo" alt="Explora" decoding="async" fetchpriority="high" /></a>        <header class="entete__menu">
+        <!-- Logo -->
+        <a href="#" class="custom-logo-link" rel="home" aria-current="page">
+            <img width="200" height="200" src="images/logoExplora.png" class="custom-logo" alt="Explora"
+                decoding="async" srcset="images/logoExplora.png 200w, images/logoExplora-150x150.png 150w"
+                sizes="(max-width: 200px) 100vw, 200px" />
+        </a>
+        <!-- Loupe -->
+        <img class="loupe" src="images/loupeExplora.png" alt="loupeExplora.png">
+        <!-- Barre de recherche -->
+        <form class="recherche" role="search" method="get" action="#">
+            <label>
+                <input class="recherche__input" type="search" class="search-field" placeholder="Recherche..." value=""
+                    name="s" />
+            </label>
+            <button class="recherche__button" type="submit">
+                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    color="#000">
+                    <path fill-rule="evenodd"
+                        d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </button>
+        </form> <!-- Navigation -->
+        <header class="entete__menu">
             <input id="chk_burger" type="checkbox">
             <label id="burger" for="chk_burger">
-                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" color="#000"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"></path></svg>
+                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" color="#000">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16">
+                    </path>
+                </svg>
             </label>
-            <nav class="menu-principal-container"><ul id="menu-principal" class="menu"><li id="menu-item-73" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-73"><a href="http://localhost:8080/4w4_clovis/category/aventure/">Aventure</a></li>
-<li id="menu-item-74" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-74"><a href="http://localhost:8080/4w4_clovis/category/croisiere/">Croisière</a></li>
-<li id="menu-item-75" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-75"><a href="http://localhost:8080/4w4_clovis/category/culturel/">Culturel</a></li>
-<li id="menu-item-118" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-118"><a href="http://localhost:8080/4w4_clovis/category/populaire/">Populaire</a></li>
-<li id="menu-item-78" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-78"><a href="http://localhost:8080/4w4_clovis/category/pleine-nature/">Nature</a></li>
-<li id="menu-item-79" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-79"><a href="http://localhost:8080/4w4_clovis/category/repos/">Repos</a></li>
-<li id="menu-item-80" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-80"><a href="http://localhost:8080/4w4_clovis/category/sport/">Sport</a></li>
-<li id="menu-item-81" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-81"><a href="http://localhost:8080/4w4_clovis/category/zen/">Zen</a></li>
-</ul></nav>        </header>
-    </div><h2>Front-page.php</h2>
-<div id="entete" class="global clr-primaire-100">
-        <section class="entete__header">  
+            <nav class="menu-principal-container">
+                <ul id="menu-principal" class="menu">
+                    <li id="menu-item-130"
+                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-130"><a
+                            href="#pays">Pays</a></li>
+                    <li id="menu-item-79"
+                        class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-79"><a
+                            href="#category/sport/">Sport</a></li>
+                    <li id="menu-item-80"
+                        class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-80"><a
+                            href="#category/pleine-nature/">Pleine nature</a></li>
+                    <li id="menu-item-81"
+                        class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-81"><a
+                            href="#category/croisiere/">Croisière</a></li>
+                    <li id="menu-item-82"
+                        class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-82"><a
+                            href="#category/aventure/">Aventure</a></li>
+                    <li id="menu-item-109"
+                        class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-109"><a
+                            href="#category/populaire/">Populaire</a></li>
+                    <li id="menu-item-83"
+                        class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-83"><a
+                            href="#category/culturel/">Culturel</a></li>
+                    <li id="menu-item-84"
+                        class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-84"><a
+                            href="#category/repos/">Repos</a></li>
+                    <li id="menu-item-85"
+                        class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-85"><a
+                            href="#category/zen/">Zen</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <h2>Front-page.php</h2>
+    <div id="entete" class="global clr-primaire-100">
+        <section class="entete__header">
             <h1 class="bgc-text">Explora</h1>
             <h3 class="bgc-text">À chacun son voyage</h3>
+            <!-- Boutons vers la page conférence -->
+            <form action="conference">
+                <button class="entete__button" type="submit">Événements</button>
+            </form>
+            <!-- Logos sites sociaux -->
+            <div class="sociaux">
+                <a href="#"><svg width="32px" height="32px" role="img" viewBox="0 0 24 24" fill="currentColor"
+                        color="#ffffff" xmlns="http://www.w3.org/2000/svg">
+                        <title>Pinterest icon</title>
+                        <path
+                            d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z">
+                        </path>
+                    </svg></a>
+                <a href="#"><svg width="32px" height="32px" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24" fill="currentColor" color="#000000">
+                        <title>YouTube icon</title>
+                        <path
+                            d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z">
+                        </path>
+                    </svg></a>
+                <a href="#"><svg width="32px" height="32px" role="img" viewBox="0 0 24 24" fill="currentColor"
+                        color="#000000" xmlns="http://www.w3.org/2000/svg">
+                        <title>WordPress icon</title>
+                        <path
+                            d="M21.469 6.825c.84 1.537 1.318 3.3 1.318 5.175 0 3.979-2.156 7.456-5.363 9.325l3.295-9.527c.615-1.54.82-2.771.82-3.864 0-.405-.026-.78-.07-1.11m-7.981.105c.647-.03 1.232-.105 1.232-.105.582-.075.514-.93-.067-.899 0 0-1.755.135-2.88.135-1.064 0-2.85-.15-2.85-.15-.585-.03-.661.855-.075.885 0 0 .54.061 1.125.09l1.68 4.605-2.37 7.08L5.354 6.9c.649-.03 1.234-.1 1.234-.1.585-.075.516-.93-.065-.896 0 0-1.746.138-2.874.138-.2 0-.438-.008-.69-.015C4.911 3.15 8.235 1.215 12 1.215c2.809 0 5.365 1.072 7.286 2.833-.046-.003-.091-.009-.141-.009-1.06 0-1.812.923-1.812 1.914 0 .89.513 1.643 1.06 2.531.411.72.89 1.643.89 2.977 0 .915-.354 1.994-.821 3.479l-1.075 3.585-3.9-11.61.001.014zM12 22.784c-1.059 0-2.081-.153-3.048-.437l3.237-9.406 3.315 9.087c.024.053.05.101.078.149-1.12.393-2.325.609-3.582.609M1.211 12c0-1.564.336-3.05.935-4.39L7.29 21.709C3.694 19.96 1.212 16.271 1.211 12M12 0C5.385 0 0 5.385 0 12s5.385 12 12 12 12-5.385 12-12S18.615 0 12 0">
+                        </path>
+                    </svg></a>
+                <a href="#"><svg width="32px" height="32px" role="img" viewBox="0 0 24 24" fill="currentColor"
+                        color="#000000" xmlns="http://www.w3.org/2000/svg">
+                        <title>Google icon</title>
+                        <path
+                            d="M12.24 10.285V14.4h6.806c-.275 1.765-2.056 5.174-6.806 5.174-4.095 0-7.439-3.389-7.439-7.574s3.345-7.574 7.439-7.574c2.33 0 3.891.989 4.785 1.849l3.254-3.138C18.189 1.186 15.479 0 12.24 0c-6.635 0-12 5.365-12 12s5.365 12 12 12c6.926 0 11.52-4.869 11.52-11.726 0-.788-.085-1.39-.189-1.989H12.24z">
+                        </path>
+                    </svg></a>
+                <a href="#"><svg width="32px" height="32px"'' role="img" viewBox="0 0 24 24" fill="currentColor"
+                        color="#000000" xmlns="http://www.w3.org/2000/svg">
+                        <title>GitHub icon</title>
+                        <path
+                            d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12">
+                        </path>
+                    </svg></a>
+                <a href="#"><svg width="32px" height="32px" role="img" viewBox="0 0 24 24" fill="currentColor"
+                        color="#000000" xmlns="http://www.w3.org/2000/svg">
+                        <title>Facebook icon</title>
+                        <path
+                            d="M23.9981 11.9991C23.9981 5.37216 18.626 0 11.9991 0C5.37216 0 0 5.37216 0 11.9991C0 17.9882 4.38789 22.9522 10.1242 23.8524V15.4676H7.07758V11.9991H10.1242V9.35553C10.1242 6.34826 11.9156 4.68714 14.6564 4.68714C15.9692 4.68714 17.3424 4.92149 17.3424 4.92149V7.87439H15.8294C14.3388 7.87439 13.8739 8.79933 13.8739 9.74824V11.9991H17.2018L16.6698 15.4676H13.8739V23.8524C19.6103 22.9522 23.9981 17.9882 23.9981 11.9991Z">
+                        </path>
+                    </svg></a>
+            </div>
         </section>
-    <div class="vague">
-    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path class="remplissage"
-            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-        ></path>
-    </svg>
-    <div class="feuille"><img src="wp-content/themes/theme_gr2/images/vague_feuille_verte.png" alt=""></div>
-</div></div>
-<div id="accueil" class="global bck-primaire-200 clr-primaire-400">
+        <div class="vague">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path class="remplissage"
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z">
+                </path>
+            </svg>
+            <div class="feuille"><img src="images/vague_feuille_verte.png" alt=""></div>
+        </div>
+    </div>
+    <div id="accueil" class="global bck-primaire-200 clr-primaire-400">
         <section class="accueil__section">
-            <h2>Catégories</h2>
-        <div class="section_cat">  
+            <!-- Affichage des destination populaires  -->
+            <h2>
+                Destinations Populaires
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path fill="#353913"
+                        d="M159.3 5.4c7.8-7.3 19.9-7.2 27.7 .1c27.6 25.9 53.5 53.8 77.7 84c11-14.4 23.5-30.1 37-42.9c7.9-7.4 20.1-7.4 28 .1c34.6 33 63.9 76.6 84.5 118c20.3 40.8 33.8 82.5 33.8 111.9C448 404.2 348.2 512 224 512C98.4 512 0 404.1 0 276.5c0-38.4 17.8-85.3 45.4-131.7C73.3 97.7 112.7 48.6 159.3 5.4zM225.7 416c25.3 0 47.7-7 68.8-21c42.1-29.4 53.4-88.2 28.1-134.4c-4.5-9-16-9.6-22.5-2l-25.2 29.3c-6.6 7.6-18.5 7.4-24.7-.5c-16.5-21-46-58.5-62.8-79.8c-6.3-8-18.3-8.1-24.7-.1c-33.8 42.5-50.8 69.3-50.8 99.4C112 375.4 162.6 416 225.7 416z" />
+                </svg>
+            </h2>
+            <div class="section_pop">
+                <!-- cartes destinations pop -->
+                <div class="carte">
+                    <div class="titre">
+                        <h3>Cancún</h3>
+                        <p><a href="#cancun-mexique/">Lire plus</a> </p>
+                    </div>
+                    <img width="1920" height="1080" src="images/pexels-asad-photo-maldives-9500412.jpg"
+                        class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async"
+                        fetchpriority="high"
+                        srcset="images/pexels-asad-photo-maldives-9500412.jpg 1920w, images/pexels-asad-photo-maldives-9500412-300x169.jpg 300w, images/pexels-asad-photo-maldives-9500412-1024x576.jpg 1024w, images/pexels-asad-photo-maldives-9500412-768x432.jpg 768w, images/pexels-asad-photo-maldives-9500412-1536x864.jpg 1536w"
+                        sizes="(max-width: 1920px) 100vw, 1920px" />
+                    <h4> Mexique</h4>
+                    <p>Cancún est une destination ensoleillée offrant une multitude d'activités sportives…</p>
+                    <ul class="post-categories">
+                        <li><a href="#category/populaire/" rel="category tag">populaire</a></li>
+                        <li><a href="#category/sport/" rel="category tag">Sport</a></li>
+                    </ul>
+                </div> <!-- cartes destinations pop -->
+                <div class="carte">
+                    <div class="titre">
+                        <h3>Kyoto</h3>
+                        <p><a href="#kyoto-japon/">Lire plus</a> </p>
+                    </div>
+                    <img width="1920" height="1080" src="images/pexels-pixabay-356629.jpg"
+                        class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async"
+                        srcset="images/pexels-pixabay-356629.jpg 1920w, images/pexels-pixabay-356629-300x169.jpg 300w, images/pexels-pixabay-356629-1024x576.jpg 1024w, images/pexels-pixabay-356629-768x432.jpg 768w, images/pexels-pixabay-356629-1536x864.jpg 1536w"
+                        sizes="(max-width: 1920px) 100vw, 1920px" />
+                    <h4> Japon</h4>
+                    <p>Kyoto incarne l'essence même de la tradition japonaise. En tant…</p>
+                    <ul class="post-categories">
+                        <li><a href="#category/culturel/" rel="category tag">Culturel</a></li>
+                        <li><a href="#category/populaire/" rel="category tag">populaire</a></li>
+                    </ul>
+                </div> <!-- cartes destinations pop -->
+                <div class="carte">
+                    <div class="titre">
+                        <h3>Lake Tahoe</h3>
+                        <p><a href="#lake-tahoe-californie-nevada-etats-unis/">Lire plus</a> </p>
+                    </div>
+                    <img width="1920" height="1080" src="images/pexels-alberto-farca-51414.jpg"
+                        class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async"
+                        srcset="images/pexels-alberto-farca-51414.jpg 1920w, images/pexels-alberto-farca-51414-300x169.jpg 300w, images/pexels-alberto-farca-51414-1024x576.jpg 1024w, images/pexels-alberto-farca-51414-768x432.jpg 768w, images/pexels-alberto-farca-51414-1536x864.jpg 1536w"
+                        sizes="(max-width: 1920px) 100vw, 1920px" />
+                    <h4> Californie/Nevada, États-Unis</h4>
+                    <p>Lake Tahoe, situé à cheval sur la frontière entre la…</p>
+                    <ul class="post-categories">
+                        <li><a href="#category/populaire/" rel="category tag">populaire</a></li>
+                        <li><a href="#category/sport/" rel="category tag">Sport</a></li>
+                    </ul>
+                </div> <!-- cartes destinations pop -->
+                <div class="carte">
+                    <div class="titre">
+                        <h3>Londres</h3>
+                        <p><a href="#londres-royaume-uni/">Lire plus</a> </p>
+                    </div>
+                    <img width="1920" height="1080" src="images/pexels-sevenstorm-juhaszimrus-575362.jpg"
+                        class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async"
+                        loading="lazy"
+                        srcset="images/pexels-sevenstorm-juhaszimrus-575362.jpg 1920w, images/pexels-sevenstorm-juhaszimrus-575362-300x169.jpg 300w, images/pexels-sevenstorm-juhaszimrus-575362-1024x576.jpg 1024w, images/pexels-sevenstorm-juhaszimrus-575362-768x432.jpg 768w, images/pexels-sevenstorm-juhaszimrus-575362-1536x864.jpg 1536w"
+                        sizes="(max-width: 1920px) 100vw, 1920px" />
+                    <h4> Royaume-Uni</h4>
+                    <p>Londres est une métropole cosmopolite où l'histoire côtoie la modernité.…</p>
+                    <ul class="post-categories">
+                        <li><a href="#category/culturel/" rel="category tag">Culturel</a></li>
+                        <li><a href="#category/populaire/" rel="category tag">populaire</a></li>
+                    </ul>
+                </div> <!-- cartes destinations pop -->
+                <div class="carte">
+                    <div class="titre">
+                        <h3>Parc national de Banff</h3>
+                        <p><a href="#parc-national-de-banff-canada/">Lire plus</a> </p>
+                    </div>
+                    <img width="1920" height="1080" src="images/pexels-lukas-kloeppel-2416649.jpg"
+                        class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async"
+                        loading="lazy"
+                        srcset="images/pexels-lukas-kloeppel-2416649.jpg 1920w, images/pexels-lukas-kloeppel-2416649-300x169.jpg 300w, images/pexels-lukas-kloeppel-2416649-1024x576.jpg 1024w, images/pexels-lukas-kloeppel-2416649-768x432.jpg 768w, images/pexels-lukas-kloeppel-2416649-1536x864.jpg 1536w"
+                        sizes="(max-width: 1920px) 100vw, 1920px" />
+                    <h4> Canada</h4>
+                    <p>Niché au cœur des Rocheuses canadiennes, le parc national de…</p>
+                    <ul class="post-categories">
+                        <li><a href="#category/pleine-nature/" rel="category tag">Pleine nature</a></li>
+                        <li><a href="#category/populaire/" rel="category tag">populaire</a></li>
+                    </ul>
+                </div> <!-- cartes destinations pop -->
+                <div class="carte">
+                    <div class="titre">
+                        <h3>Parc national de Yellowstone</h3>
+                        <p><a href="#parc-national-de-yellowstone-etats-unis/">Lire plus</a> </p>
+                    </div>
+                    <img width="1920" height="1080" src="images/pexels-kerry-534398.jpg"
+                        class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async"
+                        loading="lazy"
+                        srcset="images/pexels-kerry-534398.jpg 1920w, images/pexels-kerry-534398-300x169.jpg 300w, images/pexels-kerry-534398-1024x576.jpg 1024w, images/pexels-kerry-534398-768x432.jpg 768w, images/pexels-kerry-534398-1536x864.jpg 1536w"
+                        sizes="(max-width: 1920px) 100vw, 1920px" />
+                    <h4> États-Unis</h4>
+                    <p>Yellowstone est le plus ancien parc national au monde et…</p>
+                    <ul class="post-categories">
+                        <li><a href="#category/pleine-nature/" rel="category tag">Pleine nature</a></li>
+                        <li><a href="#category/populaire/" rel="category tag">populaire</a></li>
+                    </ul>
+                </div> <!-- cartes destinations pop -->
+                <div class="carte">
+                    <div class="titre">
+                        <h3>Parc national des Galápagos</h3>
+                        <p><a href="#parc-national-des-galapagos-equateur/">Lire plus</a> </p>
+                    </div>
+                    <img width="1920" height="1080" src="images/pexels-abigail-ramirez-19085803.jpg"
+                        class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async"
+                        loading="lazy"
+                        srcset="images/pexels-abigail-ramirez-19085803.jpg 1920w, images/pexels-abigail-ramirez-19085803-300x169.jpg 300w, images/pexels-abigail-ramirez-19085803-1024x576.jpg 1024w, images/pexels-abigail-ramirez-19085803-768x432.jpg 768w, images/pexels-abigail-ramirez-19085803-1536x864.jpg 1536w"
+                        sizes="(max-width: 1920px) 100vw, 1920px" />
+                    <h4> Équateur</h4>
+                    <p>Les îles Galápagos, situées dans l'océan Pacifique, sont un véritable…</p>
+                    <ul class="post-categories">
+                        <li><a href="#category/pleine-nature/" rel="category tag">Pleine nature</a></li>
+                        <li><a href="#category/populaire/" rel="category tag">populaire</a></li>
+                    </ul>
+                </div> <!-- cartes destinations pop -->
+                <div class="carte">
+                    <div class="titre">
+                        <h3>Paris</h3>
+                        <p><a href="#paris-france/">Lire plus</a> </p>
+                    </div>
+                    <img width="1919" height="1080" src="images/pexels-chait-goli-1796725.jpg"
+                        class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async"
+                        loading="lazy"
+                        srcset="images/pexels-chait-goli-1796725.jpg 1919w, images/pexels-chait-goli-1796725-300x169.jpg 300w, images/pexels-chait-goli-1796725-1024x576.jpg 1024w, images/pexels-chait-goli-1796725-768x432.jpg 768w, images/pexels-chait-goli-1796725-1536x864.jpg 1536w"
+                        sizes="(max-width: 1919px) 100vw, 1919px" />
+                    <h4> France</h4>
+                    <p>Paris, surnommée la Ville Lumière, est un véritable joyau culturel.…</p>
+                    <ul class="post-categories">
+                        <li><a href="#category/culturel/" rel="category tag">Culturel</a></li>
+                        <li><a href="#category/populaire/" rel="category tag">populaire</a></li>
+                    </ul>
+                </div> <!-- cartes destinations pop -->
+                <div class="carte">
+                    <div class="titre">
+                        <h3>Rome</h3>
+                        <p><a href="#rome-italie/">Lire plus</a> </p>
+                    </div>
+                    <img width="1920" height="1080" src="images/pexels-pixabay-532263.jpg"
+                        class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async"
+                        loading="lazy"
+                        srcset="images/pexels-pixabay-532263.jpg 1920w, images/pexels-pixabay-532263-300x169.jpg 300w, images/pexels-pixabay-532263-1024x576.jpg 1024w, images/pexels-pixabay-532263-768x432.jpg 768w, images/pexels-pixabay-532263-1536x864.jpg 1536w"
+                        sizes="(max-width: 1920px) 100vw, 1920px" />
+                    <h4> Italie</h4>
+                    <p>Rome, la Ville Éternelle, est un musée à ciel ouvert…</p>
+                    <ul class="post-categories">
+                        <li><a href="#category/culturel/" rel="category tag">Culturel</a></li>
+                        <li><a href="#category/populaire/" rel="category tag">populaire</a></li>
+                    </ul>
+                </div>
+            </div>
             <!-- Affichage des catégories de voyages -->
-                            <div class="carte">
+            <h2>
+                Catégories
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="40px" fill="#e8eaed">
+                    <path fill="#353913"
+                        d="m260.67-524 220-356 220 356h-440ZM703.76-80q-73.43 0-124.59-51.26Q528-182.53 528-255.76q0-73.24 51.26-124.74 51.27-51.5 124.5-51.5 73.24 0 124.74 51.4T880-255.76q0 73.43-51.4 124.59Q777.2-80 703.76-80ZM120-103.33v-309.34h309.33v309.34H120Z" />
+                </svg>
+            </h2>
+            <div class="section_cat">
+                <div class="carte">
                     <div class="titre">
                         <h3>Aventure</h3>
                         <p><a href="category/aventure">Lire Plus</a></p>
                     </div>
                     <p>Partez à la découverte de destinations exaltantes et d'expériences uniques…</p>
-                    <h4>9 destinations</h4>
+                    <h4>8 destinations</h4>
                 </div>
-                                <div class="carte">
+                <div class="carte">
                     <div class="titre">
                         <h3>Croisière</h3>
                         <p><a href="category/croisiere">Lire Plus</a></p>
@@ -65,7 +339,7 @@
                     <p>La catégorie de voyage "croisière" offre une expérience de voyage…</p>
                     <h4>10 destinations</h4>
                 </div>
-                                <div class="carte">
+                <div class="carte">
                     <div class="titre">
                         <h3>Culturel</h3>
                         <p><a href="category/culturel">Lire Plus</a></p>
@@ -73,23 +347,23 @@
                     <p>Immergez-vous dans la richesse culturelle et historique de lieux fascinants…</p>
                     <h4>8 destinations</h4>
                 </div>
-                                <div class="carte">
+                <div class="carte">
                     <div class="titre">
-                        <h3>Nature</h3>
+                        <h3>Pleine nature</h3>
                         <p><a href="category/pleine-nature">Lire Plus</a></p>
                     </div>
                     <p>Échappez à l'agitation urbaine et reconnectez-vous avec la nature sauvage…</p>
                     <h4>12 destinations</h4>
                 </div>
-                                <div class="carte">
+                <div class="carte">
                     <div class="titre">
-                        <h3>Populaire</h3>
+                        <h3>populaire</h3>
                         <p><a href="category/populaire">Lire Plus</a></p>
                     </div>
-                    <p>Nos destination les plus prisées de 2024</p>
+                    <p>Les destinations les plus visitées cette année!</p>
                     <h4>9 destinations</h4>
                 </div>
-                                <div class="carte">
+                <div class="carte">
                     <div class="titre">
                         <h3>Repos</h3>
                         <p><a href="category/repos">Lire Plus</a></p>
@@ -97,15 +371,15 @@
                     <p>Offrez-vous une escapade relaxante dans des destinations tranquilles où le…</p>
                     <h4>8 destinations</h4>
                 </div>
-                                <div class="carte">
+                <div class="carte">
                     <div class="titre">
                         <h3>Sport</h3>
                         <p><a href="category/sport">Lire Plus</a></p>
                     </div>
                     <p>Entraînez-vous, défiez-vous et repoussez vos limites dans des destinations offrant…</p>
-                    <h4>13 destinations</h4>
+                    <h4>14 destinations</h4>
                 </div>
-                                <div class="carte">
+                <div class="carte">
                     <div class="titre">
                         <h3>Zen</h3>
                         <p><a href="category/zen">Lire Plus</a></p>
@@ -113,143 +387,142 @@
                     <p>Retrouvez l'harmonie intérieure et la paix de l'esprit dans des…</p>
                     <h4>6 destinations</h4>
                 </div>
-                                <!-- Affichage des destination populaires  -->
-        </div>
-        <h2>Destinations Populaires</h2>
-        <div class="section_pop">
-                                                                            <div class="carte">
-                    <div class="titre">
-                        <h3>Cancún</h3>
-                        <p><a href="http://localhost:8080/4w4_clovis/cancun-mexique/">Lire plus</a> </p>
-                    </div>
-                    <img width="1920" height="1080" src="http://localhost:8080/4w4_clovis/wp-content/uploads/2024/04/pexels-asad-photo-maldives-9500412.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" />                    <h4> Mexique</h4>
-                    <p>Cancún est une destination ensoleillée offrant une multitude d'activités sportives…</p>
-                    <ul class="post-categories">
-	<li><a href="http://localhost:8080/4w4_clovis/category/populaire/" rel="category tag">Populaire</a></li>
-	<li><a href="http://localhost:8080/4w4_clovis/category/sport/" rel="category tag">Sport</a></li></ul>                </div>
-                                                                            <div class="carte">
-                    <div class="titre">
-                        <h3>Kyoto</h3>
-                        <p><a href="http://localhost:8080/4w4_clovis/kyoto-japon/">Lire plus</a> </p>
-                    </div>
-                    <img width="1920" height="1080" src="http://localhost:8080/4w4_clovis/wp-content/uploads/2024/04/pexels-pixabay-356629.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" />                    <h4> Japon</h4>
-                    <p>Kyoto incarne l'essence même de la tradition japonaise. En tant…</p>
-                    <ul class="post-categories">
-	<li><a href="http://localhost:8080/4w4_clovis/category/culturel/" rel="category tag">Culturel</a></li>
-	<li><a href="http://localhost:8080/4w4_clovis/category/populaire/" rel="category tag">Populaire</a></li>
-	<li><a href="http://localhost:8080/4w4_clovis/category/repos/" rel="category tag">Repos</a></li>
-	<li><a href="http://localhost:8080/4w4_clovis/category/zen/" rel="category tag">Zen</a></li></ul>                </div>
-                                                                            <div class="carte">
-                    <div class="titre">
-                        <h3>Lake Tahoe</h3>
-                        <p><a href="http://localhost:8080/4w4_clovis/lake-tahoe-californie-nevada-etats-unis/">Lire plus</a> </p>
-                    </div>
-                    <img width="1920" height="1080" src="http://localhost:8080/4w4_clovis/wp-content/uploads/2024/04/pexels-alberto-farca-51414.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" />                    <h4> Californie/Nevada, États-Unis</h4>
-                    <p>Lake Tahoe, situé à cheval sur la frontière entre la…</p>
-                    <ul class="post-categories">
-	<li><a href="http://localhost:8080/4w4_clovis/category/populaire/" rel="category tag">Populaire</a></li>
-	<li><a href="http://localhost:8080/4w4_clovis/category/sport/" rel="category tag">Sport</a></li></ul>                </div>
-                                                                            <div class="carte">
-                    <div class="titre">
-                        <h3>Londres</h3>
-                        <p><a href="http://localhost:8080/4w4_clovis/londres-royaume-uni/">Lire plus</a> </p>
-                    </div>
-                    <img width="1920" height="1080" src="http://localhost:8080/4w4_clovis/wp-content/uploads/2024/03/pexels-sevenstorm-juhaszimrus-575362.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" />                    <h4> Royaume-Uni</h4>
-                    <p>Londres est une métropole cosmopolite où l'histoire côtoie la modernité.…</p>
-                    <ul class="post-categories">
-	<li><a href="http://localhost:8080/4w4_clovis/category/culturel/" rel="category tag">Culturel</a></li>
-	<li><a href="http://localhost:8080/4w4_clovis/category/populaire/" rel="category tag">Populaire</a></li></ul>                </div>
-                                                                            <div class="carte">
-                    <div class="titre">
-                        <h3>Parc national de Banff</h3>
-                        <p><a href="http://localhost:8080/4w4_clovis/parc-national-de-banff-canada/">Lire plus</a> </p>
-                    </div>
-                    <img width="1920" height="1080" src="http://localhost:8080/4w4_clovis/wp-content/uploads/2024/04/pexels-lukas-kloeppel-2416649.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" />                    <h4> Canada</h4>
-                    <p>Niché au cœur des Rocheuses canadiennes, le parc national de…</p>
-                    <ul class="post-categories">
-	<li><a href="http://localhost:8080/4w4_clovis/category/pleine-nature/" rel="category tag">Nature</a></li>
-	<li><a href="http://localhost:8080/4w4_clovis/category/populaire/" rel="category tag">Populaire</a></li></ul>                </div>
-                                                                            <div class="carte">
-                    <div class="titre">
-                        <h3>Parc national de Yellowstone</h3>
-                        <p><a href="http://localhost:8080/4w4_clovis/parc-national-de-yellowstone-etats-unis/">Lire plus</a> </p>
-                    </div>
-                    <img width="1920" height="1080" src="http://localhost:8080/4w4_clovis/wp-content/uploads/2024/04/pexels-kerry-534398.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" />                    <h4> États-Unis</h4>
-                    <p>Yellowstone est le plus ancien parc national au monde et…</p>
-                    <ul class="post-categories">
-	<li><a href="http://localhost:8080/4w4_clovis/category/pleine-nature/" rel="category tag">Nature</a></li>
-	<li><a href="http://localhost:8080/4w4_clovis/category/populaire/" rel="category tag">Populaire</a></li></ul>                </div>
-                                                                            <div class="carte">
-                    <div class="titre">
-                        <h3>Parc national des Galápagos</h3>
-                        <p><a href="http://localhost:8080/4w4_clovis/parc-national-des-galapagos-equateur/">Lire plus</a> </p>
-                    </div>
-                    <img width="1920" height="1080" src="http://localhost:8080/4w4_clovis/wp-content/uploads/2024/04/pexels-abigail-ramirez-19085803.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" />                    <h4> Équateur</h4>
-                    <p>Les îles Galápagos, situées dans l'océan Pacifique, sont un véritable…</p>
-                    <ul class="post-categories">
-	<li><a href="http://localhost:8080/4w4_clovis/category/pleine-nature/" rel="category tag">Nature</a></li>
-	<li><a href="http://localhost:8080/4w4_clovis/category/populaire/" rel="category tag">Populaire</a></li></ul>                </div>
-                                                                            <div class="carte">
-                    <div class="titre">
-                        <h3>Paris</h3>
-                        <p><a href="http://localhost:8080/4w4_clovis/paris-france/">Lire plus</a> </p>
-                    </div>
-                    <img width="1919" height="1080" src="http://localhost:8080/4w4_clovis/wp-content/uploads/2024/04/pexels-chait-goli-1796725.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" />                    <h4> France</h4>
-                    <p>Paris, surnommée la Ville Lumière, est un véritable joyau culturel.…</p>
-                    <ul class="post-categories">
-	<li><a href="http://localhost:8080/4w4_clovis/category/culturel/" rel="category tag">Culturel</a></li>
-	<li><a href="http://localhost:8080/4w4_clovis/category/populaire/" rel="category tag">Populaire</a></li></ul>                </div>
-                                                                            <div class="carte">
-                    <div class="titre">
-                        <h3>Rome</h3>
-                        <p><a href="http://localhost:8080/4w4_clovis/rome-italie/">Lire plus</a> </p>
-                    </div>
-                    <img width="1920" height="1080" src="http://localhost:8080/4w4_clovis/wp-content/uploads/2024/03/pexels-pixabay-532263.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" />                    <h4> Italie</h4>
-                    <p>Rome, la Ville Éternelle, est un musée à ciel ouvert…</p>
-                    <ul class="post-categories">
-	<li><a href="http://localhost:8080/4w4_clovis/category/culturel/" rel="category tag">Culturel</a></li>
-	<li><a href="http://localhost:8080/4w4_clovis/category/populaire/" rel="category tag">Populaire</a></li></ul>                </div>
-                                </div>
+            </div>
+            <!-- Affichage des filtres de catégories -->
+            <h2>
+                Filtres
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path fill="#353913"
+                        d="M3.9 54.9C10.5 40.9 24.5 32 40 32H472c15.5 0 29.5 8.9 36.1 22.9s4.6 30.5-5.2 42.5L320 320.9V448c0 12.1-6.8 23.2-17.7 28.6s-23.8 4.3-33.5-3l-64-48c-8.1-6-12.8-15.5-12.8-25.6V320.9L9 97.3C-.7 85.4-2.8 68.8 3.9 54.9z" />
+                </svg>
+            </h2>
+            <div class="section_restapi">
 
+                <div class="restapi__boutons">
+                    <button id="cat_2" class="bouton__categorie">Aventure</button>
+                    <button id="cat_8" class="bouton__categorie">Croisière</button>
+                    <button id="cat_3" class="bouton__categorie">Culturel</button>
+                    <button id="cat_11" class="bouton__categorie">Populaire</button>
+                    <button id="cat_9" class="bouton__categorie">Nature</button>
+                    <button id="cat_4" class="bouton__categorie">Repos</button>
+                    <button id="cat_6" class="bouton__categorie">Sport</button>
+                    <button id="cat_5" class="bouton__categorie">Zen</button>
+                    <button id="cat_1" class="bouton__categorie btnX">X</button>
+                </div>
+                <div class="contenu__restapi"></div>
+            </div>
+            <!-- Affichage d'une galerie d'images -->
+            <h2>
+                Galerie
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path fill="#353913"
+                        d="M0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM323.8 202.5c-4.5-6.6-11.9-10.5-19.8-10.5s-15.4 3.9-19.8 10.5l-87 127.6L170.7 297c-4.6-5.7-11.5-9-18.7-9s-14.2 3.3-18.7 9l-64 80c-5.8 7.2-6.9 17.1-2.9 25.4s12.4 13.6 21.6 13.6h96 32H424c8.9 0 17.1-4.9 21.2-12.8s3.6-17.4-1.4-24.7l-120-176zM112 192a48 48 0 1 0 0-96 48 48 0 1 0 0 96z" />
+                </svg>
+            </h2>
+            <div class="galerie">
+                <figure
+                    class="wp-block-gallery has-nested-images columns-4 is-cropped galerie wp-block-gallery-1 is-layout-flex wp-block-gallery-is-layout-flex">
+                    <img class="imgGHP" decoding="async" src="images/pexels-lukas-kloeppel-2416649.jpg" alt=""/>
+                    <img class="imgGHP" decoding="async" src="images/pexels-chait-goli-1796725.jpg" alt=""/>
+                    <img class="imgGHP" decoding="async" src="images/pexels-alberto-farca-51414.jpg" alt="" />
+                    <img class="imgGHP" decoding="async" src="images/pexels-chris-molloy-1308940-1.jpg" alt=""/>
+                    <img class="imgGHP" decoding="async" src="images/pexels-chris-schippers-427679.jpg" alt=""/>
+                    <img class="imgGHP" decoding="async" src="images/pexels-pixabay-532263.jpg" alt=""/>
+                    <img class="imgGHP" decoding="async" src="images/pexels-pixabay-356629.jpg" alt=""/>
+                    <img class="imgGHP" decoding="async" src="images/pexels-kerry-534398.jpg" alt=""/>
+                    <img class="imgGHP" decoding="async" src="images/pexels-abigail-ramirez-19085803.jpg" alt=""/>
+                    <img class="imgGHP" decoding="async" src="images/pexels-asad-photo-maldives-9500412.jpg" alt=""/>
+            </div>
+
+        </section>
     </div>
     <div id="footer" class="global bck-brun-400">
         <footer class="footer__section">
-            <!-- <form class="recherche" role="search" method="get"  action="http://localhost:8080/4w4_clovis/">
-  <label>
-    <input class="recherche__input" type="search" class="search-field" placeholder="Recherche..." value="" name="s" />
-  </label>
-  <button class="recherche__bouton" type="submit" class="search-submit">
-    <span class="recherche__icone">&#x1F50D;</span>
-  </button>
-</form> -->
-
-
-  <form class="recherche" role="search" method="get"  action="http://localhost:8080/4w4_clovis/">
-    <label>
-      <input class="recherche__input" type="search" class="search-field" placeholder="Recherche..." value="" name="s" />
-    </label>
-    <button class="recherche__button" type="submit">
-      <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" color="#000"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
-    </button>
-  </form>            <div class="sociaux">
-                <a href="#"><svg width="32px" height="32px" role="img" viewBox="0 0 24 24" fill="currentColor" color="#ffffff" xmlns="http://www.w3.org/2000/svg"><title>Pinterest icon</title><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"></path></svg></a>
-                <a href="#"><svg width="32px" height="32px" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" color="#000000"><title>YouTube icon</title><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"></path></svg></a>
-                <a href="#"><svg width="32px" height="32px" role="img" viewBox="0 0 24 24" fill="currentColor" color="#000000" xmlns="http://www.w3.org/2000/svg"><title>WordPress icon</title><path d="M21.469 6.825c.84 1.537 1.318 3.3 1.318 5.175 0 3.979-2.156 7.456-5.363 9.325l3.295-9.527c.615-1.54.82-2.771.82-3.864 0-.405-.026-.78-.07-1.11m-7.981.105c.647-.03 1.232-.105 1.232-.105.582-.075.514-.93-.067-.899 0 0-1.755.135-2.88.135-1.064 0-2.85-.15-2.85-.15-.585-.03-.661.855-.075.885 0 0 .54.061 1.125.09l1.68 4.605-2.37 7.08L5.354 6.9c.649-.03 1.234-.1 1.234-.1.585-.075.516-.93-.065-.896 0 0-1.746.138-2.874.138-.2 0-.438-.008-.69-.015C4.911 3.15 8.235 1.215 12 1.215c2.809 0 5.365 1.072 7.286 2.833-.046-.003-.091-.009-.141-.009-1.06 0-1.812.923-1.812 1.914 0 .89.513 1.643 1.06 2.531.411.72.89 1.643.89 2.977 0 .915-.354 1.994-.821 3.479l-1.075 3.585-3.9-11.61.001.014zM12 22.784c-1.059 0-2.081-.153-3.048-.437l3.237-9.406 3.315 9.087c.024.053.05.101.078.149-1.12.393-2.325.609-3.582.609M1.211 12c0-1.564.336-3.05.935-4.39L7.29 21.709C3.694 19.96 1.212 16.271 1.211 12M12 0C5.385 0 0 5.385 0 12s5.385 12 12 12 12-5.385 12-12S18.615 0 12 0"></path></svg></a>
-                <a href="#"><svg width="32px" height="32px" role="img" viewBox="0 0 24 24" fill="currentColor" color="#000000" xmlns="http://www.w3.org/2000/svg"><title>Google icon</title><path d="M12.24 10.285V14.4h6.806c-.275 1.765-2.056 5.174-6.806 5.174-4.095 0-7.439-3.389-7.439-7.574s3.345-7.574 7.439-7.574c2.33 0 3.891.989 4.785 1.849l3.254-3.138C18.189 1.186 15.479 0 12.24 0c-6.635 0-12 5.365-12 12s5.365 12 12 12c6.926 0 11.52-4.869 11.52-11.726 0-.788-.085-1.39-.189-1.989H12.24z"></path></svg></a>
-                <a href="#"><svg width="32px" height="32px" role="img" viewBox="0 0 24 24" fill="currentColor" color="#000000" xmlns="http://www.w3.org/2000/svg"><title>GitHub icon</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg></a>
-                <a href="#"><svg width="32px" height="32px" role="img" viewBox="0 0 24 24" fill="currentColor" color="#000000" xmlns="http://www.w3.org/2000/svg"><title>Facebook icon</title><path d="M23.9981 11.9991C23.9981 5.37216 18.626 0 11.9991 0C5.37216 0 0 5.37216 0 11.9991C0 17.9882 4.38789 22.9522 10.1242 23.8524V15.4676H7.07758V11.9991H10.1242V9.35553C10.1242 6.34826 11.9156 4.68714 14.6564 4.68714C15.9692 4.68714 17.3424 4.92149 17.3424 4.92149V7.87439H15.8294C14.3388 7.87439 13.8739 8.79933 13.8739 9.74824V11.9991H17.2018L16.6698 15.4676H13.8739V23.8524C19.6103 22.9522 23.9981 17.9882 23.9981 11.9991Z"></path></svg></a>
+            <div class="div__footer">
+                <div class="apropos">
+                    <p>À propos</p>
+                    <p>
+                        Projet de thème wordpress réalisé avec php,
+                        javascript et sass dans le cadre du cours 582-4W4-MA
+                        Conception d'interfaces et développement web. Réalisé par Clovis Gauthier
+                    </p>
+                </div>
+                <div class="liens">
+                    <p>Liens</p>
+                    <a href="https://github.com/s1v0lc/4w4_carrousel">Dépot Github Carrousel</a>
+                    <a href="https://github.com/s1v0lc/cours-4w4/">Dépot Github Thème</a>
+                    <a href="#">Page WHC</a>
+                    <a href="https://s1v0lc.github.io/cours-4w4/">Page GHP</a>
+                </div>
+                <div class="adresse">
+                    <p>Adresse</p>
+                    <a>3800 R. Sherbrooke E, Montréal, QC H1X 2A2</a>
+                </div>
+                <div class="feuille">
+                    <p>Explora</p>
+                    <img src="images/vague_feuille_verte.png" alt="">
+                </div>
+            </div>
+            <form class="recherche" role="search" method="get" action="#">
+                <label>
+                    <input class="recherche__input" type="search" class="search-field" placeholder="Recherche..."
+                        value="" name="s" />
+                </label>
+                <button class="recherche__button" type="submit">
+                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                        fill="currentColor" color="#000">
+                        <path fill-rule="evenodd"
+                            d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </form>
+            <div class="sociaux">
+                <a href="#"><svg width="32px" height="32px" role="img" viewBox="0 0 24 24" fill="currentColor"
+                        color="#ffffff" xmlns="http://www.w3.org/2000/svg">
+                        <title>Pinterest icon</title>
+                        <path
+                            d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z">
+                        </path>
+                    </svg></a>
+                <a href="#"><svg width="32px" height="32px" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24" fill="currentColor" color="#000000">
+                        <title>YouTube icon</title>
+                        <path
+                            d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z">
+                        </path>
+                    </svg></a>
+                <a href="#"><svg width="32px" height="32px" role="img" viewBox="0 0 24 24" fill="currentColor"
+                        color="#000000" xmlns="http://www.w3.org/2000/svg">
+                        <title>WordPress icon</title>
+                        <path
+                            d="M21.469 6.825c.84 1.537 1.318 3.3 1.318 5.175 0 3.979-2.156 7.456-5.363 9.325l3.295-9.527c.615-1.54.82-2.771.82-3.864 0-.405-.026-.78-.07-1.11m-7.981.105c.647-.03 1.232-.105 1.232-.105.582-.075.514-.93-.067-.899 0 0-1.755.135-2.88.135-1.064 0-2.85-.15-2.85-.15-.585-.03-.661.855-.075.885 0 0 .54.061 1.125.09l1.68 4.605-2.37 7.08L5.354 6.9c.649-.03 1.234-.1 1.234-.1.585-.075.516-.93-.065-.896 0 0-1.746.138-2.874.138-.2 0-.438-.008-.69-.015C4.911 3.15 8.235 1.215 12 1.215c2.809 0 5.365 1.072 7.286 2.833-.046-.003-.091-.009-.141-.009-1.06 0-1.812.923-1.812 1.914 0 .89.513 1.643 1.06 2.531.411.72.89 1.643.89 2.977 0 .915-.354 1.994-.821 3.479l-1.075 3.585-3.9-11.61.001.014zM12 22.784c-1.059 0-2.081-.153-3.048-.437l3.237-9.406 3.315 9.087c.024.053.05.101.078.149-1.12.393-2.325.609-3.582.609M1.211 12c0-1.564.336-3.05.935-4.39L7.29 21.709C3.694 19.96 1.212 16.271 1.211 12M12 0C5.385 0 0 5.385 0 12s5.385 12 12 12 12-5.385 12-12S18.615 0 12 0">
+                        </path>
+                    </svg></a>
+                <a href="#"><svg width="32px" height="32px" role="img" viewBox="0 0 24 24" fill="currentColor"
+                        color="#000000" xmlns="http://www.w3.org/2000/svg">
+                        <title>Google icon</title>
+                        <path
+                            d="M12.24 10.285V14.4h6.806c-.275 1.765-2.056 5.174-6.806 5.174-4.095 0-7.439-3.389-7.439-7.574s3.345-7.574 7.439-7.574c2.33 0 3.891.989 4.785 1.849l3.254-3.138C18.189 1.186 15.479 0 12.24 0c-6.635 0-12 5.365-12 12s5.365 12 12 12c6.926 0 11.52-4.869 11.52-11.726 0-.788-.085-1.39-.189-1.989H12.24z">
+                        </path>
+                    </svg></a>
+                <a href="#"><svg width="32px" height="32px"'' role="img" viewBox="0 0 24 24" fill="currentColor"
+                        color="#000000" xmlns="http://www.w3.org/2000/svg">
+                        <title>GitHub icon</title>
+                        <path
+                            d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12">
+                        </path>
+                    </svg></a>
+                <a href="#"><svg width="32px" height="32px" role="img" viewBox="0 0 24 24" fill="currentColor"
+                        color="#000000" xmlns="http://www.w3.org/2000/svg">
+                        <title>Facebook icon</title>
+                        <path
+                            d="M23.9981 11.9991C23.9981 5.37216 18.626 0 11.9991 0C5.37216 0 0 5.37216 0 11.9991C0 17.9882 4.38789 22.9522 10.1242 23.8524V15.4676H7.07758V11.9991H10.1242V9.35553C10.1242 6.34826 11.9156 4.68714 14.6564 4.68714C15.9692 4.68714 17.3424 4.92149 17.3424 4.92149V7.87439H15.8294C14.3388 7.87439 13.8739 8.79933 13.8739 9.74824V11.9991H17.2018L16.6698 15.4676H13.8739V23.8524C19.6103 22.9522 23.9981 17.9882 23.9981 11.9991Z">
+                        </path>
+                    </svg></a>
             </div>
         </footer>
     </div>
 </body>
+
 </html>
-
-<!--
-
-https://svgbox.net/
-
-
-https://icodethis.com/
-
-
--->    
